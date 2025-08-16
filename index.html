@@ -4,18 +4,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Ruby's Nashville Weather and Time</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html, body {
-            height: 100%;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-        }
-        body { 
-            font-family: Montserrat;
+        } body {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
             background: 
                 linear-gradient(rgba(255,182,193,0.7), rgba(155,17,30,0.7)),
                 url('Cactus.jpg') no-repeat center center fixed;
@@ -82,9 +84,22 @@
             text-shadow: 0 0 8px #F6B8B8, 0 2px 4px #9b111e;
         }
         button:hover {
-            background: #9b111e;
+            background: #b71c1c
             box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+        }@media (max-width: 600px) {
+        body {
+         font-size: 1em;
         }
+        .panel-container {
+         gap: 1em;
+        }
+        .weather-box,
+        .nashville-time,
+        .quote-box {
+        max-width: 95vw;
+        padding: 1em;
+        }
+    }
     </style>
 </head>
 <body>
