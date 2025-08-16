@@ -68,6 +68,7 @@ h2 {
     border: 1px solid rgba(255,255,255,0.3);
     outline: 2px solid #F6B8B8;
     outline-offset: -4px;
+    gap: 1em;
 }
 .panel-container {
     display: flex;
@@ -164,18 +165,15 @@ audio {
     font-size: 2em;
     cursor: pointer;
     box-shadow: 0 2px 8px #F6B8B8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1em;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    position: relative;
+    margin: 0;
 }
 #play-pause:active {
     box-shadow: 0 2px 8px #4a0303;
-}
-#play-pause {
-    /* Use emoji for play/pause, but color can't be changed directly. Use SVG for full control. */
-    color: #9b111e;
-    background: linear-gradient(135deg, #F6B8B8 60%, #9b111e 100%);
 }
 #seek-bar {
     flex: 1;
@@ -201,7 +199,7 @@ audio {
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #fff;
+    background: #F6B8B8;
     border: 2px solid #9b111e;
     border-radius: 50%;
     cursor: pointer;
@@ -209,7 +207,7 @@ audio {
 .custom-audio-player input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #fff;
+    background: #F6B8B8;
     border: 2px solid #9b111e;
     border-radius: 50%;
     cursor: pointer;
@@ -306,7 +304,29 @@ audio {
         <div class="music-box">
             <h2>Music Player</h2>
             <div class="custom-audio-player" id="custom-player">
-                <button id="play-pause" aria-label="Play/Pause" style="background:#F6B8B8;color:#c50808;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5em;cursor:pointer;">▶</button>
+                <button id="play-pause" aria-label="Play/Pause" style="display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#F6B8B8;padding:0;border:none;margin:0;">
+                    <span id="play-icon" style="display:inline;">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:auto;">
+                            <defs>
+                                <filter id="play-icon-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#4a0303" flood-opacity="0.85"/>
+                                </filter>
+                            </defs>
+                            <polygon points="7,5 23,14 7,23" fill="#9b111e" filter="url(#play-icon-shadow)" opacity="0.85"/>
+                        </svg>
+                    </span>
+                    <span id="pause-icon" style="display:none;">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:auto;">
+                            <defs>
+                                <filter id="pause-icon-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#4a0303" flood-opacity="0.85"/>
+                                </filter>
+                            </defs>
+                            <rect x="8" y="5" width="4" height="18" fill="#9b111e" filter="url(#pause-icon-shadow)" opacity="0.85"/>
+                            <rect x="16" y="5" width="4" height="18" fill="#9b111e" filter="url(#pause-icon-shadow)" opacity="0.85"/>
+                        </svg>
+                    </span>
+                </button>
                 <input type="range" id="seek-bar" value="0" min="0" max="100" style="width:60%;margin:0 1em;">
                 <span id="current-time" style="color:#fff;">0:00</span> <span class="slash-bar" style="color:#F6B8B8;">/</span> <span id="duration" style="color:#fff;">0:00</span>
                 <audio id="audio" src="Speak to the wind.mp3"></audio>
@@ -400,9 +420,8 @@ audio {
     // Custom Audio Player JS
 const audio = document.getElementById('audio');
 const playPauseBtn = document.getElementById('play-pause');
-const seekBar = document.getElementById('seek-bar');
-const currentTimeSpan = document.getElementById('current-time');
-const durationSpan = document.getElementById('duration');
+const playIcon = document.getElementById('play-icon');
+const pauseIcon = document.getElementById('pause-icon');
 
 playPauseBtn.addEventListener('click', function() {
     if (audio.paused) {
@@ -413,11 +432,13 @@ playPauseBtn.addEventListener('click', function() {
 });
 
 audio.addEventListener('play', function() {
-    playPauseBtn.textContent = '⏸';
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'inline';
 });
 
 audio.addEventListener('pause', function() {
-    playPauseBtn.textContent = '▶';
+    playIcon.style.display = 'inline';
+    pauseIcon.style.display = 'none';
 });
 
 audio.addEventListener('loadedmetadata', function() {
