@@ -418,48 +418,51 @@ audio {
     };
 
     // Custom Audio Player JS
-const audio = document.getElementById('audio');
-const playPauseBtn = document.getElementById('play-pause');
-const playIcon = document.getElementById('play-icon');
-const pauseIcon = document.getElementById('pause-icon');
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('play-pause');
+    const playIcon = document.getElementById('play-icon');
+    const pauseIcon = document.getElementById('pause-icon');
+    const seekBar = document.getElementById('seek-bar');
+    const currentTimeSpan = document.getElementById('current-time');
+    const durationSpan = document.getElementById('duration');
 
-playPauseBtn.addEventListener('click', function() {
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
+    playPauseBtn.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener('play', function() {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'inline';
+    });
+
+    audio.addEventListener('pause', function() {
+        playIcon.style.display = 'inline';
+        pauseIcon.style.display = 'none';
+    });
+
+    audio.addEventListener('loadedmetadata', function() {
+        seekBar.max = Math.floor(audio.duration);
+        durationSpan.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', function() {
+        seekBar.value = Math.floor(audio.currentTime);
+        currentTimeSpan.textContent = formatTime(audio.currentTime);
+    });
+
+    seekBar.addEventListener('input', function() {
+        audio.currentTime = seekBar.value;
+    });
+
+    function formatTime(seconds) {
+        const min = Math.floor(seconds / 60);
+        const sec = Math.floor(seconds % 60);
+        return `${min}:${sec.toString().padStart(2, '0')}`;
     }
-});
-
-audio.addEventListener('play', function() {
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'inline';
-});
-
-audio.addEventListener('pause', function() {
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
-});
-
-audio.addEventListener('loadedmetadata', function() {
-    seekBar.max = Math.floor(audio.duration);
-    durationSpan.textContent = formatTime(audio.duration);
-});
-
-audio.addEventListener('timeupdate', function() {
-    seekBar.value = Math.floor(audio.currentTime);
-    currentTimeSpan.textContent = formatTime(audio.currentTime);
-});
-
-seekBar.addEventListener('input', function() {
-    audio.currentTime = seekBar.value;
-});
-
-function formatTime(seconds) {
-    const min = Math.floor(seconds / 60);
-    const sec = Math.floor(seconds % 60);
-    return `${min}:${sec.toString().padStart(2, '0')}`;
-}
     </script>
 </body>
 </html>
