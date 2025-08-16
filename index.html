@@ -200,16 +200,22 @@ fetch(apiUrl)
          { quote: "Remember to drink water", author: "Matthew Malone" },
          { quote: "You are very loved", author: "Matthew Malone" }
         ];
+        function showQuote(index) {
+        document.getElementById('quote').textContent = quotes[index].quote;
+        document.getElementById('author').textContent = "- " + quotes[index].author;
+        }
+
         let current = 0;
 
         function nextQuote() {
-            current = (current + 1) % quotes.length;
-            document.getElementById('quote').textContent = quotes[current].quote;
-            document.getElementById('author').textContent = "- " + quotes[current].author;
+        current = (current + 1) % quotes.length;
+        showQuote(current);
         }
 
         // Show the first quote on page load
-        window.onload = nextQuote;
+        window.onload = function() {
+        showQuote(current);
+        };
     </script>
 </body>
 </html>
