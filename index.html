@@ -12,6 +12,7 @@ html, body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Montserrat Alternates', sans-serif;
@@ -22,6 +23,8 @@ body {
         linear-gradient(rgba(255,182,193,0.7), rgba(155,17,30,0.7)),
         url('Cactus.jpg') no-repeat center center fixed;
     background-size: cover;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 h1 {
     text-align: center;
@@ -41,12 +44,25 @@ h2 {
     display: inline-block;
     margin-top: 1em;
 }
+.music-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.custom-audio-player {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+}
 .panel-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
-    margin-top: 1em;
+    gap: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .weather-box,
 .nashville-time,
@@ -97,6 +113,82 @@ button:hover {
     background: #b71c1c;
     box-shadow: 0 16px 32px rgba(0,0,0,0.2);
 }
+.loading {
+    color: #F6B8B8;
+}
+audio {
+    background: #9b111e;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 8px #9b111e;
+}
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9b111e;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #F6B8B8;
+    padding: 1em;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+}
+#play-pause {
+    background: #F6B8B8;
+    color: #9b111e;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #F6B8B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+}
+#play-pause:active {
+    box-shadow: 0 2px 8px #4a0303;
+}
+#seek-bar {
+    flex: 1;
+    margin: 0 1em;
+}
+#current-time, #duration {
+    color: #F6B8B8;
+    font-family: inherit;
+    font-size: 1em;
+}
+.custom-audio-player input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    margin: 0 1em;
+    height: 4px;
+    background: #9b111e;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.custom-audio-player input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #9b111e;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.custom-audio-player input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #9b111e;
+    border-radius: 50%;
+    cursor: pointer;
+}
 @media (max-width: 600px) {
     html, body {
         font-size: 1em;
@@ -143,9 +235,19 @@ button:hover {
     <h1>Ruby's Nashville Weather and Time</h1>
     <div class="panel-container">
         <div class="weather-box" id="weather">
-            <span class="loading">Loading weather data...</span>
+            <span class="loading" id="loading-weather">Loading weather data...</span>
+            <div class="weather-content" id="weather-content"></div>
+            <span class="nashville-time" id="nashville-time" style="background:none;border:none;padding:0;box-shadow:none;"></span>
         </div>
-        <div class="nashville-time" id="nashville-time"></div>
+        <div class="music-box">
+            <h2>Music Player</h2>
+            <div class="custom-audio-player" id="custom-player">
+                <button id="play-pause" aria-label="Play/Pause" style="background:#F6B8B8;color:#c50808;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5em;cursor:pointer;">▶</button>
+                <input type="range" id="seek-bar" value="0" min="0" max="100" style="width:60%;margin:0 1em;">
+                <span id="current-time" style="color:#fff;">0:00</span> / <span id="duration" style="color:#fff;">0:00</span>
+                <audio id="audio" src="song.mp3"></audio>
+            </div>
+        </div>
         <div class="quote-box">
             <div class="quote" id="quote">Click the button for a quote!</div>
             <div class="author" id="author"></div>
@@ -154,29 +256,31 @@ button:hover {
     </div>
     <script>
        // Weather API (direct from OpenWeatherMap)
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=nashville&appid=a523f876714175e83f93bdd7c611a7b7&units=metric';
+    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=nashville&appid=a523f876714175e83f93bdd7c611a7b7&units=metric';
 
-fetch(apiUrl)
+    fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
         if (data.cod !== 200) {
-            document.getElementById('weather').innerHTML = `<span class="error">Error: ${data.message}</span>`;
+            document.getElementById('weather-content').innerHTML = `<span class="error">Error: ${data.message}</span>`;
+            document.getElementById('loading-weather').style.display = 'none';
             return;
         }
         // Format the weather data
         const weatherHtml = `
-            <div class="weather-content">
-                <h2>${data.name}, ${data.sys.country}</h2>
-                <p><strong>Temperature:</strong> ${data.main.temp} °C</p>
-                <p><strong>Weather:</strong> ${data.weather[0].description}</p>
-                <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-                <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
-            </div>
+            <h2>${data.name}, ${data.sys.country}</h2>
+            <p><strong>Temperature:</strong> ${data.main.temp} °C</p>
+            <p><strong>Weather:</strong> ${data.weather[0].description}</p>
+            <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+            <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
         `;
-        document.getElementById('weather').innerHTML = weatherHtml;
+        document.getElementById('weather-content').innerHTML = weatherHtml;
+        document.getElementById('loading-weather').style.display = 'none';
+        showNashvilleTime(); // update time after weather loads
     })
     .catch(err => {
-        document.getElementById('weather').innerHTML = `<span class="error">Failed to fetch weather data.</span>`;
+        document.getElementById('weather-content').innerHTML = `<span class="error">Failed to fetch weather data.</span>`;
+        document.getElementById('loading-weather').style.display = 'none';
     });
     function showNashvilleTime() {
     const dateObj = new Date();
@@ -228,6 +332,49 @@ fetch(apiUrl)
     window.onload = function() {
     showQuote(current);
     };
+
+    // Custom Audio Player JS
+const audio = document.getElementById('audio');
+const playPauseBtn = document.getElementById('play-pause');
+const seekBar = document.getElementById('seek-bar');
+const currentTimeSpan = document.getElementById('current-time');
+const durationSpan = document.getElementById('duration');
+
+playPauseBtn.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
+
+audio.addEventListener('play', function() {
+    playPauseBtn.textContent = '⏸';
+});
+
+audio.addEventListener('pause', function() {
+    playPauseBtn.textContent = '▶';
+});
+
+audio.addEventListener('loadedmetadata', function() {
+    seekBar.max = Math.floor(audio.duration);
+    durationSpan.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener('timeupdate', function() {
+    seekBar.value = Math.floor(audio.currentTime);
+    currentTimeSpan.textContent = formatTime(audio.currentTime);
+});
+
+seekBar.addEventListener('input', function() {
+    audio.currentTime = seekBar.value;
+});
+
+function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec.toString().padStart(2, '0')}`;
+}
     </script>
 </body>
 </html>
