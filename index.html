@@ -245,7 +245,7 @@ audio {
                 <button id="play-pause" aria-label="Play/Pause" style="background:#F6B8B8;color:#c50808;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5em;cursor:pointer;">▶</button>
                 <input type="range" id="seek-bar" value="0" min="0" max="100" style="width:60%;margin:0 1em;">
                 <span id="current-time" style="color:#fff;">0:00</span> / <span id="duration" style="color:#fff;">0:00</span>
-                <audio id="audio" src="song.mp3"></audio>
+                <audio id="audio" src="Never Gonna.mp3"></audio>
             </div>
         </div>
         <div class="quote-box">
@@ -334,7 +334,7 @@ audio {
     };
 
     // Custom Audio Player JS
-const audio = document.getElementById('Never Gonna');
+const audio = document.getElementById('audio');
 const playPauseBtn = document.getElementById('play-pause');
 const seekBar = document.getElementById('seek-bar');
 const currentTimeSpan = document.getElementById('current-time');
@@ -378,4 +378,3 @@ function formatTime(seconds) {
     </script>
 </body>
 </html>
-
