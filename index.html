@@ -52,6 +52,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 0.8em;
 }
 .custom-audio-player {
     margin: 0 auto;
@@ -191,17 +192,36 @@ audio {
     border-radius: 50%;
     cursor: pointer;
 }
+.slash-bar {
+    color: #F6B8B8 !important;
+}
 @media (max-width: 600px) {
     html, body {
         font-size: 1em;
         overflow-x: hidden;
     }
     .panel-container {
-        gap: 1.5em;
+        gap: 0.7em;
         padding: 1em 0.5em;
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
+    }
+    .music-box {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .custom-audio-player {
+        margin: 0 auto;
+        max-width: 95vw;
+        width: 100%;
+        justify-content: center;
+    }
+    .slash-bar {
+        color: #F6B8B8 !important;
+        margin: 0 0.5em;
     }
     .weather-box,
     .nashville-time,
@@ -246,7 +266,7 @@ audio {
             <div class="custom-audio-player" id="custom-player">
                 <button id="play-pause" aria-label="Play/Pause" style="background:#F6B8B8;color:#c50808;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5em;cursor:pointer;">▶</button>
                 <input type="range" id="seek-bar" value="0" min="0" max="100" style="width:60%;margin:0 1em;">
-                <span id="current-time" style="color:#fff;">0:00</span> / <span id="duration" style="color:#fff;">0:00</span>
+                <span id="current-time" style="color:#fff;">0:00</span> <span class="slash-bar" style="color:#F6B8B8;">/</span> <span id="duration" style="color:#fff;">0:00</span>
                 <audio id="audio" src="Speak to the wind.mp3"></audio>
             </div>
         </div>
