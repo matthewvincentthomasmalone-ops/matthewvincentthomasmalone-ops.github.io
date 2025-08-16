@@ -103,8 +103,8 @@ button:hover {
         overflow-x: hidden;
     }
     .panel-container {
-        gap: 1em;
-        padding: 0.5em;
+        gap: 1.5em;
+        padding: 1em 0.5em;
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
@@ -112,18 +112,29 @@ button:hover {
     .weather-box,
     .nashville-time,
     .quote-box {
-        width: 100vw;
+        width: 100%;
+        max-width: 95vw;
+        margin: 0.5em auto;
         padding: 1em;
         font-size: 1em;
-        margin: 0 auto;
+        border-radius: 10px;
         box-sizing: border-box;
+        backdrop-filter: blur(2px); /* softer blur */
     }
     h1, h2 {
         font-size: 1.3em;
+        line-height: 1.2;
+    }
+    .weather-content, .nashville-time, .quote, .author {
+        font-size: clamp(1em, 2.5vw, 1.2em);
+        line-height: 1.4;
     }
     button {
-        font-size: 0.9em;
-        padding: 0.5em 1em;
+        font-size: 1em;
+        padding: 0.75em 0;
+        width: 100%;
+        margin-top: 0.5em;
+        border-radius: 8px;
     }
 }
     </style>
@@ -191,31 +202,32 @@ fetch(apiUrl)
 
         // Quote Box
         const quotes = [
-        { quote: "I love you as Honey Baby", author: "Matthew Malone" },
-        { quote: "You're a genius", author: "Matthew Malone" },
-        { quote: "You're the love of my life", author: "Matthew Malone" },
-        { quote: "Born to be a country star", author: "Matthew Malone" },
-        { quote: "Wanna go see a movie with me", author: "Matthew Malone" },
-        { quote: "I am so grateful for you, and therefore you make me more grateful for everything", author: "Matthew Malone" },
-        { quote: "Remember to drink water", author: "Matthew Malone" },
-        { quote: "You are very loved", author: "Matthew Malone" }
-        ];
-        function showQuote(index) {
-        document.getElementById('quote').textContent = quotes[index].quote;
-        document.getElementById('author').textContent = "- " + quotes[index].author;
-        }
+    { quote: "I love you as Honey Baby", author: "Matthew Malone" },
+    { quote: "You're a genius", author: "Matthew Malone" },
+    { quote: "You're the love of my life", author: "Matthew Malone" },
+    { quote: "Born to be a country star", author: "Matthew Malone" },
+    { quote: "Wanna go see a movie with me", author: "Matthew Malone" },
+    { quote: "I am so grateful for you, and therefore you make me more grateful for everything", author: "Matthew Malone" },
+    { quote: "Remember to drink water", author: "Matthew Malone" },
+    { quote: "You are very loved", author: "Matthew Malone" }
+    ];
 
-        let current = 0;
+    let current = 0;
 
-        function nextQuote() {
-        current = (current + 1) % quotes.length;
-        showQuote(current);
-        }
+    function showQuote(index) {
+    document.getElementById('quote').textContent = quotes[index].quote;
+    document.getElementById('author').textContent = "- " + quotes[index].author;
+    }
 
-        // Show the first quote on page load
-        window.onload = function() {
-        showQuote(current);
-        };
+    function nextQuote() {
+    current = (current + 1) % quotes.length;
+    showQuote(current);
+    }
+
+    // Show the first quote on page load
+    window.onload = function() {
+    showQuote(current);
+    };
     </script>
 </body>
 </html>
