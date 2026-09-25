@@ -102,7 +102,20 @@
           </section>
 
           <section class="speaker" aria-label="Speaker grille" aria-hidden="true">
-            <div class="speaker-holes"></div>
+            <svg class="speaker-art" viewBox="0 0 260 420" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="speakerColour" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#741629"/><stop offset=".55" stop-color="#470815"/><stop offset="1" stop-color="#210309"/>
+                </linearGradient>
+                <pattern id="speakerHoles" width="13" height="13" patternUnits="userSpaceOnUse">
+                  <circle cx="6.5" cy="6.5" r="3" fill="#8c3546" opacity=".9"/>
+                  <circle cx="6.5" cy="6.5" r="1.75" fill="#080205"/>
+                </pattern>
+              </defs>
+              <path class="speaker-shell" d="M5 5H68C176 5 255 92 255 210S176 415 68 415H5Z"/>
+              <path class="speaker-rim" d="M13 14H68C169 14 246 98 246 210S169 406 68 406H13Z"/>
+              <path class="speaker-field" d="M25 31H69C156 31 229 106 229 210S156 389 69 389H25Z"/>
+            </svg>
           </section>
 
           <div class="plaque"><span>R.G Gilbert</span></div>

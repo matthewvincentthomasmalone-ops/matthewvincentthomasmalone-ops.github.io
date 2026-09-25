@@ -263,7 +263,48 @@
     const min = Number(input.min), max = Number(input.max), ratio = (Number(input.value) - min) / (max - min);
     input.closest(".knob").style.setProperty("--turn", `${-125 + ratio * 250}deg`);
     const output = input.closest(".knob-control").querySelector("output"); output.value = input.id === "tempo" ? Math.round(input.value) : Number(input.value).toFixed(2);
+    const knob = input.closest(".knob");
+    knob?.setAttribute("aria-valuenow", String(input.value));
+    knob?.setAttribute("aria-valuetext", output.value);
     engine.updateControls();
+  }
+
+  function configureKnob(input) {
+    const knob = input.closest(".knob"), min = Number(input.min), max = Number(input.max), range = max - min;
+    const step = input.step === "any" ? range / 100 : Number(input.step || range / 100);
+    knob.tabIndex = 0; knob.setAttribute("role", "slider"); knob.setAttribute("aria-label", input.id); knob.setAttribute("aria-valuemin", String(min)); knob.setAttribute("aria-valuemax", String(max));
+    knob.dataset.midiControl = input.id;
+    const setValue = (value) => {
+      const precision = step < 1 ? Math.max(0, String(step).split(".")[1]?.length || 0) : 0;
+      input.value = Math.max(min, Math.min(max, Math.round(value / step) * step)).toFixed(precision);
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    };
+    let drag = null;
+    knob.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0) return;
+      event.preventDefault(); knob.focus(); knob.setPointerCapture(event.pointerId); knob.classList.add("dragging");
+      drag = { x:event.clientX, y:event.clientY, value:Number(input.value), pointerId:event.pointerId };
+    });
+    knob.addEventListener("pointermove", (event) => {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      const travel = (drag.y - event.clientY) + (event.clientX - drag.x) * .25;
+      const fine = event.shiftKey ? .2 : 1;
+      setValue(drag.value + travel / 180 * range * fine);
+    });
+    const finishDrag = (event) => {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      knob.classList.remove("dragging"); drag = null;
+    };
+    knob.addEventListener("pointerup", finishDrag); knob.addEventListener("pointercancel", finishDrag);
+    knob.addEventListener("wheel", (event) => { event.preventDefault(); setValue(Number(input.value) + (event.deltaY < 0 ? 1 : -1) * step * (event.shiftKey ? 1 : 2)); }, { passive:false });
+    knob.addEventListener("keydown", (event) => {
+      const direction = { ArrowUp:1, ArrowRight:1, ArrowDown:-1, ArrowLeft:-1 }[event.key];
+      if (direction) { event.preventDefault(); setValue(Number(input.value) + direction * step); }
+      else if (event.key === "Home") { event.preventDefault(); setValue(min); }
+      else if (event.key === "End") { event.preventDefault(); setValue(max); }
+      else if (event.key === "PageUp") { event.preventDefault(); setValue(Number(input.value) + range / 10); }
+      else if (event.key === "PageDown") { event.preventDefault(); setValue(Number(input.value) - range / 10); }
+    });
   }
 
   function toggle(button) { const on = !button.classList.contains("is-on"); button.classList.toggle("is-on", on); button.setAttribute("aria-pressed", String(on)); return on; }
@@ -355,7 +396,7 @@
     if (index !== lastStrum) { lastStrum = index; engine.strum(index); }
   });
 
-  $$("input[type=range]").forEach((input) => { input.dataset.midiControl = input.id; input.addEventListener("input", () => updateKnob(input)); updateKnob(input); });
+  $$("input[type=range]").forEach((input) => { input.dataset.midiControl = input.id; input.addEventListener("input", () => updateKnob(input)); configureKnob(input); updateKnob(input); });
   ui.chordHold.addEventListener("click", () => toggle(ui.chordHold));
   ui.autoBass.addEventListener("click", () => toggle(ui.autoBass));
   ui.rhythmStart.addEventListener("click", () => engine.toggleRhythm());
