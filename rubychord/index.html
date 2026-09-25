@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,700&family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260925b" />
   </head>
   <body>
     <div class="la-background" aria-hidden="true"></div>
@@ -66,7 +66,7 @@
                 <output for="chord">0.56</output>
               </label>
               <label class="knob-control" data-control="sustain">
-                <span>SUSTAIN</span><span class="knob" style="--turn:125deg"><input id="sustain" type="range" min="0.08" max="2.8" value="2.80" step="0.01" /></span>
+                <span>SUSTAIN</span><span class="knob" style="--turn:125deg"><input id="sustain" type="range" min="0.08" max="2.8" value="2.80" step="0.01" autocomplete="off" /></span>
                 <output for="sustain">2.80</output>
               </label>
             </div>
@@ -126,12 +126,12 @@
       <footer class="help-line">
         <button id="helpToggle" aria-expanded="false" aria-controls="helpPanel">KEYBOARD + MIDI GUIDE</button>
         <div id="helpPanel" hidden>
-          <p><b>Chords:</b> Q–O major · A–L minor · Z–. seventh &nbsp; <b>Strum:</b> 1–= &nbsp; <b>Stop:</b> Space</p>
+          <p><b>Chords:</b> Q–O major · A–L minor · Z–. seventh · Backslash F♯ major &nbsp; <b>Strum:</b> 1–= &nbsp; <b>Stop:</b> Space</p>
           <p>MIDI keyboards play the current voice. Double-click a control, then move a MIDI CC to assign it; assignments are saved in this browser. Serial accepts CHORD, STRUM, NOTE, CC and OFF commands.</p>
         </div>
       </footer>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260925b"></script>
   </body>
 </html>

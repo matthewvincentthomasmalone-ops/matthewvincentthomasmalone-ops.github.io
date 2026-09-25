@@ -171,19 +171,19 @@ button, select { touch-action: manipulation; }
 .strum-key { position:relative; border:0; border-bottom:1px solid rgba(80,71,46,.52); background:transparent; cursor:pointer; }
 .strum-key::after { content:""; position:absolute; left:6%; right:6%; bottom:-2px; height:1px; background:rgba(255,247,204,.45); }
 .strum-key.active { background:linear-gradient(90deg,transparent,rgba(255,248,181,.75),transparent); }
-.instant-off { position:absolute; left:8%; bottom:-10%; width:84%; height:7%; }
+.instant-off { position:absolute; left:8%; bottom:0; width:84%; height:7%; }
 
-.speaker { position:absolute; left:75.2%; top:21%; width:19%; height:56%; }
+.speaker { position:absolute; left:73.5%; top:23%; width:18%; height:50%; }
 .speaker-art { display:block; width:100%; height:100%; overflow:visible; filter:drop-shadow(0 4px 4px rgba(10,0,3,.62)); }
 .speaker-shell { fill:url(#speakerColour); stroke:#b96757; stroke-width:3; }
 .speaker-rim { fill:none; stroke:#37050e; stroke-width:4; }
 .speaker-field { fill:url(#speakerHoles); stroke:rgba(223,123,101,.42); stroke-width:1.5; }
 
-.plaque { position:absolute; left:15%; bottom:13%; width:21.5%; height:5%; border:1px solid #e0c064; border-radius:4px; background:linear-gradient(100deg,#28060d,#4c1019,#190307); box-shadow:0 2px 4px #160006,inset 0 0 0 2px #090104; display:grid; place-items:center; }
+.plaque { position:absolute; left:16.5%; bottom:17%; width:20.5%; height:5%; border:1px solid #e0c064; border-radius:4px; background:linear-gradient(100deg,#28060d,#4c1019,#190307); box-shadow:0 2px 4px #160006,inset 0 0 0 2px #090104; display:grid; place-items:center; }
 .plaque::before { content:""; position:absolute; inset:3px; border:1px solid rgba(231,199,105,.35); }
 .plaque span { color:#e8cb77; font:bold italic clamp(.45rem,1.15vw,1.05rem)/1 Georgia,serif; text-shadow:0 1px #000; }
 
-.status-light { position:absolute; left:40%; bottom:13.8%; display:flex; align-items:center; gap:.5em; color:#d3b15e; font:600 clamp(.21rem,.39vw,.35rem)/1 monospace; }
+.status-light { position:absolute; left:40%; bottom:17.8%; display:flex; align-items:center; gap:.5em; color:#d3b15e; font:600 clamp(.21rem,.39vw,.35rem)/1 monospace; }
 .status-light i { width:7px; height:7px; border-radius:50%; background:#5e1722; box-shadow:inset 0 0 2px #000; }
 .status-light i.on { background:#f2a366; box-shadow:0 0 8px #f08d57; }
 

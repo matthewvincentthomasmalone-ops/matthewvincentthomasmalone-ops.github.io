@@ -237,7 +237,8 @@
       const label = document.createElement("span"); label.className = "row-label"; label.textContent = ["MAJOR", "MINOR", "7TH"][row]; ui.grid.append(label);
       ROOTS.forEach((root) => {
         const button = document.createElement("button");
-        const mappedIndex = KEY_ROOTS.indexOf(root), key = mappedIndex >= 0 ? KEY_ROWS[row][mappedIndex] : "";
+        const mappedIndex = KEY_ROOTS.indexOf(root);
+        const key = root === "F#" && quality === "major" ? "\\" : (mappedIndex >= 0 ? KEY_ROWS[row][mappedIndex] : "");
         button.className = "chord-button"; button.dataset.root = root; button.dataset.quality = quality; button.dataset.midiControl = `chord:${root}:${quality}`;
         button.innerHTML = `${root}${SUFFIX[quality]}${key ? `<b>${key.toUpperCase()}</b>` : ""}`;
         button.setAttribute("aria-label", `${root} ${quality} chord${key ? `, keyboard ${key}` : ""}`);
@@ -389,6 +390,10 @@
 
   buildChordGrid(); buildStrumplate();
 
+  // Set this in JavaScript as well as HTML so browser-restored form state
+  // cannot silently return sustain to an older value such as 0.36.
+  $("#sustain").value = "2.80";
+
   ui.strumplate.addEventListener("pointermove", (event) => {
     if (!pointerDown) return;
     const bounds = ui.strumplate.getBoundingClientRect();
@@ -415,6 +420,7 @@
   window.addEventListener("keydown", (event) => {
     if (event.repeat || /INPUT|SELECT|TEXTAREA/.test(event.target.tagName)) return;
     const key = event.key.toLowerCase();
+    if (event.code === "Backslash" || key === "\\") { event.preventDefault(); engine.selectChord("F#", "major"); return; }
     for (let row = 0; row < KEY_ROWS.length; row++) {
       const index = KEY_ROWS[row].indexOf(key);
       if (index >= 0) { event.preventDefault(); engine.selectChord(KEY_ROOTS[index], QUALITIES[row]); return; }
@@ -426,7 +432,12 @@
 
   window.addEventListener("keyup", (event) => {
     const key = event.key.toLowerCase();
-    if (!ui.chordHold.classList.contains("is-on") && KEY_ROWS.some((row) => row.includes(key))) engine.stopChord();
+    if (!ui.chordHold.classList.contains("is-on") && (event.code === "Backslash" || key === "\\" || KEY_ROWS.some((row) => row.includes(key)))) engine.stopChord();
+  });
+
+  window.addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+    $("#sustain").value = "2.80"; updateKnob($("#sustain"));
   });
 
   window.addEventListener("pointerup", () => { pointerDown = false; lastStrum = -1; });
