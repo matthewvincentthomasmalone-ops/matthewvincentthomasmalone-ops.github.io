@@ -85,7 +85,7 @@ button, select { touch-action: manipulation; }
 .instrument {
   --unit: min(1vw, 1.73vh);
   position: relative;
-  width: min(1240px, 97vw);
+  width: min(1240px, 90vw);
   aspect-ratio: 1.7 / 1;
   isolation: isolate;
   user-select: none;
@@ -95,7 +95,7 @@ button, select { touch-action: manipulation; }
 .instrument-shadow {
   position: absolute;
   z-index: -4;
-  left: 5%; right: 3%; bottom: -4%; height: 18%;
+  left: 0; right: -2%; bottom: -9%; height: 22%;
   border-radius: 50%;
   background: rgba(48, 7, 20, .44);
   filter: blur(20px);
@@ -104,7 +104,7 @@ button, select { touch-action: manipulation; }
 
 .body-art {
   position: absolute;
-  inset: 0;
+  inset: -6% -4% -5%;
   z-index: -2;
   overflow: visible;
 }
@@ -197,7 +197,7 @@ button:focus-visible, select:focus-visible, input:focus-visible { outline:2px so
   .site-shell { padding-top:25px; justify-content:flex-start; }
   .site-title h1 { font-size:3.6rem; }
   .stage { width:100vw; min-height:48vh; padding:45px 0 10px; overflow-x:auto; overflow-y:hidden; place-items:center start; scrollbar-color:#7b1830 rgba(255,220,230,.4); }
-  .instrument { width:940px; min-width:940px; margin:0 12px; }
+  .instrument { width:940px; min-width:940px; margin:0 55px; }
   .help-line { margin-top:0; }
 }
 
