@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d9a6af" />
+    <meta name="description" content="Ruby Chord — a playable browser instrument inspired by the classic electronic omnichord." />
+    <title>Ruby Chord</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2230%22 fill=%22%236d0a21%22/><text x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-size=%2234%22 fill=%22%23e5c56f%22>R</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,700&family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="la-background" aria-hidden="true"></div>
+    <div class="pink-wash" aria-hidden="true"></div>
+
+    <main class="site-shell">
+      <header class="site-title">
+        <h1><span>Ruby</span> <strong>Chord</strong></h1>
+        <p>RUBYCHORD–98 · WEB INSTRUMENT</p>
+      </header>
+
+      <section class="stage" aria-label="Playable Ruby Chord instrument">
+        <div class="instrument" id="instrument">
+          <div class="instrument-shadow" aria-hidden="true"></div>
+          <svg class="body-art" viewBox="0 0 1180 620" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="bodyColour" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#78182c"/><stop offset=".31" stop-color="#510817"/>
+                <stop offset=".7" stop-color="#2b030b"/><stop offset="1" stop-color="#5c0b1f"/>
+              </linearGradient>
+              <radialGradient id="bodyLight" cx=".23" cy=".18" r=".82">
+                <stop offset="0" stop-color="#ff977b" stop-opacity=".23"/><stop offset=".42" stop-color="#650c1d" stop-opacity="0"/>
+                <stop offset="1" stop-color="#090003" stop-opacity=".48"/>
+              </radialGradient>
+              <pattern id="bodyGrain" width="7" height="7" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".045"/><circle cx="5" cy="4" r=".45" fill="#000" opacity=".1"/>
+              </pattern>
+            </defs>
+            <path class="body-edge" d="M22 294C26 174 84 88 208 52C308 23 369 48 462 57C641 74 900 55 1035 91C1129 116 1166 190 1162 295C1157 403 1070 470 919 513C741 563 523 610 326 598C151 588 48 510 24 402C17 368 16 330 22 294Z" fill="url(#bodyColour)"/>
+            <path d="M22 294C26 174 84 88 208 52C308 23 369 48 462 57C641 74 900 55 1035 91C1129 116 1166 190 1162 295C1157 403 1070 470 919 513C741 563 523 610 326 598C151 588 48 510 24 402C17 368 16 330 22 294Z" fill="url(#bodyLight)"/>
+            <path d="M22 294C26 174 84 88 208 52C308 23 369 48 462 57C641 74 900 55 1035 91C1129 116 1166 190 1162 295C1157 403 1070 470 919 513C741 563 523 610 326 598C151 588 48 510 24 402C17 368 16 330 22 294Z" fill="url(#bodyGrain)"/>
+          </svg>
+
+          <div class="model-mark">RUBYCHORD–98</div>
+          <div class="top-legend">CHORD &nbsp;·&nbsp; STRUM INSTRUMENT &nbsp;/&nbsp; EMR</div>
+
+          <section class="control-panel" aria-label="Instrument controls">
+            <div class="screw screw-tl"></div><div class="screw screw-tr"></div>
+            <div class="screw screw-bl"></div><div class="screw screw-br"></div>
+
+            <div class="upper-controls">
+              <label class="knob-control" data-control="master">
+                <span>MASTER</span><span class="knob" style="--turn:-42deg"><input id="master" type="range" min="0" max="1" value="0.78" step="0.01" /></span>
+                <output for="master">0.78</output>
+              </label>
+              <label class="select-control"><span>VOICE</span><select id="voice"><option value="omni1">OMNI I</option><option value="omni2">OMNI II</option><option value="organ">ORGAN</option></select></label>
+              <label class="knob-control" data-control="strum">
+                <span>STRUM</span><span class="knob" style="--turn:22deg"><input id="strum" type="range" min="0" max="1" value="0.82" step="0.01" /></span>
+                <output for="strum">0.82</output>
+              </label>
+              <label class="knob-control" data-control="chord">
+                <span>CHORD</span><span class="knob" style="--turn:-10deg"><input id="chord" type="range" min="0" max="1" value="0.56" step="0.01" /></span>
+                <output for="chord">0.56</output>
+              </label>
+              <label class="knob-control" data-control="sustain">
+                <span>SUSTAIN</span><span class="knob" style="--turn:-30deg"><input id="sustain" type="range" min="0.08" max="2.8" value="0.36" step="0.01" /></span>
+                <output for="sustain">0.36</output>
+              </label>
+            </div>
+
+            <div class="switch-row">
+              <button id="chordHold" class="cream-switch is-on" aria-pressed="true">CHORD HOLD</button>
+              <button id="autoBass" class="cream-switch" aria-pressed="false">AUTO BASS</button>
+            </div>
+
+            <div class="lower-controls">
+              <label class="knob-control" data-control="rhythm"><span>RHYTHM</span><span class="knob" style="--turn:-54deg"><input id="rhythm" type="range" min="0" max="1" value="0.42" step="0.01" /></span><output for="rhythm">0.42</output></label>
+              <label class="select-control pattern-control"><span>PATTERN</span><select id="pattern"><option>ROCK I</option><option>ROCK II</option><option>DISCO</option><option>WALTZ</option><option>SWING</option><option>BOSSA</option><option>MARCH</option><option>SLOW ROCK</option></select></label>
+              <button id="rhythmStart" class="cream-switch wide">RHYTHM START</button>
+              <label class="knob-control" data-control="tone"><span>TONE</span><span class="knob" style="--turn:-20deg"><input id="tone" type="range" min="0" max="1" value="0.58" step="0.01" /></span><output for="tone">0.58</output></label>
+              <label class="knob-control" data-control="preamp"><span>PREAMP</span><span class="knob" style="--turn:-70deg"><input id="preamp" type="range" min="0" max="1" value="0.18" step="0.01" /></span><output for="preamp">0.18</output></label>
+              <label class="knob-control" data-control="tempo"><span>TEMPO</span><span class="knob" style="--turn:4deg"><input id="tempo" type="range" min="60" max="180" value="112" step="1" /></span><output for="tempo">112</output></label>
+            </div>
+
+            <div class="utility-row">
+              <button id="hostSync" class="cream-switch" aria-pressed="false">TAP TEMPO</button>
+              <button id="midiButton" class="cream-switch" aria-pressed="false">ENABLE MIDI</button>
+              <button id="serialButton" class="cream-switch" aria-pressed="false">SERIAL</button>
+              <span id="midiStatus">MIDI / SERIAL READY</span>
+            </div>
+
+            <div class="chord-grid" id="chordGrid" aria-label="Chord buttons"></div>
+          </section>
+
+          <section class="strum-section" aria-label="Strumplate">
+            <span class="section-label">STRUMPLATE</span>
+            <div id="strumplate" class="strumplate" role="group" aria-label="Twelve-note strumplate"></div>
+            <button id="instantOff" class="instant-off">INSTANT OFF</button>
+          </section>
+
+          <section class="speaker" aria-label="Speaker grille" aria-hidden="true">
+            <div class="speaker-holes"></div>
+          </section>
+
+          <div class="plaque"><span>R.G Gilbert</span></div>
+          <div class="status-light"><i id="powerLight"></i><span id="statusText">TOUCH A CHORD TO BEGIN</span></div>
+        </div>
+      </section>
+
+      <footer class="help-line">
+        <button id="helpToggle" aria-expanded="false" aria-controls="helpPanel">KEYBOARD + MIDI GUIDE</button>
+        <div id="helpPanel" hidden>
+          <p><b>Chords:</b> Q–O major · A–L minor · Z–. seventh &nbsp; <b>Strum:</b> 1–= &nbsp; <b>Stop:</b> Space</p>
+          <p>MIDI keyboards play the current voice. Double-click a control, then move a MIDI CC to assign it; assignments are saved in this browser. Serial accepts CHORD, STRUM, NOTE, CC and OFF commands.</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

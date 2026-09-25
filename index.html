@@ -33,6 +33,35 @@ h1 {
     margin-top: 0.2em;
     margin-bottom: 0.5em;
 }
+.rubychord-launch-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1em;
+}
+.rubychord-launch {
+    display: inline-block;
+    color: #F6B8B8;
+    background: rgba(255, 182, 193, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    outline: 2px solid #F6B8B8;
+    outline-offset: -4px;
+    border-radius: 12px;
+    padding: 0.78em 1.5em;
+    box-shadow: 0 8px 32px rgba(74, 3, 3, 0.2), inset 0 1px rgba(255,255,255,0.22);
+    backdrop-filter: blur(5px);
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 0 8px #F6B8B8, 0 2px 4px #9b111e;
+    transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+.rubychord-launch:hover,
+.rubychord-launch:focus-visible {
+    color: #fff0f4;
+    background: rgba(155, 17, 30, 0.38);
+    box-shadow: 0 12px 34px rgba(74, 3, 3, 0.3), inset 0 1px rgba(255,255,255,0.32);
+    transform: translateY(-2px);
+    outline-color: #fff0f4;
+}
 h2 {
     text-align: center;
     color: #F6B8B8;
@@ -295,6 +324,9 @@ audio {
 </head>
 <body>
     <h1>Ruby's Nashville Weather and Time</h1>
+    <div class="rubychord-launch-wrap">
+        <a class="rubychord-launch" href="/rubychord/">Open Ruby Chord</a>
+    </div>
     <div class="panel-container">
         <div class="weather-box" id="weather">
             <span class="loading" id="loading-weather">Loading weather data...</span>
