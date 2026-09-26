@@ -18,7 +18,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "4316d1d1ce8eaa3b39ae441ba1673560a3c071efa96bcbc444873a0d8e01dc01",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0A#.flac",
+      "deliverySha256": "14c57f14c53b0e0501743adff7dd6c824325470890487fc72bec3da7d491df9c",
+      "deliveryBytes": 40973,
+      "sourceBytes": 81248,
+      "pcmSha256": "451aa16fd5b5ca94cb0f5f9450c92101c376361291104573361c4f6b4635f526"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0A.wav",
@@ -35,7 +40,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d1290277aa15d1e1e4bd47d5e418663173776963997ea468ddf929d4a6d75632",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0A.flac",
+      "deliverySha256": "56a74409ca5eac5f7a3f234e2ebd359e3f89b2c6d998888b5d3808d684ed5130",
+      "deliveryBytes": 40489,
+      "sourceBytes": 81248,
+      "pcmSha256": "06c5009dd46705cf854d92d050dc1dfe90af17f1da7d4b5297b947a2c2ac2eaa"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0B.wav",
@@ -52,7 +62,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "04e37536493b0199d24f114f804ecef9a746c148d79cdb4526353cf1e293006a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0B.flac",
+      "deliverySha256": "ef1ee53d92d2a8be4b9b4bdc3839d52d5d48022ac7fba8184b4dfa3b74fc0ec4",
+      "deliveryBytes": 40849,
+      "sourceBytes": 81248,
+      "pcmSha256": "c237f2b7fbdc58413c55ce903d2b1fe031b2cba268d68d24b3a759581697e45d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0C#.wav",
@@ -69,7 +84,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3ec5257f092fb160d3d982b6a5f07fbc04a1ea90503b3da8d12db53d25636e4d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0C#.flac",
+      "deliverySha256": "bddb1959765e8f32107023c8c6f80121820801fabda2ca72c03bf4eb464f8918",
+      "deliveryBytes": 40894,
+      "sourceBytes": 81248,
+      "pcmSha256": "e89dd4898c94d082094bb5efd838dc5dae0bbe523bb772cb365c90ff6e6cf42a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0C.wav",
@@ -86,7 +106,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8efb58d4a3900c3d94d2e4c1ed1aea2edc5b920d403408fc75c3bf7a3d2b3a94",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0C.flac",
+      "deliverySha256": "70588795fe643b5ad102f01973bcb11e1f4a8a591e14616384847e771048a9f2",
+      "deliveryBytes": 40756,
+      "sourceBytes": 81248,
+      "pcmSha256": "dd8c0b65e96d67597dfac04ee7ee58adc54d36d6f81cdcfdf7f648cd262e755e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0D#.wav",
@@ -103,7 +128,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "b75aa646799176dc2fc209c8aa6f9e4885f9cf6d016f2e5f613b7e2aa4c6a235",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0D#.flac",
+      "deliverySha256": "026eb9d58edca7cad30e22a4c018952a48940f528a1b8dd3d2d45e29dd15d2ac",
+      "deliveryBytes": 40787,
+      "sourceBytes": 81248,
+      "pcmSha256": "fe7dd6f46b2ca8d01db9953a69a39287bb30c2e85c89dba51b0e0345f8820166"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0D.wav",
@@ -120,7 +150,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1f8cbc8adf5e8276c879267a6574c27043043b509e9aae151bd621198e623c4a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0D.flac",
+      "deliverySha256": "3008bd05ff47f9302aa3af2011a60beaab5f037c84ebfec6cec1655a5c4f1f21",
+      "deliveryBytes": 41360,
+      "sourceBytes": 81248,
+      "pcmSha256": "c3a92558a0b01193bcc81b9131c333fcc73eb0da677ab63c714c6645e448c5cf"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0E.wav",
@@ -137,7 +172,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "334c22fb9ffc870210a3118fa6ee4f11ebe6501495ee22d4e5dfc4b53f6bb7c9",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0E.flac",
+      "deliverySha256": "dcbfe4b6ed3ff43f6a38b435d75094e813ad9d1d7d802baa77f967a557356c1b",
+      "deliveryBytes": 40976,
+      "sourceBytes": 81248,
+      "pcmSha256": "b5123fbd6937fa91cee2daac2f0b91840def925a21244372d59925bfcff31f3e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0F#.wav",
@@ -154,7 +194,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "7555788665f1ce63c6779cdc369a3f2b88f791d85d940c0b3d2c9cf05247573e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0F#.flac",
+      "deliverySha256": "2bfef87592bbf5af5a2813289f2eb772a98405492969403e87fa2c5523a530f0",
+      "deliveryBytes": 41127,
+      "sourceBytes": 81248,
+      "pcmSha256": "90a1f1cfeeaf8ff98556d455f30dc09d8e1fbb078445b1b135465fbe9066d83f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0F.wav",
@@ -171,7 +216,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "94c781d3529a5c1a86259e707ffd5d1a18e01f9ca557c5e906fd383104dd78b4",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0F.flac",
+      "deliverySha256": "fc53027dc8de6ed260925fbafdf103af6d839e20c93b7ad7aa83433a2a78cfb1",
+      "deliveryBytes": 40850,
+      "sourceBytes": 81248,
+      "pcmSha256": "379ddf79019f8dc3a58d0dc5fce92075c10c09e4a7ad60e55037f3d759fd6692"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0G#.wav",
@@ -188,7 +238,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d7214d540d7f7bc575fb85d058cb1fba3b065b74cf4fb904750a240f64a5bb60",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0G#.flac",
+      "deliverySha256": "df0f52b751548ca9c5e56c1a66309ce8d46591e766bd3963af92960fa35842c1",
+      "deliveryBytes": 40956,
+      "sourceBytes": 81248,
+      "pcmSha256": "debbfed47ee391f924dca78dbe9d2f95e47eead335ef7c601a6afd184f0a85f0"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_0G.wav",
@@ -205,7 +260,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3974afb0f6a7dbd326e1cc00f348c5f341c1db370da41f5fd9ebefd0e8cb2bfd",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_0G.flac",
+      "deliverySha256": "2704cd8c4cf3acbc6ef8afbc9a3b98c22473dfe583684c69736ba37c5833264d",
+      "deliveryBytes": 40807,
+      "sourceBytes": 81248,
+      "pcmSha256": "0cd400fbe60cff005886d833a01aebd5152949ada8eceac849becb68c116616c"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1C#.wav",
@@ -222,7 +282,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "92dc6ca4853709fcb31ba1abb2ab409f0374a4ed43cf4238ccbc6a0e7419d2ea",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1C#.flac",
+      "deliverySha256": "a7f2d93de9e96ad72633edde5448aa69d6740d8f5f204ced6c1be0cbbd72a2a2",
+      "deliveryBytes": 40721,
+      "sourceBytes": 81248,
+      "pcmSha256": "9899528c58e8ade52e2d6b8e2ae034210c37e108d474746f5feaa8477257ea74"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1C.wav",
@@ -239,7 +304,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "2c150c629676f7f05a8444bec6593291ccd17714023ec59cc74ae8ec10a3562f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1C.flac",
+      "deliverySha256": "87d249cc3f8c704434a30006de2f74fb79d6109a318ae1947a8b37df0ae1435e",
+      "deliveryBytes": 40751,
+      "sourceBytes": 81248,
+      "pcmSha256": "896071f96cfd03398d1ece84ba8e630b05e9bde01d3145fede812966efe4adc3"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1D#.wav",
@@ -256,7 +326,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "c6cf8768ba89314bcc10d96faf6dd8a0c2ebb6400a95721a88d46e113b909c26",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1D#.flac",
+      "deliverySha256": "46a17a6eaca1d011de3696cf31b067b995f5cb7ae2735f10c6c1481eabba6b8b",
+      "deliveryBytes": 40921,
+      "sourceBytes": 81248,
+      "pcmSha256": "1632419987b2edaabd2466f99e8977a6f4282e15c5c7e4f129e8f29382c1b35a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1D.wav",
@@ -273,7 +348,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "49af9e77bee0491a08f411c2e3f34158a0778869fcfe45c1632aee29d488c49d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1D.flac",
+      "deliverySha256": "f350342f57b0b81f18144b3c1bfdfe9546f247d063909ea1ca37f63966c38f5f",
+      "deliveryBytes": 41014,
+      "sourceBytes": 81248,
+      "pcmSha256": "c3666a13c417316acfe0cac00c5eecaf898eac764e6997285967481c88f181b6"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1E.wav",
@@ -290,7 +370,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "ae92b17d758785f60d6aa0349ba42c94e5e8fa951869f9a43841d8c934423ee6",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1E.flac",
+      "deliverySha256": "5c63247603c6ebcaa48eef659987d57ab16144c8765ee6003e2cfa870e08f216",
+      "deliveryBytes": 40946,
+      "sourceBytes": 81248,
+      "pcmSha256": "d18114c07c2d456becd3173b8c77721ffabed348fb0f9abb492d23063edf7cc7"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1F#.wav",
@@ -307,7 +392,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d6769c7efb4742abc416bfe44864e079e222d4297e9ee4ba22e6e62e61447a5c",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1F#.flac",
+      "deliverySha256": "b53f0cebc1a0d3f29f2b95e516dc62185a21c01fd241177e8b49c8c1e489e620",
+      "deliveryBytes": 40905,
+      "sourceBytes": 81248,
+      "pcmSha256": "4c4b106cdd550d923b494aeb34f74a836d46f0d15c22f1f5c44ff18fcc8d9ab9"
     },
     {
       "source": "assets/audio/omni-84/Samples/Bass/Bass_1F.wav",
@@ -324,7 +414,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "4d62509b95be4084a705584c003a16f391713746ad46aca24eb874efa812c958",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Bass/Bass_1F.flac",
+      "deliverySha256": "0aefd71d343f80619ca63a1c37d42a9de624ba7345328d053acf8f0a49266011",
+      "deliveryBytes": 40931,
+      "sourceBytes": 81248,
+      "pcmSha256": "f904f380e30f85b9e58d5c7ff291bde4460c62a1c1a269330b34bdf9d7f6cf73"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1A#.wav",
@@ -346,7 +441,12 @@
       "loopStart": 3.6322916666666667,
       "loopEnd": 8.275833333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1A#.flac",
+      "deliverySha256": "58a1b926d64df2431f8575dc76dbfdf3245497b1380d62e673d4d101e9d660f6",
+      "deliveryBytes": 1120473,
+      "sourceBytes": 1585796,
+      "pcmSha256": "f3027c8c6fce52a3bdfc4ace034ce5f3dbc50fb2e0e0b58a9b77530eb92d084f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1A.wav",
@@ -368,7 +468,12 @@
       "loopStart": 5.308166666666667,
       "loopEnd": 8.684979166666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1A.flac",
+      "deliverySha256": "2460e79c5fa4ea2609b438bacc54d007761bd8177777c2cc401fb37e78d84ef8",
+      "deliveryBytes": 1115290,
+      "sourceBytes": 1585796,
+      "pcmSha256": "d8802ff953ab3f1bfc2f8075887b53979c01e3d6defac625274ae8f3ca5388a7"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1B.wav",
@@ -390,7 +495,12 @@
       "loopStart": 3.5428333333333333,
       "loopEnd": 9.106270833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1B.flac",
+      "deliverySha256": "5c55ded41382285021132771459cfd6f7ff7116d3b02b3608e4eb840ef7d8c2c",
+      "deliveryBytes": 1107420,
+      "sourceBytes": 1585796,
+      "pcmSha256": "0cece3d84771e98a28538e9d1c130113a52df25fef6b37a172279abc20694f30"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1C#.wav",
@@ -412,7 +522,12 @@
       "loopStart": 3.601916666666667,
       "loopEnd": 8.2085625,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1C#.flac",
+      "deliverySha256": "dafc924809f4bd3eccc43c63ed58ae06ad7169345658cf2ca9e3f9db6f647de0",
+      "deliveryBytes": 1117272,
+      "sourceBytes": 1585796,
+      "pcmSha256": "f103006520cf3811bff4f02ea0725d131a32e7968c2cbb0e2b675dbc766464a5"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1C.wav",
@@ -434,7 +549,12 @@
       "loopStart": 2.6775208333333333,
       "loopEnd": 7.153645833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1C.flac",
+      "deliverySha256": "8397a654359baa59684a123b2542baf9233ff6b31667902534e82306f52a60b8",
+      "deliveryBytes": 1112311,
+      "sourceBytes": 1585796,
+      "pcmSha256": "00e7caf0c2c10078f522992373c9d178a858ce535d1abc0d307505fbf83c1dfd"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1D#.wav",
@@ -456,7 +576,12 @@
       "loopStart": 7.153625,
       "loopEnd": 9.3511875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1D#.flac",
+      "deliverySha256": "cea9d7924c54289a328567a595350b0678897d506a6c43242e6ba92afe2d3041",
+      "deliveryBytes": 1106535,
+      "sourceBytes": 1585796,
+      "pcmSha256": "529333bfec33efca1458ae460c99148d826d5af12f4aa6133821b9ae4a96a9d2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1D.wav",
@@ -478,7 +603,12 @@
       "loopStart": 2.58825,
       "loopEnd": 8.838291666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1D.flac",
+      "deliverySha256": "b38af997fb5196047a3b978b2e4008cd2851e30db61766cb2a360eddaba120f3",
+      "deliveryBytes": 1101540,
+      "sourceBytes": 1585796,
+      "pcmSha256": "c51ffa59b47eb110959b6dfef1f32b95f187bcb6a9823483144b85d4353d5499"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1E.wav",
@@ -500,7 +630,12 @@
       "loopStart": 4.996541666666666,
       "loopEnd": 7.6615416666666665,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1E.flac",
+      "deliverySha256": "8701081adc4b35bdb5670415d6e8e594d2f39d0c926e880405032c017c224b86",
+      "deliveryBytes": 1112282,
+      "sourceBytes": 1585796,
+      "pcmSha256": "5a152e2e4995929a9c8bc8326a78fe5d2b31c94785f7ef407f8788a0448c2cc6"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1F#.wav",
@@ -522,7 +657,12 @@
       "loopStart": 3.4175,
       "loopEnd": 8.27875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1F#.flac",
+      "deliverySha256": "79c24f810f50fffbe07b5a4e13b3353e75ff836543f54adecd06e9daa6b76df8",
+      "deliveryBytes": 1100562,
+      "sourceBytes": 1585796,
+      "pcmSha256": "bddd403d823f425f267e12dce588770c455a8fdd17c58f70400133eb9bad11af"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1F.wav",
@@ -544,7 +684,12 @@
       "loopStart": 3.9825625,
       "loopEnd": 6.946666666666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1F.flac",
+      "deliverySha256": "b36b33d9bfbedbea1304f00c4849ef87a5facdea2a4b7e25b7fea3ec243e0242",
+      "deliveryBytes": 1117200,
+      "sourceBytes": 1585796,
+      "pcmSha256": "e006735971ecdc7c8b446bc2bbb63daf453022c57404a7c96f2422378dff8cc6"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1G#.wav",
@@ -566,7 +711,12 @@
       "loopStart": 4.781354166666667,
       "loopEnd": 8.620708333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1G#.flac",
+      "deliverySha256": "5293675fec66ce06a0fa78bf6a9de242cd70ade71a8e695b06ee1e65aeae630b",
+      "deliveryBytes": 1110262,
+      "sourceBytes": 1585796,
+      "pcmSha256": "13b27625f4eb8abaf990c730bf44870113cef2e57ea81fb6bc751d3f4c156d80"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_1G.wav",
@@ -588,7 +738,12 @@
       "loopStart": 5.638395833333333,
       "loopEnd": 7.749125,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_1G.flac",
+      "deliverySha256": "85198b5ef9b7cca3b226337ad1ad5fd0a4efeffef947a3ca48e33e166f4933a9",
+      "deliveryBytes": 1104752,
+      "sourceBytes": 1585796,
+      "pcmSha256": "d8604ca32885b4e31ed0a4dce66285b04feac65a17c4107a79938bafa1189765"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2A#.wav",
@@ -610,7 +765,12 @@
       "loopStart": 1.1308541666666667,
       "loopEnd": 8.787729166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2A#.flac",
+      "deliverySha256": "2c57bcc2ffe4402f403d8486d21d2a321d206eb5e0139b29f9179eacb9a58330",
+      "deliveryBytes": 1118620,
+      "sourceBytes": 1585796,
+      "pcmSha256": "1f375c64abd6c41efc1f70edc9efab7ba591cfddfcb3a05125a1321b363e3f59"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2A.wav",
@@ -632,7 +792,12 @@
       "loopStart": 0.0623125,
       "loopEnd": 6.93175,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2A.flac",
+      "deliverySha256": "f135b47b93aaea3a35674e683fa7a5cd93f74e6e40e546a96aa04e18586eb195",
+      "deliveryBytes": 1113631,
+      "sourceBytes": 1585796,
+      "pcmSha256": "46adcbf95f4fd3c1c8ab8cf0c9ce176988e48a451b1cb38cd188c5392b5011bb"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2B.wav",
@@ -654,7 +819,12 @@
       "loopStart": 3.5358958333333335,
       "loopEnd": 9.0651875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2B.flac",
+      "deliverySha256": "688d4cb0f564e0fea9356c79ff5953ad990838431432866fb0e096c1d6365b85",
+      "deliveryBytes": 1104904,
+      "sourceBytes": 1585796,
+      "pcmSha256": "f55e1151d20455d8050b0cb8d7bb792b7087b3335e2edc5b26001260bb555ac2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2C#.wav",
@@ -676,7 +846,12 @@
       "loopStart": 3.1802083333333333,
       "loopEnd": 6.318895833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2C#.flac",
+      "deliverySha256": "76df739df449136a40d745a66143191364bfcd105f45727d1191aa4d132e18db",
+      "deliveryBytes": 1114969,
+      "sourceBytes": 1585796,
+      "pcmSha256": "72def507f4d0a2a5cb203a2a19d8f59464c15916928d5ea70b9c372fb56f0f1e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2C.wav",
@@ -698,7 +873,12 @@
       "loopStart": 6.318875,
       "loopEnd": 8.602416666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2C.flac",
+      "deliverySha256": "4de66f4d44cd866667e92675756e92a2b8d8e5ebfdb3b64653f38f3491d5bf1a",
+      "deliveryBytes": 1109757,
+      "sourceBytes": 1585796,
+      "pcmSha256": "616e4dcefa6bdf01d59612bfc70ae640bdea4e6563a2a00b7cbb8811d94c09bf"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2D#.wav",
@@ -720,7 +900,12 @@
       "loopStart": 5.401583333333333,
       "loopEnd": 8.048104166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2D#.flac",
+      "deliverySha256": "5a840eb82e2755ef7086b63ca3f4ad64bd5d9b1966ce6085e72a9d097ffe5689",
+      "deliveryBytes": 1107332,
+      "sourceBytes": 1585796,
+      "pcmSha256": "42cdff3dc392a4acaeceba4d80c1a3047f6c4137deb94bf081a5fc476e4cad99"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2D.wav",
@@ -742,7 +927,12 @@
       "loopStart": 0.19102083333333333,
       "loopEnd": 8.916458333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2D.flac",
+      "deliverySha256": "015761b6d9d75955b8ea3bd03203f697905e6f818ce64f5f7390dec25d33d0e2",
+      "deliveryBytes": 1120472,
+      "sourceBytes": 1585796,
+      "pcmSha256": "cc176a22303923d4c3bd4a57fd1c9fd870ead8a0301c7f2af62026758f6e58dd"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2E.wav",
@@ -764,7 +954,12 @@
       "loopStart": 4.165395833333333,
       "loopEnd": 6.000041666666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2E.flac",
+      "deliverySha256": "4bbf1d9b8125736713c99c597150cd69818625a68ad0000fb3e3db48732f203a",
+      "deliveryBytes": 1111609,
+      "sourceBytes": 1585796,
+      "pcmSha256": "a761c2ee76de04e7b467f71efd5e23de561fe7490c83f54c1e29b7446aa9428a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2F#.wav",
@@ -786,7 +981,12 @@
       "loopStart": 0.5896875,
       "loopEnd": 5.643854166666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2F#.flac",
+      "deliverySha256": "d1b02f1f77df3b04f0f11da70c8590eb85d6a651103cf835bd4ba9f27ab9bf65",
+      "deliveryBytes": 1098788,
+      "sourceBytes": 1585796,
+      "pcmSha256": "add78bbc153950ae8f96e6080d84086c2fab444aea059bac245c2384bdd72d94"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2F.wav",
@@ -808,7 +1008,12 @@
       "loopStart": 1.9061666666666666,
       "loopEnd": 4.594708333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2F.flac",
+      "deliverySha256": "e116780d4acbef4aaf852baa01e3cbfc056e524d532373cb977d4171a6f99068",
+      "deliveryBytes": 1115781,
+      "sourceBytes": 1585796,
+      "pcmSha256": "6557e10b69c8f602a3d76077ac395e797afed261ced57d67a2fa65c9f5854486"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2G#.wav",
@@ -830,7 +1035,12 @@
       "loopStart": 5.923479166666667,
       "loopEnd": 7.799291666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2G#.flac",
+      "deliverySha256": "dfab516df6d4df12c235d802835aaeb8e380b754df8e6ef94ed6ed9f78a9fa55",
+      "deliveryBytes": 1108631,
+      "sourceBytes": 1585796,
+      "pcmSha256": "fab10ce96f04b28d7dfb267dda6de8614895fc2ab73663d431ac1ee9641ee685"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_2G.wav",
@@ -852,7 +1062,12 @@
       "loopStart": 0.11770833333333333,
       "loopEnd": 8.823,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_2G.flac",
+      "deliverySha256": "e8321706b96f6377b668faa3ac6a3b59b1315fc41e890f43279aff194f7f9627",
+      "deliveryBytes": 1103417,
+      "sourceBytes": 1585796,
+      "pcmSha256": "f7265eb43eec32a186dfa9ab2da2cdd9c7cfff356bc1b6982520b6563f15c76c"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3A#.wav",
@@ -874,7 +1089,12 @@
       "loopStart": 4.379479166666667,
       "loopEnd": 8.985708333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3A#.flac",
+      "deliverySha256": "6f295e825ab5ef8af46ec304c143648d8cfaabd7665aed9e35f2dfd7db179c61",
+      "deliveryBytes": 1105671,
+      "sourceBytes": 1585796,
+      "pcmSha256": "503e9cb9edf1350c84ccafa6bb0b94049f69f0f6caca005557f32c5c04ff3d4e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3A.wav",
@@ -896,7 +1116,12 @@
       "loopStart": 0.7615,
       "loopEnd": 8.699645833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3A.flac",
+      "deliverySha256": "0dda2a26f60b8f092dadd3c1a7b9d99475a3e2ba2c3a86890b5d03d4d013ef3a",
+      "deliveryBytes": 1100779,
+      "sourceBytes": 1585796,
+      "pcmSha256": "397a6f97bba9f593846a57ef34981be79f7d4ec2331275420fbeec92ccaccf6f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3B.wav",
@@ -918,7 +1143,12 @@
       "loopStart": 3.2324375,
       "loopEnd": 5.1964375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3B.flac",
+      "deliverySha256": "584e276596851b6785d0538f6b9d30f4edb7ecbe91e0b0962282109b6b041f7e",
+      "deliveryBytes": 1110576,
+      "sourceBytes": 1585796,
+      "pcmSha256": "e58fab74d5e13c9958399d3e76d1f21e1737451d3da7941d2066efc44ef04983"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3C#.wav",
@@ -940,7 +1170,12 @@
       "loopStart": 0.2788333333333333,
       "loopEnd": 8.9603125,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3C#.flac",
+      "deliverySha256": "c50a75f0705cebd22b7e4952360d37f7e845e803e2912e03a0b272a3334cd737",
+      "deliveryBytes": 1120214,
+      "sourceBytes": 1585796,
+      "pcmSha256": "189e27e8a126d961922e623581f2789e92b3fab8ceec50101a3659a5978fec4c"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3C.wav",
@@ -962,7 +1197,12 @@
       "loopStart": 3.4056875,
       "loopEnd": 8.696958333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3C.flac",
+      "deliverySha256": "ec69b17a70f5f1af83c4bd8d668725ebddd3380ede1e4b673d982832ecae95c7",
+      "deliveryBytes": 1115492,
+      "sourceBytes": 1585796,
+      "pcmSha256": "79b66b925869f2eed0894557bc30ffbb26b71ed4719dde0760be0766e5fa15d8"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3D#.wav",
@@ -984,7 +1224,12 @@
       "loopStart": 6.052375,
       "loopEnd": 9.038520833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3D#.flac",
+      "deliverySha256": "4d3285e942d4ac34a0a9ce31c8746a537bc74691bfab6369ba04c6e39bb94035",
+      "deliveryBytes": 1112101,
+      "sourceBytes": 1585796,
+      "pcmSha256": "753ac8c186ad20ccbd17fcb86916fa558ef1eb1a39fd6f7682f04d9229c5a715"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3D.wav",
@@ -1006,7 +1251,12 @@
       "loopStart": 2.5298541666666665,
       "loopEnd": 6.4763125,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3D.flac",
+      "deliverySha256": "bb0bacb23ae4eed54adcf69a62bd0bc6bba5e9006e82e6d8f8eabf8861c62417",
+      "deliveryBytes": 1107160,
+      "sourceBytes": 1585796,
+      "pcmSha256": "09feaca9f4757003ce2f477240f428aaa15ade5d534e9b488fd2fb1ba965f3b8"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3E.wav",
@@ -1028,7 +1278,12 @@
       "loopStart": 2.4155625,
       "loopEnd": 8.559604166666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3E.flac",
+      "deliverySha256": "25262b0f8fc721c62a3db115678f5bd0d02282caee1360b38cd5375e7a418982",
+      "deliveryBytes": 1116675,
+      "sourceBytes": 1585796,
+      "pcmSha256": "9611b055775405f847dec4cee57d6a68c92904f8344df93443aea37dcd382238"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3F#.wav",
@@ -1050,7 +1305,12 @@
       "loopStart": 6.196416666666667,
       "loopEnd": 8.841708333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3F#.flac",
+      "deliverySha256": "68b83672e212e3a0adc4cca3cf352fd3965970645f0cec374f227a6cded698fd",
+      "deliveryBytes": 1106430,
+      "sourceBytes": 1585796,
+      "pcmSha256": "ad60a03c9e02ed18b2f1d318ee1243037843821e2927c4feb08c23ec4d2fdb8f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3F.wav",
@@ -1072,7 +1332,12 @@
       "loopStart": 1.8047916666666666,
       "loopEnd": 8.701729166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3F.flac",
+      "deliverySha256": "0053459159a3c2566be4b6d1931be0be52f12dd2ca2692204e5cb5c4d6464095",
+      "deliveryBytes": 1121403,
+      "sourceBytes": 1585796,
+      "pcmSha256": "0131d78d2e5347c40304dd37f271cd12595e7dc90b8078e566bc3a4801cec948"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3G#.wav",
@@ -1094,7 +1359,12 @@
       "loopStart": 4.0935,
       "loopEnd": 8.4498125,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3G#.flac",
+      "deliverySha256": "7b1446269abb7b7216538d8c861bbc8804cc4ccc8dc73cfc6c7837a23f8d6270",
+      "deliveryBytes": 1096107,
+      "sourceBytes": 1585796,
+      "pcmSha256": "335a1a608efb741d66e6078d9af91cce9094c63605b04de74e173ec759928418"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_3G.wav",
@@ -1116,7 +1386,12 @@
       "loopStart": 4.437354166666666,
       "loopEnd": 9.287583333333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_3G.flac",
+      "deliverySha256": "3bbc8c3a8520ba4de660dcdde3ee8c052ae4126bfc71740f7907e6d54415f1a0",
+      "deliveryBytes": 1111788,
+      "sourceBytes": 1585796,
+      "pcmSha256": "08ff75f345ae6900b625b49000711007dbded4e280bcba3b9cf3480a4cacb98e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4A#.wav",
@@ -1138,7 +1413,12 @@
       "loopStart": 1.515625,
       "loopEnd": 8.193166666666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4A#.flac",
+      "deliverySha256": "b6c6cf9f8ca033e8e3c23e5dd6f0353a5bb64c263d371009bd731a80ed8854db",
+      "deliveryBytes": 1103735,
+      "sourceBytes": 1585796,
+      "pcmSha256": "0acdd59477d92d1da6ceb794e8b855daf2a9ba9786dfe445d7f86f57dfdb5fd8"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4A.wav",
@@ -1160,7 +1440,12 @@
       "loopStart": 1.8075208333333332,
       "loopEnd": 9.082625,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4A.flac",
+      "deliverySha256": "31fe38945b26bd25c3a813281c30fe99f94e1680c3f85ac48c34bbab1641666b",
+      "deliveryBytes": 1098724,
+      "sourceBytes": 1585796,
+      "pcmSha256": "54217c9ef156520e7a7b6f3dddc81ac5f6f837c462d40fa812f961ee077f7902"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4B.wav",
@@ -1182,7 +1467,12 @@
       "loopStart": 3.4620416666666665,
       "loopEnd": 8.496291666666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4B.flac",
+      "deliverySha256": "61b233ac834ad7a397930b53de050a20d3c72e2fb5f1e1042c96bf5699c0266a",
+      "deliveryBytes": 1106201,
+      "sourceBytes": 1585796,
+      "pcmSha256": "ebf86d83c2ed9a48111fce13d1441cd730d49a91911f2f82583d1502165b41bc"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4C#.wav",
@@ -1204,7 +1494,12 @@
       "loopStart": 1.2982708333333333,
       "loopEnd": 9.085104166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4C#.flac",
+      "deliverySha256": "ebab22fa072307c5ca01274f8fa5fdfe886d4c211e95f3bec8bb2d23c8875c7c",
+      "deliveryBytes": 1118523,
+      "sourceBytes": 1585796,
+      "pcmSha256": "a53eef9ebf072edc2cbe5d10a5276be0cd57f7c1899b5e900890091df6159407"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4C.wav",
@@ -1226,7 +1521,12 @@
       "loopStart": 1.5493125,
       "loopEnd": 7.9699375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4C.flac",
+      "deliverySha256": "b50d59dc8bdc7eed99a7a68fd3da2e70b9fb3325a29d8a6f97865a04f08f0def",
+      "deliveryBytes": 1112944,
+      "sourceBytes": 1585796,
+      "pcmSha256": "727f6786ea9bc7e512f8d6b10c618f5b0c54073326601ac183db086761617994"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4D#.wav",
@@ -1248,7 +1548,12 @@
       "loopStart": 0.8598958333333333,
       "loopEnd": 8.455645833333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4D#.flac",
+      "deliverySha256": "64cf439fc2cf9efd0e317e775f3528d395acb8b37f4052776133a510f02e0f93",
+      "deliveryBytes": 1110759,
+      "sourceBytes": 1585796,
+      "pcmSha256": "206da127a6e1aaf2d9ee1410a9c77f0d22026ac62bca161eba12948732d85f30"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4D.wav",
@@ -1270,7 +1575,12 @@
       "loopStart": 3.624041666666667,
       "loopEnd": 8.189229166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4D.flac",
+      "deliverySha256": "cc355ed7a08a442dfa3dee4d99aba3a9123b91aafc300f7f0cdcd003dcc4e506",
+      "deliveryBytes": 1123011,
+      "sourceBytes": 1585796,
+      "pcmSha256": "9797d84b9f40dcf99243f203a2965c823e06f9eb1287ea61f1fb205f84734af2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4E.wav",
@@ -1292,7 +1602,12 @@
       "loopStart": 4.707416666666667,
       "loopEnd": 8.575020833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4E.flac",
+      "deliverySha256": "fb45c7ad419406e44f9e5a032445c4bae90c1d362aab4e8fa33d2aecd6dcfc9e",
+      "deliveryBytes": 1115440,
+      "sourceBytes": 1585796,
+      "pcmSha256": "9dfd1c02f556669dcf0378fee8c00c26c14cb592b7f0cc8f4ef5fe903147c63c"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4F#.wav",
@@ -1314,7 +1629,12 @@
       "loopStart": 0.24197916666666666,
       "loopEnd": 3.9339375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4F#.flac",
+      "deliverySha256": "70e200fe0bf1f1485488335383a89599e501fa0ac4359e70e1cb2765f1b02c71",
+      "deliveryBytes": 1104515,
+      "sourceBytes": 1585796,
+      "pcmSha256": "aa12ecf886a5cfe61cc481cf845c1b393aabc0c60ca65f0b63a70f6cac4fc0b6"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4F.wav",
@@ -1336,7 +1656,12 @@
       "loopStart": 3.3751458333333333,
       "loopEnd": 6.091166666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4F.flac",
+      "deliverySha256": "0f36fbf0cf4924a0e3eb1cd5148f7cc205aa20e60af4905ad0cdb7a0807d02cf",
+      "deliveryBytes": 1120243,
+      "sourceBytes": 1585796,
+      "pcmSha256": "bba4381a214e2ef45f14c4c5e5e329234842c18da063a51f5683b7c8ed8cb634"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4G#.wav",
@@ -1358,7 +1683,12 @@
       "loopStart": 0.3114375,
       "loopEnd": 5.083958333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4G#.flac",
+      "deliverySha256": "9c67d4efd56bca75f308a4e7e6e1dd2eb2adeeccf79e8aecdd66eac397e38ee6",
+      "deliveryBytes": 1093964,
+      "sourceBytes": 1585796,
+      "pcmSha256": "dd7b7cea4c6d602b726e387235d5ac80f38aae60f7dc41ebbe38a1df398924c2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_4G.wav",
@@ -1380,7 +1710,12 @@
       "loopStart": 5.0839375,
       "loopEnd": 8.966104166666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_4G.flac",
+      "deliverySha256": "8f371b55ce30fd128c167e802943742804360edabaa35d5f6db70670ec588871",
+      "deliveryBytes": 1109817,
+      "sourceBytes": 1585796,
+      "pcmSha256": "a65c0881a2f871cb35495e2b2815e584bcbe0cb495599a31b7c1eb060907d707"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5A#.wav",
@@ -1402,7 +1737,12 @@
       "loopStart": 5.954166666666667,
       "loopEnd": 9.0699375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5A#.flac",
+      "deliverySha256": "779a07218c882c5cd52949a7876d729c5a840eda42462923bb3078b6cbc3fd2f",
+      "deliveryBytes": 1107367,
+      "sourceBytes": 1585796,
+      "pcmSha256": "3b29f84121ab8ad12abec4400ad72ffe614b6afc8a07fdf5d7b70927d751bd1e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5A.wav",
@@ -1424,7 +1764,12 @@
       "loopStart": 0.998875,
       "loopEnd": 8.46275,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5A.flac",
+      "deliverySha256": "ee4df576a10cfa38f6fc94dda8d71a3c26de88545d6367ff092fcd97c6ebb2a5",
+      "deliveryBytes": 1101660,
+      "sourceBytes": 1585796,
+      "pcmSha256": "1c5ea94da3ff1a71ad5c77c19d53293567cc10da0af68a52d438c872f4c116a0"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5B.wav",
@@ -1446,7 +1791,12 @@
       "loopStart": 3.7047291666666666,
       "loopEnd": 7.098020833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5B.flac",
+      "deliverySha256": "44cb2cac7b590533df945594414a2eaa9062bafe324c7193218ea4e7d05b4463",
+      "deliveryBytes": 1110926,
+      "sourceBytes": 1585796,
+      "pcmSha256": "8e86b1fac7fb98b7f6f5dbb2dda1939bc3a0008b0d8e5c21237d1ab3ba08dfc2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5C#.wav",
@@ -1468,7 +1818,12 @@
       "loopStart": 2.7725416666666667,
       "loopEnd": 8.318375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5C#.flac",
+      "deliverySha256": "80f5491bcd9f07064fe20eb9e3a6f3b5a5ff00451f96adfa4d38a9f8bf50f2d4",
+      "deliveryBytes": 1121520,
+      "sourceBytes": 1585796,
+      "pcmSha256": "494a00bc51202196c52e49b87ade4a476f9d511d6d23c12f220d1f6c070ac15b"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5C.wav",
@@ -1490,7 +1845,12 @@
       "loopStart": 3.2515416666666668,
       "loopEnd": 5.297145833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5C.flac",
+      "deliverySha256": "473eebc365cde94fdf1cccc6940269a514816e7a2df704133f618c1d9bfc09de",
+      "deliveryBytes": 1116444,
+      "sourceBytes": 1585796,
+      "pcmSha256": "3b188a0d50493e903598576849c8ddb5461f859a54dd374f0e437b08afc482f1"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5D#.wav",
@@ -1512,7 +1872,12 @@
       "loopStart": 3.1495208333333333,
       "loopEnd": 8.503770833333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5D#.flac",
+      "deliverySha256": "2f14e4fd6892fb5126c3c7d34418f2451f42583b95135cc633db6c8e2174d4e2",
+      "deliveryBytes": 1113744,
+      "sourceBytes": 1585796,
+      "pcmSha256": "6f1360e4a0b2ff79603a5335b55f2a6ab5ad105da5f3afcefb8fad98c217201f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5D.wav",
@@ -1534,7 +1899,12 @@
       "loopStart": 2.4614166666666666,
       "loopEnd": 6.875916666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5D.flac",
+      "deliverySha256": "7133401bd49a74848909591bd817f9a4dc9ff6e6e02682d4db13a3ef5b6a9e23",
+      "deliveryBytes": 1108353,
+      "sourceBytes": 1585796,
+      "pcmSha256": "0283234d79f4f08d74b3d0281f1cba21757e96997b6fa621a1cb29f78c0b53bc"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5E.wav",
@@ -1556,7 +1926,12 @@
       "loopStart": 1.0199791666666667,
       "loopEnd": 8.420833333333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5E.flac",
+      "deliverySha256": "a52796f7268eaebb9038672e8640480da79c28d1fa868bc1e9f10936bc6a4016",
+      "deliveryBytes": 1118076,
+      "sourceBytes": 1585796,
+      "pcmSha256": "18a9c70cb751cf61018e4ba5429a4752fddd485e3d378e849b74e3bae66db847"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5F#.wav",
@@ -1578,7 +1953,12 @@
       "loopStart": 0.89475,
       "loopEnd": 8.126354166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5F#.flac",
+      "deliverySha256": "c6d84e4288faa5d91dce3c10c7579b6797446a7f57c881a9b536cae8980b103e",
+      "deliveryBytes": 1107944,
+      "sourceBytes": 1585796,
+      "pcmSha256": "b84d08ae0e62b4f52a13e33c9ec4e7846988caa0a1d9bcb229b43a1b5d708692"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5F.wav",
@@ -1600,7 +1980,12 @@
       "loopStart": 0.03989583333333333,
       "loopEnd": 8.552020833333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5F.flac",
+      "deliverySha256": "bd5653ebca89cd7445a80ee9878adf332a58e1c54211dbb3d6d1471816253a2e",
+      "deliveryBytes": 1122986,
+      "sourceBytes": 1585796,
+      "pcmSha256": "28b42286e5d519df9fcc7e91a4a61b5e6cd5b3e5352e80c35d05be3c101e4945"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5G#.wav",
@@ -1622,7 +2007,12 @@
       "loopStart": 6.424270833333333,
       "loopEnd": 7.962541666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5G#.flac",
+      "deliverySha256": "ec970a7cb297e256fa02da5beadb15a3ef3ab7c0d6163c7da730e33b16158861",
+      "deliveryBytes": 1097019,
+      "sourceBytes": 1585796,
+      "pcmSha256": "bfce3f769f55b83132caa21073d1a5a2338e76bfbc05686c68a0a5f99a47855b"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_5G.wav",
@@ -1644,7 +2034,12 @@
       "loopStart": 4.2766875,
       "loopEnd": 6.813354166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_5G.flac",
+      "deliverySha256": "cbfb1cc9d14e1d8da9cba107e46362866b88a929fac1700abdf72a4f74101ae7",
+      "deliveryBytes": 1092267,
+      "sourceBytes": 1585796,
+      "pcmSha256": "ea4374589864ce930dfe600baad2ce56736ee43f32333e1e04c698f4ca50e604"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6A#.wav",
@@ -1666,7 +2061,12 @@
       "loopStart": 0.19595833333333335,
       "loopEnd": 9.026833333333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6A#.flac",
+      "deliverySha256": "37954949a139ec2ba54f36175964dc65d852bbe25ae09385696b6323166c69c9",
+      "deliveryBytes": 1102114,
+      "sourceBytes": 1585796,
+      "pcmSha256": "7dc8d75d67ac9f8acfa5b331c2e408f14710c11f5d464656cb8c37b6b62c38df"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6A.wav",
@@ -1688,7 +2088,12 @@
       "loopStart": 0.8274166666666667,
       "loopEnd": 6.077020833333333,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6A.flac",
+      "deliverySha256": "a03022918a6a118ad8730ea2eb55aa595f701ddef985e8079ecd70d5db0b31a4",
+      "deliveryBytes": 1097102,
+      "sourceBytes": 1585796,
+      "pcmSha256": "4dec07e00aca839be0023ee7bb0cf2b6f100a80eef5cf3d29e793cbb542d90b4"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6B.wav",
@@ -1710,7 +2115,12 @@
       "loopStart": 3.223291666666667,
       "loopEnd": 8.6424375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6B.flac",
+      "deliverySha256": "73a5e448b5c57177c215e5cf599a2e91e94ba060058b842d7d5a948efd5d34d9",
+      "deliveryBytes": 1106778,
+      "sourceBytes": 1585796,
+      "pcmSha256": "793c0ed2a8a53448cb70c5febcadbfeace6c1f8142ce8525c715ce874eb3479f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6C#.wav",
@@ -1732,7 +2142,12 @@
       "loopStart": 0.18895833333333334,
       "loopEnd": 8.678270833333332,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6C#.flac",
+      "deliverySha256": "166373a8b973b04df310823c6124c169ddc0e1954d5ee64364d187db35b48021",
+      "deliveryBytes": 1116558,
+      "sourceBytes": 1585796,
+      "pcmSha256": "4306fc67b9c965249ed19949c0825228dd0bafa2640f0cdf116e963ee4a4f5bc"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6C.wav",
@@ -1754,7 +2169,12 @@
       "loopStart": 0.08572916666666666,
       "loopEnd": 9.06725,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6C.flac",
+      "deliverySha256": "00cb995d3cd183b1c684c6a81701aadd49df67072a2f1c1b1d3e7da9830625ee",
+      "deliveryBytes": 1111619,
+      "sourceBytes": 1585796,
+      "pcmSha256": "2c79012c8e2a162a3acaf6dcdfee22ca111aecade2cc47bbb4d551bd00ccb8ce"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6D#.wav",
@@ -1776,7 +2196,12 @@
       "loopStart": 1.0355,
       "loopEnd": 8.865270833333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6D#.flac",
+      "deliverySha256": "e4a4635fb71949d11b779303781ff752b0d7e56fdd17aef5870c2996cbddf9d6",
+      "deliveryBytes": 1108886,
+      "sourceBytes": 1585796,
+      "pcmSha256": "9292d536d1e1896d12e7f55d5f4cf4bfedeb26195ce1aef0257e7b23bc779de2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6D.wav",
@@ -1798,7 +2223,12 @@
       "loopStart": 2.7425,
       "loopEnd": 5.517,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6D.flac",
+      "deliverySha256": "75161b72ae84c8261ed55585ef207b45cc5c5230a4257d42fad3ad5b17bb246e",
+      "deliveryBytes": 1121408,
+      "sourceBytes": 1585796,
+      "pcmSha256": "8588cb1991c02f241ca7acffe480ecd8545b0fb9b7c5ea7ebeb26db7de7ff773"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6E.wav",
@@ -1820,7 +2250,12 @@
       "loopStart": 2.0865833333333335,
       "loopEnd": 4.1131875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6E.flac",
+      "deliverySha256": "bd48e4936601e774c9602f905102fb314deccf26193c4e416dad9bda8401c356",
+      "deliveryBytes": 1113497,
+      "sourceBytes": 1585796,
+      "pcmSha256": "7621bcacb5ed12ad85b11754a73827c4cd3901f46a64267c2365697c7110251a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6F#.wav",
@@ -1842,7 +2277,12 @@
       "loopStart": 0.9323958333333333,
       "loopEnd": 6.607479166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6F#.flac",
+      "deliverySha256": "0a75edc9d0ebc313b8329794015939a512a0084c59e2e3c8e93d21c6d0e76451",
+      "deliveryBytes": 1102146,
+      "sourceBytes": 1585796,
+      "pcmSha256": "9c30f38f4814830bb06debac129e28a822a2da7c9c0f4458f026b8f8efbd4c20"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6F.wav",
@@ -1864,7 +2304,12 @@
       "loopStart": 6.086291666666667,
       "loopEnd": 8.561,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6F.flac",
+      "deliverySha256": "87f5c24d5506148da93f1d9290ac8421b3e795c15f7991ac9248a0cc75486363",
+      "deliveryBytes": 1118316,
+      "sourceBytes": 1585796,
+      "pcmSha256": "de77447aaa2567b2dff1da208b62c4f63157af47037d58934f7ac6b516fad983"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6G#.wav",
@@ -1886,7 +2331,12 @@
       "loopStart": 0.16602083333333334,
       "loopEnd": 9.056208333333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6G#.flac",
+      "deliverySha256": "079cbfb8bd13f7c90aa53f48bf003058f5340d61ef117a722b40cf8a4758c488",
+      "deliveryBytes": 1112337,
+      "sourceBytes": 1585796,
+      "pcmSha256": "214545826d1c87906a36d37a7488c1572b478c1e82171d3151decc53e50d39db"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_6G.wav",
@@ -1908,7 +2358,12 @@
       "loopStart": 5.917645833333333,
       "loopEnd": 8.860979166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_6G.flac",
+      "deliverySha256": "4a567e22686bb1fa3e27bed203d9b5443f2a49bad7fb0aa8ea01a07d9861b2a7",
+      "deliveryBytes": 1107108,
+      "sourceBytes": 1585796,
+      "pcmSha256": "b635fa615f6218b7f6814615c1f549601ce82cfd2b0b4ad7b4e2947b9c71a1d3"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7A#.wav",
@@ -1930,7 +2385,12 @@
       "loopStart": 1.790875,
       "loopEnd": 8.214791666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7A#.flac",
+      "deliverySha256": "8313be82ba9ea04ef138935836ac4574a5eb7398d94a065f4c018bf498a0faee",
+      "deliveryBytes": 1102671,
+      "sourceBytes": 1585796,
+      "pcmSha256": "ab24954eee1c506d5989a61bd90cad276dee8eae9a1f6838cb5601c5c694717a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7A.wav",
@@ -1952,7 +2412,12 @@
       "loopStart": 3.8930833333333332,
       "loopEnd": 6.666375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7A.flac",
+      "deliverySha256": "0f164b234fbc630151a25147b828441c6d7dff8fa249d30c88fd026c5c15025f",
+      "deliveryBytes": 1116513,
+      "sourceBytes": 1585796,
+      "pcmSha256": "14b4311d84ca95e53ce984f8cef4acbd1a2adb62048b410e449c816204c6283f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7B.wav",
@@ -1974,7 +2439,12 @@
       "loopStart": 1.3071458333333332,
       "loopEnd": 4.11675,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7B.flac",
+      "deliverySha256": "5c8ab981028bff5efd99aee478ad07ddffef4d73c390046ed6589c7cf1b6d993",
+      "deliveryBytes": 1107869,
+      "sourceBytes": 1585796,
+      "pcmSha256": "5ada8c36710319e533b33d64e814aee4dca3723c8eab111de829ffd6c30b3f6d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7C#.wav",
@@ -1996,7 +2466,12 @@
       "loopStart": 0.343375,
       "loopEnd": 6.2311875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7C#.flac",
+      "deliverySha256": "0ed2d13c317592544058dd6ff36ab60390cc96d8552e7a8c6179415ef89c1c52",
+      "deliveryBytes": 1117279,
+      "sourceBytes": 1585796,
+      "pcmSha256": "a261d308e3d41ae159b5fb4878dd04292667cfa47cfa0e3ce131f5dc0e86de40"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7C.wav",
@@ -2018,7 +2493,12 @@
       "loopStart": 0.19610416666666666,
       "loopEnd": 5.657729166666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7C.flac",
+      "deliverySha256": "e090bac7ff500914a6dd09806ebdbc095c2a5854db80980e9605591dc6b1eea0",
+      "deliveryBytes": 1112572,
+      "sourceBytes": 1585796,
+      "pcmSha256": "c71ccd0669e34156d73468f890e1f79cea3db30753aff1471f2f5e124e101c4f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7D#.wav",
@@ -2040,7 +2520,12 @@
       "loopStart": 3.105625,
       "loopEnd": 7.936375,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7D#.flac",
+      "deliverySha256": "e70d9c1d887dbea5200decc06b555f5e13b08a4f3415c5e09025c5db8f23c253",
+      "deliveryBytes": 1107196,
+      "sourceBytes": 1585796,
+      "pcmSha256": "fe82048dbf4827d0c5833c768aa5b839c7024716ac9ca70ed2661232adb2746a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7D.wav",
@@ -2062,7 +2547,12 @@
       "loopStart": 3.39825,
       "loopEnd": 8.6461875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7D.flac",
+      "deliverySha256": "2bf319f8b9771a9ca6178e095f55289b9dec3551c5091d3aab3127e0fca28748",
+      "deliveryBytes": 1103585,
+      "sourceBytes": 1585796,
+      "pcmSha256": "c625ef18b55b812e97fbb3a20abae91f439c23fd437ef61178d4b99d0fcd5343"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7E.wav",
@@ -2084,7 +2574,12 @@
       "loopStart": 1.9067083333333332,
       "loopEnd": 7.367416666666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7E.flac",
+      "deliverySha256": "26f1c85c87e61cce1418e6dcd9c9ced9a0d99664ed5d356e2ed88a84ae18931c",
+      "deliveryBytes": 1112857,
+      "sourceBytes": 1585796,
+      "pcmSha256": "12308639c5ec8bed1efc651a731a495d1ae3d3bf955d4df34b61ecb37d69404a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7F#.wav",
@@ -2106,7 +2601,12 @@
       "loopStart": 0.6389583333333333,
       "loopEnd": 8.3401875,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7F#.flac",
+      "deliverySha256": "72ab596f604ad8bd94c1b74bf27337f7b9fca52565d74fe29105558792c56779",
+      "deliveryBytes": 1101434,
+      "sourceBytes": 1585796,
+      "pcmSha256": "09890e2e47bcb27c45b2a33412a219049a59584f58bfca457d805f10cc6df29e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7F.wav",
@@ -2128,7 +2628,12 @@
       "loopStart": 4.116583333333334,
       "loopEnd": 8.852729166666666,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7F.flac",
+      "deliverySha256": "a4c4840974cf2fa9ea88c583f91f108df270d2689b0c28a236000ed3c41ec3de",
+      "deliveryBytes": 1117700,
+      "sourceBytes": 1585796,
+      "pcmSha256": "26f7a8a661f140db53dedac0914f26a89eab65cc8e962a946aea9abda3f540f4"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7G#.wav",
@@ -2150,7 +2655,12 @@
       "loopStart": 0.8979583333333333,
       "loopEnd": 8.343666666666667,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7G#.flac",
+      "deliverySha256": "7e5174ff80fafcddf88e913bfc8e6102605e2c370488d2ca8b3cb9bc0510ebf1",
+      "deliveryBytes": 1111250,
+      "sourceBytes": 1585796,
+      "pcmSha256": "751ff13c557da9a937c80c4b6ace47b9bb2bf79ac65d374685558bae2f22d335"
     },
     {
       "source": "assets/audio/omni-84/Samples/Chords/Chords_7G.wav",
@@ -2172,7 +2682,12 @@
       "loopStart": 3.38175,
       "loopEnd": 5.428145833333334,
       "crossfade": 0.01,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Chords/Chords_7G.flac",
+      "deliverySha256": "3ad731811a06ff3cfdc88436e23c4631e0df2ca33ce571be862b1e0832699cd5",
+      "deliveryBytes": 1106840,
+      "sourceBytes": 1585796,
+      "pcmSha256": "6406f274c0a22333a4ee628135c0e83407d0d7700cf3d061ca9f495b3811eb16"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Clave_2A.wav",
@@ -2190,7 +2705,12 @@
       "tuningCents": 0,
       "sha256": "a423c007db24a1a30c00c63f6a3b8283c68d2a9b85f3dabeee68196d8f15f13c",
       "drum": "clave",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Clave_2A.flac",
+      "deliverySha256": "cee570a56c9934f9cb95df18e499e77fcf0ecdf876700545cae8687e7ac0241d",
+      "deliveryBytes": 26161,
+      "sourceBytes": 33347,
+      "pcmSha256": "4493afd0f8022fd4005ab267f1d36be3aa81366efc8a7270bd84a244eb080cac"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Clave_2G#.wav",
@@ -2208,7 +2728,12 @@
       "tuningCents": 0,
       "sha256": "a1f8262e20f107f9a23fde1e72f7beecb23758c84f851c15b6e58f8b965d9980",
       "drum": "clave",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Clave_2G#.flac",
+      "deliverySha256": "8a8a05e9c179183e0bcfbfd62de3a973f606c7c5b7da17b767189aad4744133c",
+      "deliveryBytes": 12872,
+      "sourceBytes": 6830,
+      "pcmSha256": "204cb1f98b8e042bf8e6bdbb6fe56bb9fd9336c6dd18fcfaabebcad536ca8306"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Clave_2G.wav",
@@ -2226,7 +2751,12 @@
       "tuningCents": 0,
       "sha256": "c6efcb882a86ab4279ee1686ebbc3e5d874ebf05241c92af83e698d5c825487e",
       "drum": "clave",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Clave_2G.flac",
+      "deliverySha256": "708e8799396631efd1f66649d5b4e4be314e1dd27b30cd0ce46b1af48255aea6",
+      "deliveryBytes": 12683,
+      "sourceBytes": 6578,
+      "pcmSha256": "cf0670e6e25706af470443ae487bb5581f83f8db323206cafc7ea03be8e3b6d1"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2C#.wav",
@@ -2244,7 +2774,12 @@
       "tuningCents": 0,
       "sha256": "98e977cf0d46fbe83cc990d645d3821afa01d1f7707e79e2a91febcf6646f0b4",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2C#.flac",
+      "deliverySha256": "b692ae1070226d389e468e48be1f4041b0cd6e64be6ad72187ee64fd5fa5ed2d",
+      "deliveryBytes": 11248,
+      "sourceBytes": 4494,
+      "pcmSha256": "9314512357b00899591931ab7cb1e3a085af6219d95c64c464b474880ae8bf42"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2D#.wav",
@@ -2262,7 +2797,12 @@
       "tuningCents": 0,
       "sha256": "c374aa44a7984f9584bc7a22730a0111e2522ea15953d73a05e5463b0adb37a7",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2D#.flac",
+      "deliverySha256": "f985dcd843e05c37eaa184d8db7bd3d1b3e9fc4e7a35898077106caf708e90c6",
+      "deliveryBytes": 12812,
+      "sourceBytes": 7064,
+      "pcmSha256": "f4f3d2139bef86f05d37ecb28e723805242c403e1893ce0c51201960e71722a0"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2D.wav",
@@ -2280,7 +2820,12 @@
       "tuningCents": 0,
       "sha256": "e71ef49d345013fb6018040aebe361553256794c77810cd96ea3c46a4edc085e",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2D.flac",
+      "deliverySha256": "046ed4abd6aa8d84b19d57d073181d9a9606cd21745acfb4169f1fd3c52b9154",
+      "deliveryBytes": 11768,
+      "sourceBytes": 5504,
+      "pcmSha256": "b4fd8f5fb82bf95bd642d35670dfe2cc28d7e19c233a777b6a8bd5660f93ec34"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2E.wav",
@@ -2298,7 +2843,12 @@
       "tuningCents": 0,
       "sha256": "0252f0b7c9c3684527ecf3f974ca5bd0a6b9eac52e254b4dd8fca6bc0f346ac0",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2E.flac",
+      "deliverySha256": "e54b8f3fd458aec416fc34e91c0fad5ed0df08a03cc0816470e7d35cc7c481ce",
+      "deliveryBytes": 17829,
+      "sourceBytes": 15317,
+      "pcmSha256": "e8c5aa6317b0ba9f75f2d4f3cb8844e65ba1b0ae3cf4a0514b72a586c3558df4"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2F#.wav",
@@ -2316,7 +2866,12 @@
       "tuningCents": 0,
       "sha256": "7351de3a9c3411f36c4be30c866c568ea062e4611e3c4ac0e5c56030842e1d60",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2F#.flac",
+      "deliverySha256": "9b4de6a9945e592ce989d3a5fc5a0525e23dd4102de9720f5b6c15a26f713502",
+      "deliveryBytes": 33305,
+      "sourceBytes": 40229,
+      "pcmSha256": "d7202dfe4223336bfb98edd2850a402e44a396f45c1452632cecf2364edc7c7a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/HiHat_2F.wav",
@@ -2334,7 +2889,12 @@
       "tuningCents": 0,
       "sha256": "5be1f7bae89db35f02194be4bcbcbf8012115408a9a7ab3de40e48a3ea0e63a0",
       "drum": "hihat",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/HiHat_2F.flac",
+      "deliverySha256": "37f76d4899fff595aa01aa01e3058e82f003ae216d2b55edaf943ffda44b1869",
+      "deliveryBytes": 32598,
+      "sourceBytes": 38693,
+      "pcmSha256": "2bc22dd230164a29bda3b87655fb6045a8f3f3024fe540ded6a2156aa2f73f8f"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1C#.wav",
@@ -2352,7 +2912,12 @@
       "tuningCents": 0,
       "sha256": "8822c9f70fd08a5ba8d90a5d6d3738027f6189e041e118a4be03b3eac86b670d",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1C#.flac",
+      "deliverySha256": "6ec10d0f721e2b831b4f2f0b52e58c8dc59228ed4e979ec32557fbc8b786f352",
+      "deliveryBytes": 27513,
+      "sourceBytes": 36728,
+      "pcmSha256": "b1e00c926f9d94eeafa44fc8c2e69cd1820434f4cb4304181b56de71964fb446"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1C.wav",
@@ -2370,7 +2935,12 @@
       "tuningCents": 0,
       "sha256": "bbffb2d06c62ce5864e11085335268624c9002d412256040c44baeae63237c9e",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1C.flac",
+      "deliverySha256": "e217ae83d4d2b205e7717c22ff56161d2070dedf60b357a7a7c5468661f96a91",
+      "deliveryBytes": 27508,
+      "sourceBytes": 36677,
+      "pcmSha256": "e78748e8ffdbfe7316a1569a5821d7156cce725ebd646f281ae5cce11966da86"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1D#.wav",
@@ -2388,7 +2958,12 @@
       "tuningCents": 0,
       "sha256": "25c2405fcec80b265a95859899e4c61876371062708b641d33c46c6467bb811e",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1D#.flac",
+      "deliverySha256": "f2b65df3951ff7399549cb305087f1fefed30d22478396380ba2d22c3912df9c",
+      "deliveryBytes": 32307,
+      "sourceBytes": 36728,
+      "pcmSha256": "1c1c72a635d7b87d6daa4f0d460568a7dd925e17cd28b4019f947611b6665323"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1D.wav",
@@ -2406,7 +2981,12 @@
       "tuningCents": 0,
       "sha256": "46166e4424e6022fd7bd318a03cf75956d4d68b5c0266b38e32dff7c97ed6115",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1D.flac",
+      "deliverySha256": "88f459f71d8de926ce5f184cfd69e87bc556bcc48d3a2eedeb2e3652accbdf5d",
+      "deliveryBytes": 28043,
+      "sourceBytes": 36728,
+      "pcmSha256": "21bf38fe473f4be439262f09cef8ee5c178d2230a260136c9003af3b5cceadd6"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1E.wav",
@@ -2424,7 +3004,12 @@
       "tuningCents": 0,
       "sha256": "0b8482daf3235c0908fb07ff160ddf06f3709c69a147cd3643385251a83098d6",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1E.flac",
+      "deliverySha256": "dc339dd6e035c9016e5f3dc71775824ceb32d09bf4f01410e5d076bdd2c602d9",
+      "deliveryBytes": 41781,
+      "sourceBytes": 54728,
+      "pcmSha256": "1e15a55e24a1fae6ab517a32b68bd4a2dff25bffae7e6af8d5e1f6c6599ed501"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1F#.wav",
@@ -2442,7 +3027,12 @@
       "tuningCents": 0,
       "sha256": "77cf997a18340f84632af79d0022042bfd3327f18e1768d2bbb98835bd263e1b",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1F#.flac",
+      "deliverySha256": "df85ec5f9c2f6491823148cbf11a8d53f02296e21c16af388f5b5054e685b77a",
+      "deliveryBytes": 31905,
+      "sourceBytes": 36728,
+      "pcmSha256": "3e8bd4e6a568768db9cfd6257502be538c80f2bccb98672c5e244396df2b7142"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Kick_1F.wav",
@@ -2460,7 +3050,12 @@
       "tuningCents": 0,
       "sha256": "27961e27f7bc9886e494831bf184d43bb8b4fa0e7605a3fc18ca62b348daeaae",
       "drum": "kick",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Kick_1F.flac",
+      "deliverySha256": "901eea32169a7e39750698b1351dc107e260c3a842de1d8b606f0a4af87db6c4",
+      "deliveryBytes": 30163,
+      "sourceBytes": 36728,
+      "pcmSha256": "c7d338ac76f4c6f9eb06dd97697735b8402152c33367b1d46a061d07da821de0"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_1A#.wav",
@@ -2478,7 +3073,12 @@
       "tuningCents": 0,
       "sha256": "531712f8d93e31adfbb0a5061b0766eb65e37544b487fdc67a5ad4ec40438285",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_1A#.flac",
+      "deliverySha256": "1a893414eee8f9861dca75ef0fef05ec7d8e8c127249d1ce413f893c97ee09e9",
+      "deliveryBytes": 14351,
+      "sourceBytes": 9338,
+      "pcmSha256": "3b520b63d6faa58f9d3e9a49d052c26acc0ba0b27e7bf329fc2dda94d95368c4"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_1A.wav",
@@ -2496,7 +3096,12 @@
       "tuningCents": 0,
       "sha256": "c0b176ad16a65f94cfdc68cc5790ac0c83ca621b8ead65f4d164dc2c6ffb2f36",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_1A.flac",
+      "deliverySha256": "4f4d7191ab1e46d7f1b2390d418a848187bc11fa57d42cc4ac9ba3025688e2b6",
+      "deliveryBytes": 13379,
+      "sourceBytes": 8078,
+      "pcmSha256": "2f4fa9b6ad45598d5a77b3a7a5b9893db796bc332921b28aca12a81c802c5ad8"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_1B.wav",
@@ -2514,7 +3119,12 @@
       "tuningCents": 0,
       "sha256": "6bd5d9d68a7dc5b710244c442df68ac5cdf663fe20ec56a46543353b6261abd1",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_1B.flac",
+      "deliverySha256": "fa80b551bb337295c21b99c864d55d819575c4a349dc93cbef0084a33528cdb4",
+      "deliveryBytes": 30828,
+      "sourceBytes": 35363,
+      "pcmSha256": "89dc5be74b074769657775718deb8822ad4fd99a6f2f8bd2b1a6910ca8b748a9"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_1G#.wav",
@@ -2532,7 +3142,12 @@
       "tuningCents": 0,
       "sha256": "23b32007cc522f254b3bb5f6555a8949697157ce80bf1310e09f56ff8fcba375",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_1G#.flac",
+      "deliverySha256": "a60802fe5d44270e5e5c1d78b0f57a63d633a87d8aafa45470ebc7f0364d85e6",
+      "deliveryBytes": 13279,
+      "sourceBytes": 8228,
+      "pcmSha256": "905736d78cdfc256537f5e7338eaf942a4d870da4ddfc55a76b2d98e704a30b0"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_1G.wav",
@@ -2550,7 +3165,12 @@
       "tuningCents": 0,
       "sha256": "bbe84a413bac147f3c0c72f11d2abe995d8bcf179587a8cf3f81478cc5c622a7",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_1G.flac",
+      "deliverySha256": "d1e55610efeb2de515b2debb71de411a47933fda37cde4fc9f24404954a42190",
+      "deliveryBytes": 13256,
+      "sourceBytes": 8222,
+      "pcmSha256": "74b6a82d370989c51270e98c26fb0da0a0fc8850adde88000cfabd49706be0fc"
     },
     {
       "source": "assets/audio/omni-84/Samples/Drums/Snare_2C.wav",
@@ -2568,7 +3188,12 @@
       "tuningCents": 0,
       "sha256": "9df8d68f15db4097058f9b4f8bad3119b5129ca1012c98340ef94a7c2c3d00fc",
       "drum": "snare",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/Drums/Snare_2C.flac",
+      "deliverySha256": "697a9fa72de2cc17faf597faeb0fc586e157f34e26febffa949e86d9384cec00",
+      "deliveryBytes": 35054,
+      "sourceBytes": 41948,
+      "pcmSha256": "2f80f231f14ce9e30b44db51b472be7b1bd8009322cef06e0f876027f15b9631"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1A#.wav",
@@ -2588,7 +3213,12 @@
       "loopStart": 0.007916666666666667,
       "loopEnd": 11.748958333333333,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1A#.flac",
+      "deliverySha256": "6bba765c9ea86a4ddcda67e3c79a36297dec2c21cdc48607605d30986f39c34f",
+      "deliveryBytes": 497196,
+      "sourceBytes": 1693016,
+      "pcmSha256": "82f3305ecd48d2029cda46e592a52ce98e7ff1d1bf54ae0493bde94f42819c0a"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1A.wav",
@@ -2608,7 +3238,12 @@
       "loopStart": 0.0060416666666666665,
       "loopEnd": 11.748541666666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1A.flac",
+      "deliverySha256": "66e4333915254717030670debd4beee120a7c011d5052d9aaa36ed4183d1515b",
+      "deliveryBytes": 495057,
+      "sourceBytes": 1692953,
+      "pcmSha256": "81560ee731e694335d2923018b88672638408bf442434fae071fecaa45912c06"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1B.wav",
@@ -2628,7 +3263,12 @@
       "loopStart": 0.005458333333333333,
       "loopEnd": 11.747291666666667,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1B.flac",
+      "deliverySha256": "5fa73ef0015b4635c78dd97da14e791e47562bdf92e75ab78aac654acc3e0ad9",
+      "deliveryBytes": 499141,
+      "sourceBytes": 1693013,
+      "pcmSha256": "ded232690b90965300b3f9a33cb87e14696290d6f9ef805ecd650253e2cc8b58"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1C#.wav",
@@ -2648,7 +3288,12 @@
       "loopStart": 0.005125,
       "loopEnd": 11.747625,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1C#.flac",
+      "deliverySha256": "6d26811205d3a62d014a7f2f9e876734ce6fe384fc61ea472adf1066954b80ff",
+      "deliveryBytes": 481380,
+      "sourceBytes": 1692953,
+      "pcmSha256": "5d32a11cbee105a50b2d407eb3d96011ba7da33b4a7bc517d009a41c57b03a47"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1C.wav",
@@ -2668,7 +3313,12 @@
       "loopStart": 0.009270833333333334,
       "loopEnd": 11.750625,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1C.flac",
+      "deliverySha256": "6680592079afe531adb2579df229db2f8f30ec88f007c7b4228029cea118137f",
+      "deliveryBytes": 480913,
+      "sourceBytes": 1692953,
+      "pcmSha256": "95905c6d9a42638f7aa38d5c6dba938e0d93a71d4f23572bc57d2fb4465c119d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1D#.wav",
@@ -2688,7 +3338,12 @@
       "loopStart": 0.007916666666666667,
       "loopEnd": 11.7503125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1D#.flac",
+      "deliverySha256": "28122cacdfe87af47ad2ca3bbdde3f8612d5f1adc421141702925dc8a335ed19",
+      "deliveryBytes": 484958,
+      "sourceBytes": 1693022,
+      "pcmSha256": "e30fc3f6027e149c829b0fd24f9d0e8b47b7a7c5931644de055bb2aadad2d0d1"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1D.wav",
@@ -2708,7 +3363,12 @@
       "loopStart": 0.008333333333333333,
       "loopEnd": 11.747395833333334,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1D.flac",
+      "deliverySha256": "6f40012c5dae8aef467281edcdd29b735f188dda1907c043b674c784863976d1",
+      "deliveryBytes": 483123,
+      "sourceBytes": 1693022,
+      "pcmSha256": "df96c675c51f930e5cff43dd40ede4b963427361f47e6084fe56e61508bb3cfe"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1E.wav",
@@ -2728,7 +3388,12 @@
       "loopStart": 0.004520833333333333,
       "loopEnd": 11.7505625,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1E.flac",
+      "deliverySha256": "0501cc923ca4406bdf86fd4cd7a76a5cf3e6991bea6d821b6bd1f5828df057f4",
+      "deliveryBytes": 486217,
+      "sourceBytes": 1693019,
+      "pcmSha256": "184b4b1757724520bcd31e0b85a180be9dfd4d973fb25c4fe7f917f9ef44ea59"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1F#.wav",
@@ -2748,7 +3413,12 @@
       "loopStart": 0.004166666666666667,
       "loopEnd": 11.74925,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1F#.flac",
+      "deliverySha256": "4c22a8c688f84bbcfe44647e938de5ff4841941de0e62f934a40ea1319f51b1f",
+      "deliveryBytes": 490263,
+      "sourceBytes": 1693016,
+      "pcmSha256": "aabdd32274a518864351777d093e315a7bdfa871af4b6da8b772e852bcb0e466"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1F.wav",
@@ -2768,7 +3438,12 @@
       "loopStart": 0.007166666666666667,
       "loopEnd": 11.750458333333333,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1F.flac",
+      "deliverySha256": "b55b13d5cd860f4fda15355b2306f17cf71b62f3269ee0bb779323ae0fbb0825",
+      "deliveryBytes": 488332,
+      "sourceBytes": 1693016,
+      "pcmSha256": "3696fc536b24b0beca3894a6a26d5b466b4523d4fe9cf621247f8b166a632d00"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1G#.wav",
@@ -2788,7 +3463,12 @@
       "loopStart": 0.003958333333333334,
       "loopEnd": 11.751520833333334,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1G#.flac",
+      "deliverySha256": "4185fbf858acf5be7b5d42f83d069c9286d1ac55892fce6c5434edce98d1b3e8",
+      "deliveryBytes": 493955,
+      "sourceBytes": 1693022,
+      "pcmSha256": "c45f702eda3e0a1fd59de78963f464c622186201e4257f721788dd04b9b77f9e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1G.wav",
@@ -2808,7 +3488,12 @@
       "loopStart": 0.0065625,
       "loopEnd": 11.747791666666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_1G.flac",
+      "deliverySha256": "416ab99a560b1cec6bbdcee6789ff9c121ecf92db265671c2b47c9979e07a875",
+      "deliveryBytes": 1066292,
+      "sourceBytes": 1693022,
+      "pcmSha256": "11fbdad90f9620d063bb4c648c504b6e93940527673ef48cd5c6f094a70622d2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2A#.wav",
@@ -2828,7 +3513,12 @@
       "loopStart": 0.007833333333333333,
       "loopEnd": 11.7488125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2A#.flac",
+      "deliverySha256": "7ceee2b424c5457c376eb825d6cdaf505564733fb8ee842fe5c8285afabe80e7",
+      "deliveryBytes": 525071,
+      "sourceBytes": 1693016,
+      "pcmSha256": "8876e2706ecdaecffccae256621059391c661944af16fc88897e76f752e0c24e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2A.wav",
@@ -2848,7 +3538,12 @@
       "loopStart": 0.007916666666666667,
       "loopEnd": 11.7495,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2A.flac",
+      "deliverySha256": "e044a2fbb07e8100e4aacf51bc752dec3d67d07468718786d7488b3a1fdb33ac",
+      "deliveryBytes": 522840,
+      "sourceBytes": 1692953,
+      "pcmSha256": "ecf601ffb2938197cef892b2e2ab9b4b018198cc9c379bf3fc89ad34758d35e9"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2B.wav",
@@ -2868,7 +3563,12 @@
       "loopStart": 0.0075,
       "loopEnd": 11.749020833333333,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2B.flac",
+      "deliverySha256": "4a6365f53ac8fb96cca372ae33cd97cd4ca76c25cb6ae58b1d9ea4a1ac3f6057",
+      "deliveryBytes": 527875,
+      "sourceBytes": 1693013,
+      "pcmSha256": "ad8e3f273898c8c063c166f0f598b7e4505c517b05a506e7e7d563651eb4aa35"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2C#.wav",
@@ -2888,7 +3588,12 @@
       "loopStart": 0.005145833333333333,
       "loopEnd": 11.7475625,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2C#.flac",
+      "deliverySha256": "e77714dfeb4c3d4146442631ae260a235ddd7bf094f7c4209567335eb65e7e60",
+      "deliveryBytes": 503878,
+      "sourceBytes": 1692953,
+      "pcmSha256": "eb236f79357901da8a82bd450125643fd228084c0422f8d8f5fd735ed9bed029"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2C.wav",
@@ -2908,7 +3613,12 @@
       "loopStart": 0.005395833333333333,
       "loopEnd": 11.749125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2C.flac",
+      "deliverySha256": "16caa8b0cd15133e3fa6413e85a72f9430ddd96e7d0e6ed77864249a31f3e9b7",
+      "deliveryBytes": 501622,
+      "sourceBytes": 1692953,
+      "pcmSha256": "652df12ff4f243d1cd0b1f8d857445d0ba09dcf0232ba9dd8a963464c8ccdf92"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2D#.wav",
@@ -2928,7 +3638,12 @@
       "loopStart": 0.006354166666666667,
       "loopEnd": 11.747708333333334,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2D#.flac",
+      "deliverySha256": "bb9b50ba26e74b7cae0780baa06ddf5c2a8b736db8d502f13c744a959b8fc13d",
+      "deliveryBytes": 508561,
+      "sourceBytes": 1692953,
+      "pcmSha256": "2295d80ce4b05cb3e5966eb86d9320ace98dc227aafddc451ccd01149fc672c2"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2D.wav",
@@ -2948,7 +3663,12 @@
       "loopStart": 0.006666666666666667,
       "loopEnd": 11.748541666666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2D.flac",
+      "deliverySha256": "ff676de2b2ac81b0d69a02e7286caaa46da7f75f7590ea2616a2857c467b1806",
+      "deliveryBytes": 1079676,
+      "sourceBytes": 1692953,
+      "pcmSha256": "3e24b351c7f91125338843bee72d110b4296755c145b79ce9d07bad83e64787e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2E.wav",
@@ -2968,7 +3688,12 @@
       "loopStart": 0.0075,
       "loopEnd": 11.750041666666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2E.flac",
+      "deliverySha256": "ab7732b570e785b99e0c82a9f5a8a7e2b5552a833548e7a9b5fa363dd728f48b",
+      "deliveryBytes": 510910,
+      "sourceBytes": 1693019,
+      "pcmSha256": "0d5c6dfa1881f4a349abb4e44ec1516e81cabc75fe096c12cb720016f158064d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2F#.wav",
@@ -2988,7 +3713,12 @@
       "loopStart": 0.008291666666666666,
       "loopEnd": 11.749520833333333,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2F#.flac",
+      "deliverySha256": "6eaece2c229f12e7d8681a12acbea97cc1896a8785a9fe7e53e545eb02f81fe4",
+      "deliveryBytes": 1089879,
+      "sourceBytes": 1693016,
+      "pcmSha256": "9c1162423734e6aab2704ee82d3a7068c52f14ce09f72f92d4b3700ea5bf598d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2F.wav",
@@ -3008,7 +3738,12 @@
       "loopStart": 0.008958333333333334,
       "loopEnd": 11.748479166666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2F.flac",
+      "deliverySha256": "13107e9f42d6343c8665743e110e0c188477d17c446bdbdb69dc875da676ce42",
+      "deliveryBytes": 513115,
+      "sourceBytes": 1693016,
+      "pcmSha256": "28c667257b4664ceb0245ff8735cf34543bc74363febaabdf5f37134adef6504"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2G#.wav",
@@ -3028,7 +3763,12 @@
       "loopStart": 0.008729166666666666,
       "loopEnd": 11.7493125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2G#.flac",
+      "deliverySha256": "d8fd121377c80d496556d49650f438a785a8a6fce952e1d7ea7a09f3c31c4ea4",
+      "deliveryBytes": 520975,
+      "sourceBytes": 1693022,
+      "pcmSha256": "7c6ca2d740d17e5d766281003ed9b5f5f789808ac9686ce100d6aa6b2f262790"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2G.wav",
@@ -3048,7 +3788,12 @@
       "loopStart": 0.007875,
       "loopEnd": 11.748270833333333,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_2G.flac",
+      "deliverySha256": "097732449c8cec27cc66fa5355154296e52d03152c97b1f64f684be5de4749ee",
+      "deliveryBytes": 517385,
+      "sourceBytes": 1692953,
+      "pcmSha256": "f0e5ca74ae969ac9eb71fdafeac1f46ee7365877cfdddc5de9f0a0d1f8bea858"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3C#.wav",
@@ -3068,7 +3813,12 @@
       "loopStart": 0.0069791666666666665,
       "loopEnd": 11.748125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3C#.flac",
+      "deliverySha256": "bf5de762d0822cbce333d35b4c6a6107d5aef7df0de609d46f436c6263c9aab1",
+      "deliveryBytes": 534627,
+      "sourceBytes": 1692953,
+      "pcmSha256": "0c925790f58694131ff3544f8e6e8b7e0c2efdd24a815e4ac5438a793feba24c"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3C.wav",
@@ -3088,7 +3838,12 @@
       "loopStart": 0.008333333333333333,
       "loopEnd": 11.74775,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3C.flac",
+      "deliverySha256": "39c7d61a90833227e1b060bedc2c9e8c8216ce987bcda59c687b2c87c50ff1b4",
+      "deliveryBytes": 531152,
+      "sourceBytes": 1692953,
+      "pcmSha256": "049ee34a8373aa295d5a0ecf9177ebb5596bbdd30dedeece2353da85e727c959"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3D#.wav",
@@ -3108,7 +3863,12 @@
       "loopStart": 0.008,
       "loopEnd": 11.747458333333332,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3D#.flac",
+      "deliverySha256": "23e94def0c8212eeb7c8b665e79e7fc150f1f70e80d0f13e688b1b40c3d955eb",
+      "deliveryBytes": 541493,
+      "sourceBytes": 1692953,
+      "pcmSha256": "40ac01de708c5a52d0a1a7160ddc1a9ce298bd154365fdd38033ee751bc05aba"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3D.wav",
@@ -3128,7 +3888,12 @@
       "loopStart": 0.005833333333333334,
       "loopEnd": 11.7493125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3D.flac",
+      "deliverySha256": "c6d2a97d9dd9246e7f009c67bd3e50f51c080f51bf981d3f7e3712f1fe9cb9b3",
+      "deliveryBytes": 537809,
+      "sourceBytes": 1692953,
+      "pcmSha256": "1fb9edfed583a58c002e86c419b2ae7a2cc24acddb40cdb515471ef5564c286d"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3E.wav",
@@ -3148,7 +3913,12 @@
       "loopStart": 0.007541666666666667,
       "loopEnd": 11.7478125,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3E.flac",
+      "deliverySha256": "cf7a0c2a0507ed4eebd77f248a51d8b5abf8484cef24c9c5c7dd909eab727131",
+      "deliveryBytes": 545312,
+      "sourceBytes": 1692953,
+      "pcmSha256": "f168ebf18a47a58f93a4e1f44e781e7427285b0f91716da5e343855380481e2e"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3F#.wav",
@@ -3168,7 +3938,12 @@
       "loopStart": 0.0077083333333333335,
       "loopEnd": 11.747708333333334,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3F#.flac",
+      "deliverySha256": "ecba0f10fe72d5bbe6c903ba2d6a923e20189373464980cbc8cd344d1bbbac68",
+      "deliveryBytes": 551175,
+      "sourceBytes": 1692953,
+      "pcmSha256": "f2670dda7e8336b5b424f40498f447147e1ec3bb37af95fed0d6b501212a6950"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3F.wav",
@@ -3188,7 +3963,12 @@
       "loopStart": 0.007291666666666667,
       "loopEnd": 11.748104166666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3F.flac",
+      "deliverySha256": "7fa10dd7ec0dadc95c6979e2c1ded872b3c7238040d586776045501d8c388b5b",
+      "deliveryBytes": 547762,
+      "sourceBytes": 1692953,
+      "pcmSha256": "d378c0d6e2aea6ee754cd1d31176fdf79ad418633c8febb6c469d6ea84f85d58"
     },
     {
       "source": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3G.wav",
@@ -3208,7 +3988,12 @@
       "loopStart": 0.007333333333333333,
       "loopEnd": 11.747791666666666,
       "crossfade": 0.00020833333333333335,
-      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending"
+      "loopAssessment": "Preset loop; runtime crossfade; listening verification pending",
+      "deliverySource": "assets/audio/omni-84/Samples/Keyboard/Keyboard_3G.flac",
+      "deliverySha256": "719baca4c40bcec290832c108ca7f40a14d802efd050140e0835ddb6bd10cfe0",
+      "deliveryBytes": 554588,
+      "sourceBytes": 1692953,
+      "pcmSha256": "1d500686500f1633f33d26c6b916335631156795ca103227078fa782ebaf6b0a"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1A#.wav",
@@ -3225,7 +4010,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9c08e145ca729cb73624fe8f6fb093a4b2d627597fb5b5621bfd7a4149a21975",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1A#.flac",
+      "deliverySha256": "1c8e49a4c361d284c5859bc01557b16c09ae76dbb7d39fc3f03d881a8705a5b3",
+      "deliveryBytes": 189969,
+      "sourceBytes": 432728,
+      "pcmSha256": "3dfa4b5f01df7ecfa211805fe4a583898e3911eb05492e335b891e8a8df6cbfc"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1A.wav",
@@ -3242,7 +4032,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "bf5632c496ee5ef0429d6bb511e90c5e85bf64dcd32ccc6805bad7344298bafb",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1A.flac",
+      "deliverySha256": "4fbc744efff1a915dfd3d22fbbf1c4011b2bbd4d6fe390cf42f3a49c69398844",
+      "deliveryBytes": 189447,
+      "sourceBytes": 432728,
+      "pcmSha256": "9b2d317dfbd3a22dfcfcae3817b941558d31ead705ae2098801c29fa281f5558"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1B.wav",
@@ -3259,7 +4054,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9e93957e7590943a4ece1510ef146f74590da7f7b345dcb90ec385b99c653400",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1B.flac",
+      "deliverySha256": "de414f9180f7a74499fd279e0368bf3e3054496ccd191030fe1b601a0cadf615",
+      "deliveryBytes": 190216,
+      "sourceBytes": 432728,
+      "pcmSha256": "9818e39390501a10b79e0647c496cffe951c9e0aac29941d29c61f63a37c7434"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1F#.wav",
@@ -3276,7 +4076,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "ff3b4e18b54e72db53612f55efb1061ed5b0ac539910502fc79d228052e3dccb",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1F#.flac",
+      "deliverySha256": "2d112228fc75bb21a2526869cbda58d11f2c7776da637d473e0cc73392214db2",
+      "deliveryBytes": 190661,
+      "sourceBytes": 432728,
+      "pcmSha256": "ff36b4842929c672eae2961cb96f6e7c53c549c041dd6f580956405de45f5f9c"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1G#.wav",
@@ -3293,7 +4098,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "276d5d34b2523fec978beb6e70bae488ca4a99d4776ce07cc03d32feca394f5a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1G#.flac",
+      "deliverySha256": "a8224d3d1b20da8d029fa100f811fb529c4b11a4521f669bd6ac91ad4dbd2f62",
+      "deliveryBytes": 189559,
+      "sourceBytes": 432728,
+      "pcmSha256": "8c7463fbc5fcfb93125db46a856a90bb74ab1063a299c0913b1f52e7d438921b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1G.wav",
@@ -3310,7 +4120,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8bbedd284a97329319cace20a998cce31e4d38b2fff4d94cb3f44d654018b944",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_1G.flac",
+      "deliverySha256": "632549c2d56d4fc0069ea17006cce1f43f4ea7a325a6c6ac71ee90f853e7cc7f",
+      "deliveryBytes": 188682,
+      "sourceBytes": 432728,
+      "pcmSha256": "08a06ff17443ce711d5b7b6006a300bbd8d75c46a40289f1aa0dac72909f5987"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2A#.wav",
@@ -3327,7 +4142,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "c936ed41d3b5a7464e6c0a29bcdeda6127bb3626d2718efd72e9412503b16076",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2A#.flac",
+      "deliverySha256": "9e6fed1f643ae53ddd33f1ccec24b93aca680e9eb49399ae9216daea40195fab",
+      "deliveryBytes": 189844,
+      "sourceBytes": 432728,
+      "pcmSha256": "adf7dd9ff7a66c6f7d040b7a43c919a42780092bddda76c944a32a0456d85bde"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2A.wav",
@@ -3344,7 +4164,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "833057e7c95cb17057abfb0db682d3960988574c9dde97dc57547673ab062583",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2A.flac",
+      "deliverySha256": "9f6445bfb2a18d9c9ace52545c0ac8b45c06e5949bf049e54d2a5d4ea048f154",
+      "deliveryBytes": 190243,
+      "sourceBytes": 432728,
+      "pcmSha256": "346b56741215d628081833cce84d371c51ff157242975d2bbd6d01011d28a29d"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2B.wav",
@@ -3361,7 +4186,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1d3be1dbdd9a1bba0596c2cacae6671bf416e8a69f397d19866719c74c2f8b58",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2B.flac",
+      "deliverySha256": "00e6b5e1888cac86748921e070a704a559d32c137862dcefcc527f4eb2db762a",
+      "deliveryBytes": 190345,
+      "sourceBytes": 432728,
+      "pcmSha256": "3f17960d60b92d36446ebdab5ca85d4f002bc35781e49cb610c5a9a094cc49d4"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2C#.wav",
@@ -3378,7 +4208,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "4ff0ae2bf0aca0e188626d66667d66d7b50cc11331871dfd780dce95d4e56413",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2C#.flac",
+      "deliverySha256": "6dc2fc238b92fceb5acfa0037b3d03067dd5db2515843d1053ff9fa334aced07",
+      "deliveryBytes": 189917,
+      "sourceBytes": 432728,
+      "pcmSha256": "2a4346671369ee893e9b6b0a313cef7080db34114c8349147ac6bd1e55d73a08"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2C.wav",
@@ -3395,7 +4230,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8e570a19dc63943e262991ae971817e7c862eb99140711645950cdd4ff3e401d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2C.flac",
+      "deliverySha256": "f992e8a23f8c1d8612e975e79f279101e3bf0569effb41bb5186a523eb4cecac",
+      "deliveryBytes": 189760,
+      "sourceBytes": 432728,
+      "pcmSha256": "0c78d8e54f6e65952a3a8b8cc01d4bb5e28a03665dcbf23dba3d5378318e6a55"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2D#.wav",
@@ -3412,7 +4252,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "fa9484378ff33841ba44dc4c694ee66e49cc59c7ddd8d66c02a0d0da8f87d649",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2D#.flac",
+      "deliverySha256": "663dea1c6579b6ee7f26f6970a475c63842caeb70df0926f8cbe286d18bcf76a",
+      "deliveryBytes": 190277,
+      "sourceBytes": 432728,
+      "pcmSha256": "b3529a525aaf13d15362794670d9ef5ca0a2df9dabe5a13d9d23ff2b5f4a1319"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2D.wav",
@@ -3429,7 +4274,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5617dca439431ffac381b4d9901fac428cf5eab8dd1ba9fcfd7f963094a924af",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2D.flac",
+      "deliverySha256": "b7c0c64f4f06d3cee3a1c9d903c0c763441b90445e210f3ce0c7b1238a4a1407",
+      "deliveryBytes": 190745,
+      "sourceBytes": 432728,
+      "pcmSha256": "7534dddddcd9345e20ac61272d24c14cbc88fc43c3da64d3164fa0350ef43dd6"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2E.wav",
@@ -3446,7 +4296,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "99d36cd060067d373f66de1df4a092dc0c70c6723faca75b9f0aaca3fa690633",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2E.flac",
+      "deliverySha256": "c0e4635bf8ac46a337f9227f74fa9fe38997750f4bb864519305b3d6df2e23aa",
+      "deliveryBytes": 190833,
+      "sourceBytes": 432728,
+      "pcmSha256": "f9198cc67333cb89aa9e13515838d5ad772b26349081807235b4eb6b3703085d"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2F#.wav",
@@ -3463,7 +4318,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "2c302c4f34cbdb7f6d07cddb975ce1600f3af164d7e5fb1f2cf5589ffafdf16c",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2F#.flac",
+      "deliverySha256": "df092823d08e618158ace3fb21bcd89293ba5bc10f967daf7c83714e10bcd954",
+      "deliveryBytes": 189818,
+      "sourceBytes": 432728,
+      "pcmSha256": "bb289fb090f931f9191c6969476cf5c3ff637fb140ee723015bb22cfa1965b4e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2F.wav",
@@ -3480,7 +4340,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "802b498b32b0d77172c48a7753ad3a3555e41d2efb63ca2c5478b3b60203214e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2F.flac",
+      "deliverySha256": "b17b1d44a07f8367dc1484628759b48b7f3dac5996bff120dae378658a44be9a",
+      "deliveryBytes": 190796,
+      "sourceBytes": 432728,
+      "pcmSha256": "47277a992a8353e7f3d1a0be35f3dd563cd2f8c18a162608186547a9d9044808"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2G#.wav",
@@ -3497,7 +4362,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "842513108e9130dbd9355365039e76bb973f409307a57ec99dec7116119b064b",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2G#.flac",
+      "deliverySha256": "c920830d23a5afcd1dc4986e459cb946c23e4888e9c9a63271d698e8e771b995",
+      "deliveryBytes": 189064,
+      "sourceBytes": 432728,
+      "pcmSha256": "ddc54d8d2526d5924739cae666d8a02a400e779569220067cbaa513f51691ad5"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2G.wav",
@@ -3514,7 +4384,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "556080fa34b0dd4571b2871ce00b3b2a457fae1c1f7aadc702b534db119e2b6e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_2G.flac",
+      "deliverySha256": "a57e2eccd93f42f0395ebef7d5e77ac8473c2c24bcc4562af6b5e2c18da9b36c",
+      "deliveryBytes": 188993,
+      "sourceBytes": 432728,
+      "pcmSha256": "2ab3eebb0b9aab00864e6219f8aaa12eede3a024d12596bec8ccb62aa4531eb6"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3A#.wav",
@@ -3531,7 +4406,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "186dc813697c45286dba3f5d42c5dc0ad4f3b68d24b8188b2a638440f46d50b2",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3A#.flac",
+      "deliverySha256": "e39709b387fd115e9df5a5bc72514f07a955d7cbc6d3e6b50545780ab08a2a8a",
+      "deliveryBytes": 193871,
+      "sourceBytes": 432728,
+      "pcmSha256": "839b33e38ed1608bfc854fcfad54ffda6c0d393fb76e1bb5034c8b143e7faf8c"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3A.wav",
@@ -3548,7 +4428,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e73ee0eaf7ac16ed78fc9c53cde5823dc3560bad22d12d6c0c908b6e1f4230d2",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3A.flac",
+      "deliverySha256": "d9039cfbc6495e421aca5fe61fe4025b275e43bd29edea8fbf3cd7b690c279b4",
+      "deliveryBytes": 195346,
+      "sourceBytes": 432728,
+      "pcmSha256": "0aaf9e749b8e1be1e6e6e707c7c258eb641008a98bece9267b65619ad2c3fa3c"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3B.wav",
@@ -3565,7 +4450,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5b3c4487d479e2b06c496ee51264b2507dfe57e240daea764d7d437bcc455976",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3B.flac",
+      "deliverySha256": "c687c16db11bda8ae43971348cd633b6c246ecff83f4ce8ab63a8a1007791c79",
+      "deliveryBytes": 193075,
+      "sourceBytes": 432728,
+      "pcmSha256": "d867687e555ff241b48575e0f854d41b6e4b23f6237ac141b13ccdb148e583b2"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3C#.wav",
@@ -3582,7 +4472,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "7a80c03abab07a5bca7070218c0a75972986dbc8ea8fe8b60c392e45dc0f62cf",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3C#.flac",
+      "deliverySha256": "2deac7161b25dc95652dba63d02ecce10e04adfcd2e713259ab220398d769860",
+      "deliveryBytes": 190675,
+      "sourceBytes": 432728,
+      "pcmSha256": "36e149b4b72daac3682564ac6bf59c24d6888913f011aba0e915b47836408e97"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3C.wav",
@@ -3599,7 +4494,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5b5917aeb43c7567c3668cd33f52f40191858bdde8d2f7fd5c074fb73ff30704",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3C.flac",
+      "deliverySha256": "ea085e8f7f27079444e36d13811874e36c55dd91c2992344f060374e57e90cb1",
+      "deliveryBytes": 191049,
+      "sourceBytes": 432728,
+      "pcmSha256": "532bd7942970eede08f63b2e173aec58506a8593f4ec686c9f77086d6b17a15f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3D#.wav",
@@ -3616,7 +4516,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "6ecdd15b6aa31fd96b15323ba4a90b93b416e7030b7108a3845c25bbfb71cbe5",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3D#.flac",
+      "deliverySha256": "3a7cc59435cce475da54721f10896a96f4bccf2cd6804dde8d077eb6672eb461",
+      "deliveryBytes": 191588,
+      "sourceBytes": 432728,
+      "pcmSha256": "a7c53accf8549459d75ba2dde44b4cf95c01d8b3dfddea8b6e7d2ba0ecf07392"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3D.wav",
@@ -3633,7 +4538,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "89c4084311be30e09db19b47768b99b3eee79e056616e722a8fa85e6676dd21e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3D.flac",
+      "deliverySha256": "0449122dbf8a387f1f5fb738cb319746ab26bc1e4972256109d8204c9c5706f8",
+      "deliveryBytes": 191795,
+      "sourceBytes": 432728,
+      "pcmSha256": "b1c5f68e47b683d8e54d2ca9d3c87be22af7a91a463e6ef6106069c24b1ca247"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3E.wav",
@@ -3650,7 +4560,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8f38ed065b89b991ef21ddce3c9fcf1135d592e6a872befe5ace5ca6ee205f58",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3E.flac",
+      "deliverySha256": "411ba8708b24cd80463ac2d04e20a383cec680024de660b7ca50d025f7bca8a1",
+      "deliveryBytes": 192007,
+      "sourceBytes": 432728,
+      "pcmSha256": "3e6ccb5b0d5a12381e39be50320b48d0e2f0895fe048ab914064ec2cbb3a065a"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3F#.wav",
@@ -3667,7 +4582,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "84484b4abfb086b6c2f8f0cb6eb732e15c8d6644a1d9e4b5d686b5828456e5da",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3F#.flac",
+      "deliverySha256": "331aace66d00ea349c8d5ebea9381f83fb0602b27eb1d5a3f20d426994c896d1",
+      "deliveryBytes": 194844,
+      "sourceBytes": 432728,
+      "pcmSha256": "1d78b93d757af4e24ac4fb93bb03b058a69c69177417e3e48a5c98fca651631a"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3F.wav",
@@ -3684,7 +4604,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "bb078f3c5fe66bc166e61f469456d3d002ca30c58dfcb360219322fde803f10a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3F.flac",
+      "deliverySha256": "c6bb2dc80bbf7cfede229407997753bc0fc8d3c68182641a4aca8c26342003ba",
+      "deliveryBytes": 192596,
+      "sourceBytes": 432728,
+      "pcmSha256": "772a6869f87a99f738d61a536ebce0f14b06b23a03c48316216c16421f5e5b1c"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3G#.wav",
@@ -3701,7 +4626,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "744bd3b8b6199c8d7b45a640ae628042d3725f8de79969c576d33c133a17d00a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3G#.flac",
+      "deliverySha256": "2f80ca15f9f09f002add89f71404b1d6400aeaa7f2de631eeb50b9a974f99b68",
+      "deliveryBytes": 194247,
+      "sourceBytes": 432728,
+      "pcmSha256": "7d0263895e30ac65656a0e2d63a4fd67b6ea45bfdc87cb58b9aebba0386f1b19"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3G.wav",
@@ -3718,7 +4648,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f08ac43614a34405a45a96dc983c638a30607e97f2eb89939667d60d562f7597",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_3G.flac",
+      "deliverySha256": "2d1aaeb095df31ab0dd3ac5ccbda0c6e795d2343996bd4012a7bdcdbd75894ab",
+      "deliveryBytes": 193925,
+      "sourceBytes": 432728,
+      "pcmSha256": "d32feac0f8eec744dabaa08024d64e949ea54430c633793df93364d7d07ab26d"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4A#.wav",
@@ -3735,7 +4670,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "6f8d5161e68586410def9a0bd0678c30434144f32af8d4f69d20fd91be37bb57",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4A#.flac",
+      "deliverySha256": "06968a243729626b7ad6cead2a88228526ef8f909e73989539ef6f2bd5cec5f1",
+      "deliveryBytes": 186808,
+      "sourceBytes": 432728,
+      "pcmSha256": "1ca0c6c93d769d295fa466d56e5fcc6d5ffdfc418205840298957d7fa99df86b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4A.wav",
@@ -3752,7 +4692,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1c6b434cff0db4048657c87339019ada44fa99e2d3e2a080e59b0b40cdb8b62e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4A.flac",
+      "deliverySha256": "a25cde2511a7ea131625387e119ff62af40f070db075a42a7ea39162a6e13bda",
+      "deliveryBytes": 187368,
+      "sourceBytes": 432728,
+      "pcmSha256": "3f35d1d085ed1edb784b825f1a2c0ae9b72cad498cc555eb471d4f6cd92b5ead"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4B.wav",
@@ -3769,7 +4714,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1405b32dfe84e57b454b631751c7b09edcef4cf21c2481976e22222e2045fe59",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4B.flac",
+      "deliverySha256": "ca8bad6780681195dff34a19681a2d7c5ff098fc2c30f90487cc9bede949e2c0",
+      "deliveryBytes": 185248,
+      "sourceBytes": 432728,
+      "pcmSha256": "63d21a89ddfdb4a0d62e7a032b2bea47c4cb918c98c356211b5cb627cfc523ef"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4C#.wav",
@@ -3786,7 +4736,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "833eb7574789dbfa73faf9ec580eaf93ab0951b32013293ac73353bb0bd75e10",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4C#.flac",
+      "deliverySha256": "6a17553453f604198b1b842c6e8318c28df8bd57f735c3fce40901578a4e4247",
+      "deliveryBytes": 189116,
+      "sourceBytes": 432728,
+      "pcmSha256": "0b0dd82524a19d346613127a024d434855e5c37026a7045be8a4906092bd24ef"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4C.wav",
@@ -3803,7 +4758,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d4d198caabd4eb92b548922a387583227b32b08788a266a6a4c2661bd8bcec57",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4C.flac",
+      "deliverySha256": "54b618ed5ac65dca088fc2f21f92349eb59e8ea1c5064c84959a5e633dcd0d0c",
+      "deliveryBytes": 192610,
+      "sourceBytes": 432728,
+      "pcmSha256": "174c3975f7d84031522734412f3e70e7a1d3fc64c51d8d301d41e34082e72eab"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4D#.wav",
@@ -3820,7 +4780,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "814fecba08dd42289f26ac89e62799bff9679012e23b45fddfb9bf43439e796e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4D#.flac",
+      "deliverySha256": "de6e6feac0b9566f75f2079819823cf5c0903ccb3009063bd75dd65a75fad436",
+      "deliveryBytes": 189082,
+      "sourceBytes": 432728,
+      "pcmSha256": "cfb6ab4d9107379e8c8c6043fa144adb141f3191ecbd77ce332c77ee159d199e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4D.wav",
@@ -3837,7 +4802,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "2fee99492cf91163c5b8c6ccee439893b86b2ff569d8cb0264ddda4fac58eabc",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4D.flac",
+      "deliverySha256": "88df3d9ae4ed53c396656d345ce9016d3782cf3e1dfe8fa66b9c38c724330ed1",
+      "deliveryBytes": 189396,
+      "sourceBytes": 432728,
+      "pcmSha256": "3abbf9cb254bcc47a0d643c932ccf81eb9cae394de1bb49df425c5269e52ce2b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4E.wav",
@@ -3854,7 +4824,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "b45c757111c98cd22719e9ed4581f529279213ef6dce631629856823194cba56",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4E.flac",
+      "deliverySha256": "a684836a5c064c40e408001decc88de84fc8aa93aa853d5f5ee2902a58134903",
+      "deliveryBytes": 189911,
+      "sourceBytes": 432728,
+      "pcmSha256": "d22ce10f1825a5efb394fc776884de68f30d7e46994862fac1568d9b99e3242b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4F#.wav",
@@ -3871,7 +4846,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f75b0e1a4ce3321e0afc2f4ffd18917df22ed91fae2410a4a9b6fa40f469ebc9",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4F#.flac",
+      "deliverySha256": "1c63aaf577689cb704ee283494ede519c4c54b94ebcac67ef6fb15ae2efb1f46",
+      "deliveryBytes": 190153,
+      "sourceBytes": 432728,
+      "pcmSha256": "8f6d259dd68b6d716b273146bf0298a49bd46c038dae9efd2808316287b84915"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4F.wav",
@@ -3888,7 +4868,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f82fc0b9d3d21d628148b87c58cef2f4d7dc27d2921b80397eae88c51ab77e96",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4F.flac",
+      "deliverySha256": "21babd98e5d88fc8580606a5ebbd3ac06d8bf939763575910f507c48b547b245",
+      "deliveryBytes": 187734,
+      "sourceBytes": 432728,
+      "pcmSha256": "c02b08130fd5ac5056e5cb1e8f96c180e95ac54c0138e4d53b2f0e88bf3cf249"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4G#.wav",
@@ -3905,7 +4890,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "52906dd21ed954328cff7f4609bc0bd017592468610c5ba32ed554e485b7cb4f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4G#.flac",
+      "deliverySha256": "63a465dc9ea35f2592ea277e0b095fd428aedf41c807dfed12165476a82fb68f",
+      "deliveryBytes": 187747,
+      "sourceBytes": 432728,
+      "pcmSha256": "c4e439196672785cd27dbfeb401487b55570974078e7b7272e66e21ce6a9c322"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4G.wav",
@@ -3922,7 +4912,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "4597d776c1c69ecdb374994b8d36359c65328afd150477e517f8fbc1cc708e89",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_4G.flac",
+      "deliverySha256": "b9413d43affdde317f00e24eb34195baf8a70539aac654eb331ebb8a37e105e2",
+      "deliveryBytes": 188905,
+      "sourceBytes": 432728,
+      "pcmSha256": "c793f1df9d1554f4d8d2e11131189ebb4b0ac67b24b58427152533d41623d23f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5A#.wav",
@@ -3939,7 +4934,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1ab6833712376ab2776050a5abd4cd539e4a83a8a92c6d3322e7785105a45c85",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5A#.flac",
+      "deliverySha256": "9bae1c18de72e0a9cbdae8db1f2352b3be605bb7a8891eda866208a653fc6bbd",
+      "deliveryBytes": 179388,
+      "sourceBytes": 432728,
+      "pcmSha256": "2d8c97ee4c6894bdcb839fdb61a3aac442f22b18821447ff366f12bfdb19721e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5A.wav",
@@ -3956,7 +4956,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "977f7c064d6bc1b4d409bb669980e8d988786ea3050127a851f29cee83a30c7f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5A.flac",
+      "deliverySha256": "a9411158bafb5026100f24dabfb39074755bdce837b067e9267646d0e5d1e181",
+      "deliveryBytes": 180107,
+      "sourceBytes": 432728,
+      "pcmSha256": "fafbfaa2da48f166ff3aee922a262fa6460e7210bb0ce8e2e044016a1352f530"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5B.wav",
@@ -3973,7 +4978,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "78a6add49995c767f7f933f32d0737b69e2ddadfd2d3f2ea0b8755e5e3b2087f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5B.flac",
+      "deliverySha256": "2a339769796f5ccff265808b6d2955395cbc21fb73f78becfb68c0fd1da43989",
+      "deliveryBytes": 178884,
+      "sourceBytes": 432728,
+      "pcmSha256": "87d8a51bfddcb7c3b0c6c4f751574e97b08cee2e6fec7aaec5425acf8724a2cd"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5C#.wav",
@@ -3990,7 +5000,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f543d5a5d698143b2d6271393316dee82cceffad36523e9e184cb8e3e3076e79",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5C#.flac",
+      "deliverySha256": "400349ca9f3d2d4d01578e166b9e6c783e140cedfbdd84bc835b7e21d65391d1",
+      "deliveryBytes": 184205,
+      "sourceBytes": 432728,
+      "pcmSha256": "85b533a346db270a9f8740a89b122572217c67c8a59ac8328df0cfe0cd1f30f2"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5C.wav",
@@ -4007,7 +5022,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "cc2238656a68a52e56b818462d640f10fea98fa6507788eee9aeffd3cbd9108e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5C.flac",
+      "deliverySha256": "621f4fe09c80b1a244c4149f2851729524ad718722e6ec6402b722e73be383c4",
+      "deliveryBytes": 185279,
+      "sourceBytes": 432728,
+      "pcmSha256": "cb84733041fb59d5ec0d23cff27f504b09781cbf21eec304dedffa473564332c"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5D#.wav",
@@ -4024,7 +5044,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "cd3c88feb7dcfac7f41597f87c16e46efefaa54bbc946f3866203c719b03830e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5D#.flac",
+      "deliverySha256": "6052dcb95039019c5f3c67a9ab26d36a5b8341fc467693c1a225d14b71d11c4e",
+      "deliveryBytes": 182915,
+      "sourceBytes": 432728,
+      "pcmSha256": "0fd22485b984422304809188bff84fdf74d55ee95d41b53d6bf534a12c317b95"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5D.wav",
@@ -4041,7 +5066,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "39fea317d3a97016b0db1bc61e59fe5de8c15c284f427bc66f0944e342607e2d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5D.flac",
+      "deliverySha256": "b6d8268b313d0a39ff499eb1bee7bc513ab5690c53d5292ca7eacff1813b8df8",
+      "deliveryBytes": 183410,
+      "sourceBytes": 432728,
+      "pcmSha256": "6f1d9429e3cb43403aacda4d040660e91978e2acb63abbc6498eda7b69079853"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5E.wav",
@@ -4058,7 +5088,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "bba817692a9b0cd0d11087fac1a04a200507535d466735f6abec4e139e8dace8",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5E.flac",
+      "deliverySha256": "210fd731e798d903f55fc4ca28d6d9ecab42fb7eb050505650727886dd0689a8",
+      "deliveryBytes": 181912,
+      "sourceBytes": 432728,
+      "pcmSha256": "affae26e3fe821547ed16925595ea3b0f78c0de5fba9da0a69d935c0de6a0d9e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5F#.wav",
@@ -4075,7 +5110,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "0d70b0a2a0f124585eb2edfce7bea1b33d2f43dd635fd5f6de7af82c468fdf51",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5F#.flac",
+      "deliverySha256": "65418164e2d6b7e35ce3455eaec82baaca2a6cc7adca83889def6b24dc68c87c",
+      "deliveryBytes": 182162,
+      "sourceBytes": 432728,
+      "pcmSha256": "bbf2302c1a08bc9b10a2dd5ea47d7b89acc27dbbbad69471ef4ee6d97d50de3f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5F.wav",
@@ -4092,7 +5132,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "54be3b15476a64f061d0587a46eb1b14a478dbbaae86456d0b8ca97154ae3bd2",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5F.flac",
+      "deliverySha256": "67a0fccd1e509343ca906c8b836f92541043d379ff364d8822532d21e2d35393",
+      "deliveryBytes": 182049,
+      "sourceBytes": 432728,
+      "pcmSha256": "6f95ae1c2dcf0cd23b3e1d8c025e6b6d7ae8f40af43eb5e593f6df8466e30189"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5G#.wav",
@@ -4109,7 +5154,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5908b248d1dedc9a89c4ae83f26b4886c923cf0a0216812bd2bbf2bf3d5c13de",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5G#.flac",
+      "deliverySha256": "b498ab91b8c4a83a3883cd076eb8c9827063be38acfe1baa03b71c5a3ab5f43b",
+      "deliveryBytes": 180346,
+      "sourceBytes": 432728,
+      "pcmSha256": "0e871d58e117a41b5bdd42f50f516d59b7b650143113947ed0a8688b98ee64ec"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5G.wav",
@@ -4126,7 +5176,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "7731647b9ef7db1a68e889432f9e4330c263279143b1040651114b571e6478ee",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_5G.flac",
+      "deliverySha256": "eb8abe167c9e0d96b4d70801baa3ce8dcaca4f914cfa9cb3631bb93443477972",
+      "deliveryBytes": 181323,
+      "sourceBytes": 432728,
+      "pcmSha256": "13ba2c297febaee03692882d0623047e85d7334cc35049dbe439be8d69a358fc"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6C#.wav",
@@ -4143,7 +5198,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "efa989a4e2e0413a586d7af9102e4b2670047aeaef31da8c4c306d1c924e4f53",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6C#.flac",
+      "deliverySha256": "ef23f8c0968846315b68bd39582e94489e08894ee82abd9fe6cc095309c8cecd",
+      "deliveryBytes": 177410,
+      "sourceBytes": 432728,
+      "pcmSha256": "29737eb5c0c70d8fa599673970b191b50d43dc890d729b1ed76df8d6a66a5e71"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6C.wav",
@@ -4160,7 +5220,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e5ef6e487ad32ae77b1d0ba66f165399a6fe824086028db7abf96a8936ace438",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6C.flac",
+      "deliverySha256": "b71a4d7ad97fd1065b35802031234a90feef96556e7e8d0a922550bae390fcb1",
+      "deliveryBytes": 177561,
+      "sourceBytes": 432728,
+      "pcmSha256": "38a2f517dcdb7b84885e924c5851961410ebc1786557b95e7f8b6e37caa91c5f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6D#.wav",
@@ -4177,7 +5242,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "540713eae7c4bbcd3b8620af2693e9f52655279aa4f3bcad7414fd0097a4497c",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6D#.flac",
+      "deliverySha256": "945a349e3dfac4e261da181f1245eeaa8bfa28ba2747942143a85ceef91cadc8",
+      "deliveryBytes": 176902,
+      "sourceBytes": 432728,
+      "pcmSha256": "be628f39e37e8b4b979e73f7226955d661293d97e98eef468357d53d84a3e5d2"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6D.wav",
@@ -4194,7 +5264,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "1026e339e1bda0ea149eaa0071f4600f9eee9a5b4dded53c550a27e4dddde545",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6D.flac",
+      "deliverySha256": "b94ad2cdc70c74e7f49ee9e6f19604fbf069e3b22b10b390bc5b3a789801e5b7",
+      "deliveryBytes": 176786,
+      "sourceBytes": 432728,
+      "pcmSha256": "b509d1a76078fa232659832da80198e63e9565a09d3cc87b20a7a27e743b8dd3"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6E.wav",
@@ -4211,7 +5286,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8cec32eace90b1c975d1ede624b3fbba8ec6e5e689bad5f3dd356f02d074d7e0",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6E.flac",
+      "deliverySha256": "fdf6e6e4ea4e2bfce2956f33d44b8276afc068ae689edf578a66eb0c9daf0a08",
+      "deliveryBytes": 176645,
+      "sourceBytes": 432728,
+      "pcmSha256": "60aac281ad09232a1906a3ff0258ae726e979205b1fc2106a43122fee1db2c1f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6F.wav",
@@ -4228,7 +5308,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3b044a9f71a050f60d00dda3609815f3560ddacc3028a317b802941bb8e96a7e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice1/SonicStrings1_6F.flac",
+      "deliverySha256": "3bd520d451fcbf633044f50db28d34c59930265d2bf3b4653e184cbe7bd2cd70",
+      "deliveryBytes": 176496,
+      "sourceBytes": 432728,
+      "pcmSha256": "d9f13e893f496be1868162bf50a20d90204aa7c23ccae39cddda32d21c3feb25"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1A#.wav",
@@ -4245,7 +5330,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5c176c4b49e939dd1fc81b32fa870906b44c2e9f84543b559469aaaaa5bf2c15",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1A#.flac",
+      "deliverySha256": "02981bad430108be81af5976b20c7434bda4405361ce9c09e89d5e95310e0d34",
+      "deliveryBytes": 192993,
+      "sourceBytes": 432728,
+      "pcmSha256": "7f61d0260746deda5b024deb008ddc931003f073c84bcf3c87dffa031deff507"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1A.wav",
@@ -4262,7 +5352,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "57724779dd7bc14a2b6ba4858b0eb669de254a18ac727a13a697617a20cbb3b0",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1A.flac",
+      "deliverySha256": "e197d841ff839895279cf7b9a9ebfc19d8157486dbf1d5f2dcb6bd05e39aac29",
+      "deliveryBytes": 192616,
+      "sourceBytes": 432728,
+      "pcmSha256": "e5358ea8493e31124383b8f1751ac9156db92a4ba866fe9742a3d78b761ef440"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1B.wav",
@@ -4279,7 +5374,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f61335a9f15962438cb8e0a1fad81694962f1151a6b0fa43a3ab98511682cc3d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1B.flac",
+      "deliverySha256": "83dc40c78150114c267f43d92a904071fb9229f7362c63108452e837a0a057dc",
+      "deliveryBytes": 193408,
+      "sourceBytes": 432728,
+      "pcmSha256": "084813d474f9b20957dbe781e43a9e81c56dcaa18c96e93511f1b92518a96709"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1F#.wav",
@@ -4296,7 +5396,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "27d6418346c4ec3f7f3d1eeffc7981e30474302c98f9e9d72d2078436a08ec94",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1F#.flac",
+      "deliverySha256": "5a9ea750ee72039e6297bbf66df199e56c3f668fc8187ff5ae94bbfb79d67baf",
+      "deliveryBytes": 193574,
+      "sourceBytes": 432728,
+      "pcmSha256": "a2947615ae5bc2d6ba49259c0086bdd08f635c1844a7239975def55b68378819"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1G#.wav",
@@ -4313,7 +5418,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "b22c0734120eaa885b99990d1e43f31e18acf159aca41659fa62a50b6037f016",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1G#.flac",
+      "deliverySha256": "2f525dbbffbcac3aa719e666f7cbf621000633f8eb927df7ebc3f57c250dcef0",
+      "deliveryBytes": 192918,
+      "sourceBytes": 432728,
+      "pcmSha256": "61d5e15b01bf80e9f9fb7f085064d81db1a025b870a2e86a071640d3ae00a933"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1G.wav",
@@ -4330,7 +5440,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "11e31011ed88dbb719619e0b0cf4388b098e72a82c011aca4cef9235e8c49bb2",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_1G.flac",
+      "deliverySha256": "d581b85d878979b4e5132500482b19b1fcad01c62d73f91dbf0942972f84bcd7",
+      "deliveryBytes": 192774,
+      "sourceBytes": 432728,
+      "pcmSha256": "c27c03e941c1188cf45555bb61167c26456353f02e0681020758d001cae5195b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2A#.wav",
@@ -4347,7 +5462,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e09a64ea44d7fbc971e29a5afa7d3376a9bb8fb4b889f32b772465a34f8ef1a9",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2A#.flac",
+      "deliverySha256": "6c7b6242bb80db3d1b7a5edb514d97d55c8bc21e7807716c15bee2774f0f3f44",
+      "deliveryBytes": 193846,
+      "sourceBytes": 432728,
+      "pcmSha256": "c01208312274c100b8a22bcf1081363e4dee27cce41caafb49b6c42155505e1b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2A.wav",
@@ -4364,7 +5484,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "26e28758b183c940f398e1dcd4615bb9402e5ccc1ffb896143d05ff10f461b81",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2A.flac",
+      "deliverySha256": "a8a89e7969fce1094bf963b102fa844724ddb8d4136ecaee4a98388711c6173a",
+      "deliveryBytes": 193733,
+      "sourceBytes": 432728,
+      "pcmSha256": "afdc70e4b44e3fee1c5ae9a28f381e73995d786d8d817ff3b3862c27855ff165"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2B.wav",
@@ -4381,7 +5506,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "bda038f67e61d9a05ae03fd5130565cfb2af9deba2aad1a86ce0d461dce472dc",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2B.flac",
+      "deliverySha256": "0879a3eb36ccc0233cfc440b49441582ba9be57153238e9bc1c6c652fd0af40f",
+      "deliveryBytes": 193762,
+      "sourceBytes": 432728,
+      "pcmSha256": "95ecdbb2eccca4f5a582881ee97ad117b3adb65020e0cd2cd784fffc699e6c8b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2C#.wav",
@@ -4398,7 +5528,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d0d4e37176fce39565240c0f4e44bd8b42068d9c41b2316329f4e7cce1f8f228",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2C#.flac",
+      "deliverySha256": "bca606cf73810da767b1ea93da831e4c3371ddda120fede3adc84e621e5da80d",
+      "deliveryBytes": 193627,
+      "sourceBytes": 432728,
+      "pcmSha256": "b74e22e2003de0b2f3ed311366d847746857f66d3dab077f683a6b33c29231e9"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2C.wav",
@@ -4415,7 +5550,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "b5e274697f3dbd0c2d0c2f829fb1111e71b66aa532b48d6b818d924a5251e4fc",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2C.flac",
+      "deliverySha256": "d99631755a59df640afbfdea13181f803c9773fd7aa7ee5ba10fbffa31b592da",
+      "deliveryBytes": 194232,
+      "sourceBytes": 432728,
+      "pcmSha256": "f3e5d92534d8a41d62c91c940b71d8883157ae396588ba7068262139458561ea"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2D#.wav",
@@ -4432,7 +5572,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "cefc264289ff9084c057ab58f803bf6edf87ba1a5ca06685f2e95b6bd73eaf94",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2D#.flac",
+      "deliverySha256": "415ec362e7d8c2d206d162bc6c89e79f9dd82a9a996fe487f5a8d0942af9399a",
+      "deliveryBytes": 194473,
+      "sourceBytes": 432728,
+      "pcmSha256": "31c90fa07dd6a7c0ee949eb6fd326660bebfcbf938a4bfc7b8149d8eae2d14f5"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2D.wav",
@@ -4449,7 +5594,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "0d481f58ee133cf88ed7b84083b082279840d02ff0453eaaad92d98ef528f478",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2D.flac",
+      "deliverySha256": "4842882006233746c48ae60c0196ada9e5a6fae6502a02b5122038a11426d4d6",
+      "deliveryBytes": 194275,
+      "sourceBytes": 432728,
+      "pcmSha256": "3b68ab55144435bc6a82d86e1f656363a5a362a7af29f5532a40c0a8ea6e6a39"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2E.wav",
@@ -4466,7 +5616,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3bd6393fb78849091b4ea28bd563c96c248bfa23a6a9f261bea5c26afa158813",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2E.flac",
+      "deliverySha256": "5d45af71a168d8a8c0e07764f9c7ef75c0d694feae900ff9100ee30ccf134fb0",
+      "deliveryBytes": 194840,
+      "sourceBytes": 432728,
+      "pcmSha256": "ee8a7432199daa238ffb21a077bde7ca10727f778d00de0f148a363305237be4"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2F#.wav",
@@ -4483,7 +5638,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "12b8a40a6cbfdbe2773726c888162a37740971ad3f74bcacf800c4279af37fc2",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2F#.flac",
+      "deliverySha256": "a09fcf5df948b6dfc5d5501a5ab5c7113354c5d4037046b919d1f344f7d66070",
+      "deliveryBytes": 193904,
+      "sourceBytes": 432728,
+      "pcmSha256": "5cde06b8d4b55b932a26ca7e0021cb17dadedafe93215aca011c3b12332cbd1e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2F.wav",
@@ -4500,7 +5660,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "233fc324a445e7d5d6b2fec4a6166b50546f16392e953c63f93e4bbb3e5b25ae",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2F.flac",
+      "deliverySha256": "c2c546c8a67d0bb11b5b12718a20fcbfa504e90ace2f3a87cc90c08014447ee8",
+      "deliveryBytes": 194516,
+      "sourceBytes": 432728,
+      "pcmSha256": "0c8b3e316ea00239fa412663fc2f484bc99640afab96347be3429e5ce612982b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2G#.wav",
@@ -4517,7 +5682,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "ce09bd83bd24ce978017c1e68ba132e8aaed710e77f8d1810d97887a0dafcd83",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2G#.flac",
+      "deliverySha256": "fce41a74462ed9f2a5af30c63900b6d2d704f20e7074180accdef92d149f48e0",
+      "deliveryBytes": 193709,
+      "sourceBytes": 432728,
+      "pcmSha256": "b9d7264f220023bd3903bd9a0c92d7a02733d68e0e5a01a76e0530b2158eee85"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2G.wav",
@@ -4534,7 +5704,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "23c7b9fe11eae836d180cf02c3750670c739fcf77366a97cfe570abe1e5cba16",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_2G.flac",
+      "deliverySha256": "cb202144859744aa54f1fb214300f92d44a1e655d5ea407315d9e030d508d688",
+      "deliveryBytes": 193840,
+      "sourceBytes": 432728,
+      "pcmSha256": "eb141c9772e7d1d36fad32f2c29a9a50384ba588fb6c6bf6fde3faffdc02dde7"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3A#.wav",
@@ -4551,7 +5726,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3a4746ad1769eb702dbe9f603919a6fa65d86bc2aff4ebb3cd49c30c63e49022",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3A#.flac",
+      "deliverySha256": "06a9f26277f5aa9f105b38f39e90c483b238a98aaaae9ad95c5ca5ec22e207ce",
+      "deliveryBytes": 198493,
+      "sourceBytes": 432728,
+      "pcmSha256": "dbd811bf929b5c6381df204faeb0c9f09e369d111dde5c7188b003e9bccef529"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3A.wav",
@@ -4568,7 +5748,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f148f54f10135b864f47c99505dba19161fd3e1fa296259bf2c91f1b0f901e8f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3A.flac",
+      "deliverySha256": "daf06b6f0576806e6cfe2ffe23abdc8b04b0d869de54b0c7706f3de5aa9af61f",
+      "deliveryBytes": 198013,
+      "sourceBytes": 432728,
+      "pcmSha256": "389f675d24c73ee4ed9b9f2d896b44692add4e9c3d7d4712b7c09596131c2a38"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3B.wav",
@@ -4585,7 +5770,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "0375495ca08adb753ebffb5e9ee52fc4a44d8f5483caad9a27ee1cd7283b311e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3B.flac",
+      "deliverySha256": "92600016a693acfa3c4c2f883b8bee91ad0142e56930662774ed581e64a3c9e1",
+      "deliveryBytes": 196889,
+      "sourceBytes": 432728,
+      "pcmSha256": "04fb8832a42bf246ecb896d6ff2c6ee4bffbc58476df2d7f6451024b884cf3fd"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3C#.wav",
@@ -4602,7 +5792,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "10ffca0259db1e73eb4bcb3ff8ce491ed7cbf8ac26b70bbf83f415ab91a22ec8",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3C#.flac",
+      "deliverySha256": "aa1e34cc1f2c46b4790f23c73820098d950711e4ca19fba59d5f6d766313c4a0",
+      "deliveryBytes": 194088,
+      "sourceBytes": 432728,
+      "pcmSha256": "4099dce070e28e14c965a6b1e5fdea0dfaf172bd3825c6e9bd42e6346de0b803"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3C.wav",
@@ -4619,7 +5814,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "900e24ae0efed9a63a012f7cd8ed8608d48755acc36dcfbc4ac02e8fcc82264f",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3C.flac",
+      "deliverySha256": "5b16e31176e0f58ab8c7eac9b9417d7fdc4f66359c58438c72cfc9c96b1c6a76",
+      "deliveryBytes": 193384,
+      "sourceBytes": 432728,
+      "pcmSha256": "7c987f15a633d358141410df44d96e83a16fd94977d75608e47e7dec18123e06"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3D#.wav",
@@ -4636,7 +5836,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e6cb209b6239fcf170bbfdf8a407ef1592c0dd9c69ed98f608cd8f0c64891520",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3D#.flac",
+      "deliverySha256": "8b1d05f15059a46215af192abc2efebc5d09d32c443944998a4c5f1425e8532f",
+      "deliveryBytes": 195153,
+      "sourceBytes": 432728,
+      "pcmSha256": "7c01ff99ba1293437d91715fce6a0b72bc50e27774f49bfeeafbedfa5ec12ebe"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3D.wav",
@@ -4653,7 +5858,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5c49ddfd86e438ecbd2a6264593141b0214e31d41edbf8edc837ac77772df2c8",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3D.flac",
+      "deliverySha256": "7b293dff6b370f2427cbfc3bb0e558e8a6321efbc0613754d5f1ebf632e5f96a",
+      "deliveryBytes": 194294,
+      "sourceBytes": 432728,
+      "pcmSha256": "9a1a4c478a268536657cfd45b7828098abe63878bbd5c19641d53acb9415cc40"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3E.wav",
@@ -4670,7 +5880,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "89744195fffe266077bf14ff7eb509d5e1827989f9eab7cfa1db18951aed1e0b",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3E.flac",
+      "deliverySha256": "cd9772e5bcd1acd848f27e92f8e276550315220027542a7e10b6f322b02a26ae",
+      "deliveryBytes": 194842,
+      "sourceBytes": 432728,
+      "pcmSha256": "1680e16023ff69a561fe330c89c3f1c4153428a485ee3ca44d0b7fb74b91525e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3F#.wav",
@@ -4687,7 +5902,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "5b2a2daafa1a7633defcc3631521ac2500aeed76620e97f076549c0856947a97",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3F#.flac",
+      "deliverySha256": "c0919c1d65212f3861ba437e6f76163290682cd77fe120f574ef56f35fa2710d",
+      "deliveryBytes": 197860,
+      "sourceBytes": 432728,
+      "pcmSha256": "56213ce28ab522bbb6f0a62845dda3bb8a7508dd587111c95aaf1141e885dde4"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3F.wav",
@@ -4704,7 +5924,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "78dcca0f806274b34adb764d9c714d4cb351535adc86c35da90df88e3e2ec4e1",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3F.flac",
+      "deliverySha256": "a7ca13aa858d8b473a1e81a6c3ee27a4a7db75f4e83e023878fa306c523cdb91",
+      "deliveryBytes": 195293,
+      "sourceBytes": 432728,
+      "pcmSha256": "0f424fbe468cb9f73d542cd1fe75a8edaa925310f0f4a46d2cfa81d5e6868bcb"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3G#.wav",
@@ -4721,7 +5946,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9e3394075a1fb13d83412859d8ecbcdc9048261cf35ac59c7746ee0112bd403e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3G#.flac",
+      "deliverySha256": "a78e84d031106d2fe89be76b8fd592ddcfe1d475734afd8ecf2702cb6418a7e2",
+      "deliveryBytes": 197794,
+      "sourceBytes": 432728,
+      "pcmSha256": "312a25381dceeab80183a815ae3d36ad759ecbc496f9ab2b0850072a4ce1adbd"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3G.wav",
@@ -4738,7 +5968,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "eceae82854a96bccba142f0a19f1ac23b516b989f6649c05952315d709004b98",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_3G.flac",
+      "deliverySha256": "24015bb2665134daec660e584c64b02c1f4a9a83ce596b297884ec664c85b410",
+      "deliveryBytes": 198216,
+      "sourceBytes": 432728,
+      "pcmSha256": "d768c15eb2b0770515b9aaaa041916d953c976649d8275267e001aa533d98fe8"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4A#.wav",
@@ -4755,7 +5990,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e8e5666804ba4039051d8d7f9767657a041773b0c55aa6ce81006c26931dd685",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4A#.flac",
+      "deliverySha256": "c8ffc4c48153ac915e9d911f21dce0c0bab8a9152ad7d02a8764d6bf8bc4a594",
+      "deliveryBytes": 190108,
+      "sourceBytes": 432728,
+      "pcmSha256": "b7971fb8f1a61074e160081fd31e9940847f0e827286bb2ae15bca3d6054699d"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4A.wav",
@@ -4772,7 +6012,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "329997b009d8dccfb02ef77efba41e1d2a6d2ec7d7b7a869a90ecf3355ea3e60",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4A.flac",
+      "deliverySha256": "687ab9434656fd3cc6ae4678590078253365ba0e29ca078299ca0bf63be15fcb",
+      "deliveryBytes": 189294,
+      "sourceBytes": 432728,
+      "pcmSha256": "98f9dfef25af3ce038e82022c649888d5f32c04d8e4e77dd9a58b6885e1b8cf3"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4B.wav",
@@ -4789,7 +6034,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "113c8db5ac99c7919cd2cac45ba65f95e2d354f6d03dfaeb5e2f51a35dcac271",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4B.flac",
+      "deliverySha256": "44d983b84a7a7b7c950bb60b37bdde3fff411489a3a99e6d88cb119328e601a6",
+      "deliveryBytes": 189627,
+      "sourceBytes": 432728,
+      "pcmSha256": "8430e42a8c6073118916ec2a710a2f8c6c7756d60c32a6ff431ad1aea935992d"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4C#.wav",
@@ -4806,7 +6056,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f754d26ac28c1ee0f3bea0bc466dd33a2094f873115826819f1a83d8009209bf",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4C#.flac",
+      "deliverySha256": "3c79ccce7498412d87748baff620e38d6d00adb51a97075d003d340fc5cf9965",
+      "deliveryBytes": 193823,
+      "sourceBytes": 432728,
+      "pcmSha256": "58caca1a8027f7b0ab501c4c2475b156e8c4f3b136b703b32054a312447f58af"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4C.wav",
@@ -4823,7 +6078,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "7dccd6a63274c62400fa8c33edcd40dba0bbc92ad40d848c70ff5274bdab1f27",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4C.flac",
+      "deliverySha256": "925a75fc6fac7c250c31147a0d99bd0da3dbc9bf2536aa1f40730dbbe5b180c0",
+      "deliveryBytes": 195916,
+      "sourceBytes": 432728,
+      "pcmSha256": "3c65ab10e25503ca347ae1e253c999ef408eba291b773343535a84cac17bb44f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4D#.wav",
@@ -4840,7 +6100,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "f45a43fd832973e194b8e1c5073bb8cc179f63b4d1e879517b268f43e444c3b0",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4D#.flac",
+      "deliverySha256": "dafb78085d7dbd25b88306c86b4cbbcff0cd95e025f17d148c2925dfb960bda4",
+      "deliveryBytes": 193281,
+      "sourceBytes": 432728,
+      "pcmSha256": "2a8f94660281c5c5755d314b01b86a50eb0bc3544309c53d1affd39365ea30c9"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4D.wav",
@@ -4857,7 +6122,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "e5799a86e9bd1ca9fd78a2bd76c3ff2687d27c236dff854f568db671ad47b1f1",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4D.flac",
+      "deliverySha256": "2d4a4b35831a745b76a94fafb2107c46a4a43308c0ed88dd1c8422325c0970e5",
+      "deliveryBytes": 193122,
+      "sourceBytes": 432728,
+      "pcmSha256": "20039bf3a5e834cf3eaffdc59ba37d557522fa193242c21578ca061a70e5db3a"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4E.wav",
@@ -4874,7 +6144,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "3347092f41908ef5fb67b9058ab495f7a485a8da2b9073bb48dc753e9972be31",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4E.flac",
+      "deliverySha256": "9e874c95c68811f1b6a28ce1d8154604245bd2a28cf5fe40d53a316457877d43",
+      "deliveryBytes": 192745,
+      "sourceBytes": 432728,
+      "pcmSha256": "64434dd6faaab9d7556540b31cfdb91daa2d5ec4e6aea20a9cca40fca6282f36"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4F#.wav",
@@ -4891,7 +6166,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "8a9dcdb62629d4ba810f78be5de67588f88595b55cc2ea89964aa39b0e509e51",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4F#.flac",
+      "deliverySha256": "6915c2a5c11b5ac8335ea6916a32c9fe4606fa069baebef8e2cf94af91330d2b",
+      "deliveryBytes": 193587,
+      "sourceBytes": 432728,
+      "pcmSha256": "6b9559aac78eebf777dfaa23f3db7d58c0c096366ec76a182785e265f63423ff"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4F.wav",
@@ -4908,7 +6188,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "484ff3cde729c93463ddcad6429270b7e428d5d95d6161e545446236cb2b2970",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4F.flac",
+      "deliverySha256": "99d9ff020a49bdf96287cc668235d8b7dda513a38ca98b5e3096d2e0f8793c12",
+      "deliveryBytes": 192200,
+      "sourceBytes": 432728,
+      "pcmSha256": "4b1083e56805e8c18c7eaaafceadd4579d8fec775df224a5543e81112755fb42"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4G#.wav",
@@ -4925,7 +6210,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9ad7083dbe23bcdc0ba82752c2fec696ec712f6d9992c72988fa7fe75ef37c5e",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4G#.flac",
+      "deliverySha256": "5bb5e1625f1d04dc107c0fbfbed5552b2a40d2c8727532cbae7c93938e70cf9e",
+      "deliveryBytes": 191826,
+      "sourceBytes": 432728,
+      "pcmSha256": "46b457ce9613524e067d3d0759c6a123555aaf1f58d33fba695f5734454c1a4b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4G.wav",
@@ -4942,7 +6232,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "caad3dcfae0fb7ff5cdbb95505cfa323c6c52155d7092054dedb3614605c8c64",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_4G.flac",
+      "deliverySha256": "825931bd464dcceffe63ecb859cfb2d7a7db1a81dd063ca7c9aab27b7e57131a",
+      "deliveryBytes": 193374,
+      "sourceBytes": 432728,
+      "pcmSha256": "3d81cbb06aaab83e111ffd0a0ef999da4c523e394bb2feb27fa371375f3ab724"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5A#.wav",
@@ -4959,7 +6254,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "6c9874adc91a17c0acdca70e0f0ce950059ccb001f24cfac04b438ad8ada8ea7",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5A#.flac",
+      "deliverySha256": "64db2eb084d116065e168171a9f5ea351a8639a0a3edd599106c5ab66b6526d4",
+      "deliveryBytes": 184699,
+      "sourceBytes": 432728,
+      "pcmSha256": "ff75ee16e811356c583dc9dc5af88b644da7e4b153549c937074c02d93b60adc"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5A.wav",
@@ -4976,7 +6276,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "04cf094455896e46bb61264db427ee274dd00e7ca4fc3ade6f1a6c082b4ab1f3",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5A.flac",
+      "deliverySha256": "7ff1d5c23aa1d1eaecc08a237555b75b48050dbb0f19b7f1d69a8f7802d71b10",
+      "deliveryBytes": 184483,
+      "sourceBytes": 432728,
+      "pcmSha256": "04ef9bb538e560eeefb7ac2e6274f67961877a8d19a6ae0c536708d17e2b6622"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5B.wav",
@@ -4993,7 +6298,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "32179f9cfb10d768970eca809a24b6e822930a84fa86d354bddc636b919ab19c",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5B.flac",
+      "deliverySha256": "3f731652e1a594eade68fd6c0070840988bc0c911efb58d9cab30e30c9c68b1d",
+      "deliveryBytes": 183338,
+      "sourceBytes": 432728,
+      "pcmSha256": "aa5b1cd31b8d73395f87466f0da814603596418f2eb92c82d8fd562606d174e9"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5C#.wav",
@@ -5010,7 +6320,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "09fa20d05249feb5f1a1f8731c9e6098b6f9f635d009eae0d2d1a8c2b247b628",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5C#.flac",
+      "deliverySha256": "757d39586881b3dcbca99b23b03a5218cf71774da407bb41a43e2c4ce28343ba",
+      "deliveryBytes": 187889,
+      "sourceBytes": 432728,
+      "pcmSha256": "3416cc023ca975a4810a03676080adcd48d39313cf6bf0784b0bb73f8c573f7b"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5C.wav",
@@ -5027,7 +6342,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9107f9bfee1e6505fa5d46e83651eb000570948f9f8e55ab78ecc5334cf80310",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5C.flac",
+      "deliverySha256": "7be5675bdc26f6552f7ec975ebae48fad030b7afe2cb28ffebfc62466846e884",
+      "deliveryBytes": 189237,
+      "sourceBytes": 432728,
+      "pcmSha256": "e2c6bbb804d6f5e43f16d6cd00cf7fc851db837eb676ab1f818ab632b3a875fb"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5D#.wav",
@@ -5044,7 +6364,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "b2b8e981a5d784e21100c721eede67c35edf6acf2705063924e408b8398390c4",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5D#.flac",
+      "deliverySha256": "3a62e4a7e945fdd3529fb24895833473e9d595cb7f2a3fd4c0d85899f15cbc44",
+      "deliveryBytes": 186870,
+      "sourceBytes": 432728,
+      "pcmSha256": "a1bb7b8e83ead15a2553318b47feebc12e533c31afa850a29b4776f809d46814"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5D.wav",
@@ -5061,7 +6386,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "a2b8c4add1426ed18875445b64cc89e19a02b5a7fd208f4a9f357302a59aba84",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5D.flac",
+      "deliverySha256": "d1184fd71251606c8b252b9235779f944d58839f674f84fab7b422e5c33d8126",
+      "deliveryBytes": 187182,
+      "sourceBytes": 432728,
+      "pcmSha256": "e11145b42fca94ce2a1564802e15495f03b79b71d4932476a11e2d0d667149e2"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5E.wav",
@@ -5078,7 +6408,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "177ad37d9f37bd649d989cc3524af8f6d862b0d4e63c8a1e2f22c589268a29b6",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5E.flac",
+      "deliverySha256": "a31890aae619b45b05bb98f1337a7bde543848130c6e8bcf397dedf2610cc976",
+      "deliveryBytes": 186265,
+      "sourceBytes": 432728,
+      "pcmSha256": "6ebef684f59f5098967d0bbaca7f90db1438f00dc36428ca34882589c3934e15"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5F#.wav",
@@ -5095,7 +6430,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "2f056bd0f4c01f4d905937db45dbbd1fed74727794dffb35a136f05b25a4cd3b",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5F#.flac",
+      "deliverySha256": "d535ecb1584fb41723f2b63b75b282206894478699b1662a9c1baa1f529d77ac",
+      "deliveryBytes": 187173,
+      "sourceBytes": 432728,
+      "pcmSha256": "0c1c935cd5d4ce21e975d5e9629ec3bf186504bd918a4d4f55005abc347fc2af"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5F.wav",
@@ -5112,7 +6452,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "9dcff027c124ea5a2d62d5b55c6243369275c2613ce4b854c733e884fb6753f4",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5F.flac",
+      "deliverySha256": "df915ecb3a2f66b2082e643b9b8c3177e13102cff9c2cb0b312b79e3a30734ad",
+      "deliveryBytes": 186066,
+      "sourceBytes": 432728,
+      "pcmSha256": "41ca6d616e2c663b5fdbe07ce66dbd7f447b835cbb9170460c8ba795315d72ae"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5G#.wav",
@@ -5129,7 +6474,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "c441f832b1c985b4ba5b6712120b29026de95bc0bef6810b2ac3b71637cfe83b",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5G#.flac",
+      "deliverySha256": "0cd4acfb5d53d80cc36bf7fe4b5900735e367d78b0be764d6604b2d54ac12346",
+      "deliveryBytes": 186003,
+      "sourceBytes": 432728,
+      "pcmSha256": "a16f8fd01c35c7cc1bbe8bf72bb88d3bbb047994a5e0c82d1532dd83c03efbd4"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5G.wav",
@@ -5146,7 +6496,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "fba163408e382f761a0b1a6280ce76223314b1ab991ffbd4221593a1fc9bfd68",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_5G.flac",
+      "deliverySha256": "42e2592486fd1c475182fdd8fef2285e5b202b3e1db0d00e4521efcc12bfeb24",
+      "deliveryBytes": 185974,
+      "sourceBytes": 432728,
+      "pcmSha256": "dbdaf916a6b24a72c4b9bb2849b21905607555312d7f8a8ca0640a1b880f2858"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6C#.wav",
@@ -5163,7 +6518,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "7d1d9c24cc9e73245032efd6f501f78cbcffdc1bd00a122009de0ae18474cb9a",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6C#.flac",
+      "deliverySha256": "c91668a4dd0f678afb8b0bfed73dd4ebd5fe9dc4f6ce4c7855a7dc00672c9b06",
+      "deliveryBytes": 180838,
+      "sourceBytes": 432728,
+      "pcmSha256": "fc132e4acf5d2f4505b76c1b5dec0cb05a69060b7b4dc4b3b09e07df499c2818"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6C.wav",
@@ -5180,7 +6540,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "d461bb1415512315f4b5c88bfd52866b75921efb1ac28d97b5c2ecca31ea9530",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6C.flac",
+      "deliverySha256": "2811af5093ae1d93c7c73afd9a717f3cf1c04a23cabcda8b5b5be13e1e290d3a",
+      "deliveryBytes": 182523,
+      "sourceBytes": 432728,
+      "pcmSha256": "083ce7aa76029e8e146b27e888b9d27a0e2c75666f714f2eea98d116cebd719e"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6D#.wav",
@@ -5197,7 +6562,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "4022e1e1712700f4be14bede1df6895f543e52d9169b9faff5f2b42b038b2895",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6D#.flac",
+      "deliverySha256": "c40871e7e65293f8284cfb476141654c710cb21503a7a72568903e1fbd6d3ac0",
+      "deliveryBytes": 180497,
+      "sourceBytes": 432728,
+      "pcmSha256": "34a65c945c437deb5ac255f4d4bb6dc958eb64fc2a2b95bed927eb474908d69f"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6D.wav",
@@ -5214,7 +6584,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "bb119897ff12207cdd2f20b2c38b8b9949e2e13cff370818747388d68862e925",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6D.flac",
+      "deliverySha256": "8d4079e6739d2d705f127b6d98497d53669e1a8a6239d0303fe7f7e340b803f9",
+      "deliveryBytes": 180353,
+      "sourceBytes": 432728,
+      "pcmSha256": "47261929bb0e5fe3682720a98c1b766d89de4870489848ea049cd3b7ed095a42"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6E.wav",
@@ -5231,7 +6606,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "a50b52ea11ded30c04eef88d6caefb5b65485b7c9a8a702443523a8198b89c71",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6E.flac",
+      "deliverySha256": "d6e6f322be347a3e15db0ccf59bd610044265773d82956e8ba968ab0506d2870",
+      "deliveryBytes": 179950,
+      "sourceBytes": 432728,
+      "pcmSha256": "c557747bfeba3704c50941996b01415245fd33a73d2fa4c3a5c4f811a2cd9b16"
     },
     {
       "source": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6F.wav",
@@ -5248,7 +6628,12 @@
       "gain": 1,
       "tuningCents": 0,
       "sha256": "df321a741038f5f0b2860f5a428588151bfba81dcf2dad64b0ef713b93a7fb5d",
-      "loopAssessment": "One-shot; not looped"
+      "loopAssessment": "One-shot; not looped",
+      "deliverySource": "assets/audio/omni-84/Samples/SonicStrings/Voice2/SonicStrings2_6F.flac",
+      "deliverySha256": "4a34dea4ddadb9c92c90392b600474db6d05b6ab3d6ab27213d312293dac71e8",
+      "deliveryBytes": 179491,
+      "sourceBytes": 432728,
+      "pcmSha256": "aeceed35afe574718a5f679e9aaf859994ac198bf6787bd0722889bb0489553b"
     }
   ]
 }

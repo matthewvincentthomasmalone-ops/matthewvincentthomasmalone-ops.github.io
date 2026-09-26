@@ -9,13 +9,8 @@
 }
 body {
   margin: 0;
-  background: radial-gradient(
-    ellipse at 45% 40%,
-    #413039,
-    #211d24 68%,
-    #18171d
-  );
-  color: #ddc9c9;
+  background: #d8a2ad;
+  color: #56142a;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
@@ -26,7 +21,7 @@ input {
 button {
   cursor: pointer;
 }
-button:focus-visible,
+button:not(#power):focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid #fff2cb;
   outline-offset: 4px;
@@ -47,13 +42,13 @@ main {
   margin-bottom: 24px;
 }
 .edition {
-  color: #9e888f;
+  color: #794253;
   font-size: 9px;
 }
 .topline button,
 .below button {
   background: none;
-  color: #c7aeb3;
+  color: #571326;
   border: 0;
   border-bottom: 1px solid #685058;
   padding: 10px 0;
@@ -89,9 +84,8 @@ main {
 }
 .panel {
   position: absolute;
-  border: 1px solid #bf82904f;
-  border-radius: 1px;
-  background: #430c1910;
+  border: 0;
+  background: none;
 }
 .panel h2 {
   font-size: 10px;
@@ -182,20 +176,20 @@ main {
   height: 16px;
 }
 .voice-panel {
-  left: 151px;
-  top: 73px;
-  width: 187px;
+  left: 164px;
+  top: 91px;
+  width: 179px;
   height: 66px;
 }
 .pattern-panel {
-  left: 151px;
-  top: 150px;
-  width: 187px;
+  left: 164px;
+  top: 166px;
+  width: 179px;
   height: 68px;
 }
 .selector-bank {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   position: absolute;
   left: 6px;
   right: 6px;
@@ -206,7 +200,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25px;
+  width: 24px;
   gap: 4px;
   position: relative;
 }
@@ -239,21 +233,21 @@ main {
 }
 .string-controls {
   left: 369px;
-  top: 61px;
+  top: 88px;
   width: 156px;
-  height: 79px;
+  height: 65px;
 }
 .rhythm-controls {
   left: 352px;
-  top: 144px;
+  top: 161px;
   width: 107px;
-  height: 74px;
+  height: 70px;
 }
 .chord-controls {
   left: 465px;
-  top: 144px;
+  top: 161px;
   width: 60px;
-  height: 74px;
+  height: 70px;
 }
 .knob-row {
   display: flex;
@@ -316,17 +310,10 @@ main {
 }
 .chord-panel {
   position: absolute;
-  left: 30px;
-  top: 224px;
-  width: 495px;
-  height: 148px;
-  border: 1px solid #bc7e8a66;
-  background: repeating-linear-gradient(
-    71deg,
-    transparent 0 31px,
-    #c6949833 31px 32px,
-    transparent 32px 33px
-  );
+  left: 64px;
+  top: 240px;
+  width: 461px;
+  height: 134px;
 }
 #chordGrid {
   position: relative;
@@ -374,18 +361,6 @@ main {
   width: 256px;
   color: #ead6c4;
 }
-.brand:before {
-  content: "";
-  position: absolute;
-  left: 34px;
-  right: 3px;
-  top: -17px;
-  border-top: 2px solid #c78e9770;
-  border-left: 2px solid #c78e9770;
-  border-radius: 5px;
-  height: 24px;
-  transform: skew(-5deg);
-}
 .brand span {
   font-size: 35px;
   font-weight: 900;
@@ -402,9 +377,9 @@ main {
 }
 .realtime {
   left: 428px;
-  top: 377px;
+  top: 381px;
   width: 101px;
-  height: 150px;
+  height: 144px;
 }
 .realtime h2 {
   font-size: 8px;
@@ -412,7 +387,7 @@ main {
 .mode-legend {
   position: absolute;
   left: 54px;
-  top: 20px;
+  top: 15px;
   display: grid;
   gap: 3px;
   font-size: 7px;
@@ -426,67 +401,64 @@ main {
 #autoBass {
   position: absolute;
   left: 53px;
-  top: 43px;
+  top: 32px;
 }
 .chord-legend {
   position: absolute;
   left: 37px;
-  top: 65px;
+  top: 51px;
   font-size: 7px;
 }
 .hold-legend {
   position: absolute;
   left: 55px;
-  top: 75px;
+  top: 55px;
   font-size: 7px;
 }
 #chordHold {
   position: absolute;
   left: 53px;
-  top: 87px;
+  top: 66px;
 }
 .rhythm-legend {
   position: absolute;
   left: 13px;
-  top: 94px;
+  top: 65px;
   font-size: 7px;
 }
 .sync-legend {
   position: absolute;
   left: 12px;
-  top: 106px;
+  top: 75px;
   display: grid;
   gap: 2px;
   font-size: 7px;
 }
 #rhythmStart {
   position: absolute;
-  left: 12px;
-  top: 128px;
+  left: 10px;
+  top: 98px;
 }
 .strum-frame {
   position: absolute;
-  left: 536px;
-  top: 93px;
+  left: 539px;
+  top: 108px;
   width: 107px;
-  height: 345px;
-  border: 1px solid #cd9ba661;
-  clip-path: polygon(0 0, 100% 6%, 100% 94%, 0 100%);
-  background: #74304430;
+  height: 308px;
 }
 #strumplate {
   position: absolute;
   left: 7px;
   top: 8px;
   width: 96px;
-  height: 329px;
+  height: 288px;
   background: repeating-linear-gradient(
     to bottom,
     #e2cf8c 0 2px,
     #51492f 2px 3px,
     #bba963 3px 5px
   );
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 20% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 6%, 100% 96%, 0 100%);
   box-shadow: inset 0 0 5px #f4e6be66;
   touch-action: none;
   cursor: crosshair;
@@ -514,7 +486,7 @@ main {
 #instantOff {
   position: absolute;
   left: 653px;
-  top: 120px;
+  top: 138px;
   width: 25px;
   height: 27px;
   border: 0;
@@ -529,10 +501,10 @@ main {
 }
 .speaker {
   position: absolute;
-  left: 690px;
-  top: 99px;
-  width: 380px;
-  height: 330px;
+  left: 700px;
+  top: 120px;
+  width: 348px;
+  height: 288px;
 }
 .below {
   display: flex;
@@ -540,7 +512,7 @@ main {
   justify-content: space-between;
   gap: 20px;
   font-size: 11px;
-  color: #ac969e;
+  color: #571326;
   margin: 0 12px;
 }
 .below p {
@@ -643,4 +615,65 @@ main {
   * {
     scroll-behavior: auto !important;
   }
+}
+
+.la-background,
+.pink-wash {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.la-background {
+  z-index: -2;
+  background: url("assets/la.webp") center 52% / cover no-repeat;
+  filter: saturate(1.65) contrast(0.68) brightness(1.2) sepia(0.12);
+  transform: scale(1.025);
+}
+.pink-wash {
+  z-index: -1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 210, 222, 0.58),
+      rgba(244, 164, 184, 0.52)
+    ),
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(255, 241, 235, 0.32),
+      rgba(128, 0, 32, 0.14)
+    );
+  backdrop-filter: blur(0.6px);
+}
+body {
+  isolation: isolate;
+}
+.panel-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#power:focus,
+#power:focus-visible {
+  outline: none;
+}
+#power:focus-visible {
+  box-shadow:
+    0 2px 1px #20080f,
+    inset 0 0 0 2px #d6b985;
+}
+
+.string-controls .knob-row {
+  margin-top: 2px;
+}
+.string-controls .knob-control {
+  gap: 3px;
+}
+.rhythm-controls .knob-row {
+  margin-top: 4px;
+}
+.rhythm-controls .knob-control,
+.chord-controls .knob-control {
+  gap: 4px;
 }

@@ -17,6 +17,11 @@ export class SampleEngine {
     this.rhythmTimer = null;
     this.step = 0;
     this.ready = null;
+    this.loadingAll = null;
+    this.pendingSamples = new Map();
+    this.failedSamples = new Set();
+    this.playable = false;
+    this.chordReady = null;
     this.settings = {
       master: 0.65,
       chord: 0.5,
@@ -91,45 +96,136 @@ export class SampleEngine {
     }
   }
   async load() {
-    this.report("Loading local Omni-84 2.1.0 recordings…");
-    let failed = 0;
+    this.report("Loading the first Omni-84 sounds…", { phase: "loading" });
     try {
-      const response = await fetch("sample-manifest.json");
+      const response = await fetch("sample-manifest.json?v=20260926-cream");
       if (!response.ok) throw Error("manifest unavailable");
       this.samples = (await response.json()).samples;
-      let cursor = 0,
-        done = 0;
-      const worker = async () => {
-        while (cursor < this.samples.length) {
-          const entry = this.samples[cursor++];
-          try {
-            const r = await fetch(
-              entry.source.split("/").map(encodeURIComponent).join("/"),
-            );
-            if (!r.ok) throw Error("missing sample");
-            const buffer = await this.ctx.decodeAudioData(
-              await r.arrayBuffer(),
-            );
-            if (entry.loopStart !== undefined) this.prepareLoop(buffer, entry);
-            this.buffers.set(entry.source, buffer);
-          } catch {
-            failed++;
-          }
-          done++;
-          if (done % 30 === 0)
-            this.report(`Loading Omni-84: ${done}/${this.samples.length}`);
-        }
-      };
-      await Promise.all(Array.from({ length: 6 }, worker));
+      const essential = this.chordEntries({ root: 0, quality: "major" });
+      this.startupCount = essential.length;
+      await this.loadEntries(essential, 4);
+      this.playable = true;
+      this.loadResult.essential = this.buffers.size;
+      this.report(
+        this.buffers.size
+          ? "Omni-84 ready to play · other sounds load in the background"
+          : "Samples unavailable · temporary synthesized fallback",
+        { phase: "ready" },
+      );
+      // Ready resolves as soon as the first chord, strings, bass and drum hits are usable.
+      this.loadingAll = this.loadEntries(this.samples, 2).then(() => {
+        this.report(
+          `Omni-84 2.1.0 · ${this.buffers.size} recordings ready${this.failedSamples.size ? " · missing sounds use fallback" : ""}`,
+          { phase: "background" },
+        );
+      });
     } catch {
-      failed++;
+      this.playable = true;
+      this.loadResult = { loaded: 0, failed: 1, essential: 0 };
+      this.loadingAll = Promise.resolve();
+      this.report("Samples unavailable · temporary synthesized fallback", {
+        phase: "ready",
+      });
     }
-    this.report(
-      this.buffers.size
-        ? `Omni-84 2.1.0 · ${this.buffers.size} recordings ready${failed ? " · missing sounds use fallback" : ""}`
-        : "Local samples unavailable · temporary synthesized fallback",
+  }
+  updateLoadStats() {
+    this.loadResult = {
+      ...this.loadResult,
+      loaded: this.buffers.size,
+      failed: this.failedSamples.size,
+    };
+    if (!this.playable && this.startupCount)
+      this.report(
+        `Loading the first Omni-84 sounds: ${this.buffers.size}/${this.startupCount}`,
+        { phase: "loading" },
+      );
+  }
+  async loadEntry(entry) {
+    if (!entry || this.buffers.has(entry.source)) return true;
+    if (this.pendingSamples.has(entry.source))
+      return this.pendingSamples.get(entry.source);
+    const loading = (async () => {
+      const paths = [
+        ...new Set([entry.deliverySource, entry.source].filter(Boolean)),
+      ];
+      for (const path of paths) {
+        try {
+          const response = await fetch(
+            path.split("/").map(encodeURIComponent).join("/"),
+          );
+          if (!response.ok) throw Error("missing sample");
+          const buffer = await this.ctx.decodeAudioData(
+            await response.arrayBuffer(),
+          );
+          if (entry.loopStart !== undefined) this.prepareLoop(buffer, entry);
+          this.buffers.set(entry.source, buffer);
+          this.updateLoadStats();
+          return true;
+        } catch {
+          /* Try the original WAV if this browser cannot decode FLAC. */
+        }
+      }
+      this.failedSamples.add(entry.source);
+      this.updateLoadStats();
+      return false;
+    })();
+    this.pendingSamples.set(entry.source, loading);
+    return loading;
+  }
+  async loadEntries(entries, concurrency = 4) {
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < entries.length) {
+        await this.loadEntry(entries[cursor++]);
+      }
+    };
+    await Promise.all(Array.from({ length: concurrency }, worker));
+  }
+  closest(group, midi) {
+    return this.samples
+      .filter((s) => s.group === group)
+      .reduce(
+        (best, entry) =>
+          !best ||
+          Math.abs(entry.rootMidi - midi) < Math.abs(best.rootMidi - midi)
+            ? entry
+            : best,
+        null,
+      );
+  }
+  chordEntries(chord) {
+    const entries = new Set();
+    const add = (entry) => {
+      if (entry) entries.add(entry);
+    };
+    const sampledChord = this.samples.find(
+      (s) =>
+        s.role === "chords" &&
+        s.rootPC === chord.root &&
+        s.quality === chord.quality,
     );
-    this.loadResult = { loaded: this.buffers.size, failed };
+    add(sampledChord);
+    if (!sampledChord)
+      for (const n of INTERVALS[chord.quality])
+        add(this.closest("keyboard", 48 + ((chord.root + n) % 12)));
+    for (const midi of strumNotes(chord.root, chord.quality)) {
+      add(this.closest("strings2", midi));
+      add(
+        this.closest(
+          this.settings.voice === "omni2" ? "keyboard" : "strings1",
+          midi,
+        ),
+      );
+    }
+    for (const kind of ["kick", "snare", "hihat", "clave"])
+      add(this.samples.find((s) => s.drum === kind));
+    for (const midi of [36 + chord.root, 43 + chord.root])
+      add(this.closest("bass", midi));
+    add(this.closest("keyboard", 60));
+    return [...entries];
+  }
+  async warmChord(chord) {
+    await this.loadEntries(this.chordEntries(chord));
   }
   prepareLoop(buffer, entry) {
     // Blend the tail into the pre-loop segment. At the wrap both value and phase follow the source.
@@ -302,7 +398,12 @@ export class SampleEngine {
     const token = ++this.generation;
     this.chord = chord;
     this.chordActive = true;
-    if (!(await this.ensure()) || token !== this.generation) return;
+    this.chordReady = (async () => {
+      if (!(await this.ensure())) return false;
+      await this.warmChord(chord);
+      return this.powered;
+    })();
+    if (!(await this.chordReady) || token !== this.generation) return;
     this.stopChord();
     if (!this.settings.auto) this.chordLayer();
     if (this.settings.sync && !this.rhythmTimer) this.startRhythm();
@@ -318,8 +419,9 @@ export class SampleEngine {
   }
   async strum(index) {
     const token = this.generation;
-    if (!(await this.ensure()) || token !== this.generation || !this.chord)
-      return;
+    if (!(await this.ensure())) return;
+    if (this.chordReady) await this.chordReady;
+    if (token !== this.generation || !this.chord || !this.powered) return;
     if (!Number.isInteger(index) || index < 0 || index > 12) return;
     const midi = strumNotes(this.chord.root, this.chord.quality)[index],
       s = this.settings;
@@ -363,6 +465,13 @@ export class SampleEngine {
     this.midiVoices.set(midi, pending);
     if (
       !(await this.ensure()) ||
+      token !== this.generation ||
+      this.midiVoices.get(midi) !== pending
+    )
+      return;
+    await this.loadEntry(this.closest("keyboard", midi));
+    if (
+      !this.powered ||
       token !== this.generation ||
       this.midiVoices.get(midi) !== pending
     )

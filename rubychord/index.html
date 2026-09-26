@@ -13,9 +13,11 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23531224'/%3E%3Ctext x='9' y='29' fill='%23eee0bb' font-size='28'%3ER%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260926-omni84" />
+    <link rel="stylesheet" href="styles.css?v=20260926-cream" />
   </head>
   <body>
+    <div class="la-background" aria-hidden="true"></div>
+    <div class="pink-wash" aria-hidden="true"></div>
     <main>
       <div class="topline">
         <span>RUBYCHORD <span class="edition">/ PERSONAL INSTRUMENT</span></span
@@ -70,13 +72,73 @@
                 stroke-width="2"
               />
               <use href="#outline" fill="url(#grain)" />
-              <path
-                d="M48 209C87 120 169 46 274 35C307 31 336 34 364 40L692 103M40 372C72 489 177 561 299 565C406 565 464 537 526 484"
+              <use
+                id="bodyBorder"
+                href="#outline"
                 fill="none"
-                stroke="#d28c87"
-                stroke-opacity=".38"
-                stroke-width="1.6"
+                transform="translate(31 24) scale(.944 .908)"
+                stroke="#efe2bd"
+                stroke-width="3.2"
               />
+            </svg>
+            <svg class="panel-art" viewBox="0 0 1100 600" aria-hidden="true">
+              <g
+                fill="none"
+                stroke="#efe2bd"
+                stroke-width="2.2"
+                stroke-linejoin="round"
+              >
+                <rect
+                  class="panel-outline"
+                  x="164"
+                  y="91"
+                  width="179"
+                  height="66"
+                  rx="1"
+                />
+                <rect
+                  class="panel-outline"
+                  x="164"
+                  y="166"
+                  width="179"
+                  height="68"
+                  rx="1"
+                />
+                <rect
+                  class="panel-outline"
+                  x="369"
+                  y="88"
+                  width="156"
+                  height="65"
+                  rx="1"
+                />
+                <rect
+                  class="panel-outline"
+                  x="352"
+                  y="161"
+                  width="107"
+                  height="70"
+                  rx="1"
+                />
+                <rect
+                  class="panel-outline"
+                  x="465"
+                  y="161"
+                  width="60"
+                  height="70"
+                  rx="1"
+                />
+                <rect
+                  class="panel-outline"
+                  x="64"
+                  y="240"
+                  width="461"
+                  height="134"
+                  rx="1"
+                />
+                <path class="panel-outline" d="M428 381H529V457L428 525Z" />
+                <path class="panel-outline" d="M539 108L646 128V400L539 416Z" />
+              </g>
             </svg>
             <div class="power-control">
               <i id="powerLight" class="led"></i
@@ -204,8 +266,8 @@
               <path
                 d="M6 5L282 57C333 65 367 101 367 148C367 193 341 218 299 234L119 300C78 315 34 314 6 316Z"
                 fill="none"
-                stroke="#af6270"
-                stroke-opacity=".45"
+                stroke="#efe2bd"
+                stroke-width="2.4"
               />
               <path
                 d="M16 17L281 68C328 77 355 108 355 148C355 187 332 209 291 224L115 289C77 303 40 304 16 304Z"
@@ -276,6 +338,6 @@
         </p>
       </aside>
     </main>
-    <script type="module" src="app.js?v=20260926-omni84"></script>
+    <script type="module" src="app.js?v=20260926-cream"></script>
   </body>
 </html>

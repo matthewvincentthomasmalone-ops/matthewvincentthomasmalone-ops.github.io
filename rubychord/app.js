@@ -1,4 +1,4 @@
-import { SampleEngine } from "./audio-engine.js";
+import { SampleEngine } from "./audio-engine.js?v=20260926-cream";
 import {
   ROOTS,
   PANEL_ROOTS,
@@ -14,8 +14,8 @@ import { connectDevices } from "./connections.js";
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
 const status = (text) => ($("#statusText").textContent = text);
-const engine = new SampleEngine((text) => {
-  status(text);
+const engine = new SampleEngine((text, state = {}) => {
+  if (state.phase !== "background") status(text);
   $("#sampleStatus").textContent = text;
 });
 const pressed = new Map(),
@@ -60,6 +60,7 @@ async function power() {
     powerBusy = false;
   }
 }
+$("#power").addEventListener("pointerdown", (event) => event.preventDefault());
 $("#power").addEventListener("click", power);
 function knob(parent, id, label, min, max, value, step) {
   const wrapper = document.createElement("label");
@@ -177,6 +178,9 @@ function selectors(container, values, setting) {
   function update() {
     const value = values[bank * 5 + column];
     engine.update({ [setting]: value });
+    if (setting === "voice" && engine.playable && engine.chord) {
+      engine.chordReady = engine.warmChord(engine.chord);
+    }
     bankButton.setAttribute("aria-pressed", String(bank === 1));
     [...bankEl.querySelectorAll(".led")].forEach((l, i) =>
       l.classList.toggle("on", i === bank),
@@ -261,14 +265,14 @@ const descriptors = chordButtons().map((d, i) => ({ ...d, note: 48 + i }));
 for (const [i, root] of PANEL_ROOTS.entries()) {
   const label = document.createElement("span");
   label.className = "root-label";
-  label.style.left = `${54 + i * 34}px`;
+  label.style.left = `${54 + i * 31}px`;
   label.textContent = LABELS[root];
   $("#chordGrid").append(label);
 }
 for (const [row, name] of ["MAJOR", "MINOR", "7th"].entries()) {
   const label = document.createElement("span");
   label.className = "row-label";
-  label.style.top = `${31 + row * 46}px`;
+  label.style.top = `${29 + row * 42}px`;
   label.textContent = name;
   $("#chordGrid").append(label);
 }
@@ -281,8 +285,8 @@ for (const descriptor of descriptors) {
     (row === 1 ? [0, 1, 4, 8, 11] : [0, 4, 7, 10]).includes(column)
   )
     button.classList.add("grey");
-  button.style.left = `${(row === 0 ? 54 : row === 1 ? 37 : 54) + column * 34}px`;
-  button.style.top = `${20 + row * 46}px`;
+  button.style.left = `${(row === 0 ? 54 : row === 1 ? 37 : 54) + column * 31}px`;
+  button.style.top = `${18 + row * 42}px`;
   button.dataset.root = root;
   button.dataset.quality = quality;
   button.dataset.midiControl = `chord:${ROOTS[root]}:${quality}`;
