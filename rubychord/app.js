@@ -349,14 +349,14 @@ for (const descriptor of descriptors) {
       if (pressed.has(`p${e.pointerId}`)) end(`p${e.pointerId}`);
     });
   button.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
+    if (e.key === "Enter") {
       e.preventDefault();
       e.stopPropagation();
       if (!e.repeat) begin("focused", descriptor);
     }
   });
   button.addEventListener("keyup", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
+    if (e.key === "Enter") {
       e.preventDefault();
       e.stopPropagation();
       end("focused");
@@ -486,6 +486,24 @@ $("#keyboard").addEventListener("click", () => {
   light("#keyboardLight", keyboard);
   refreshPlayingDisplay();
 });
+// Handle Space before focused instrument buttons can activate themselves.
+window.addEventListener(
+  "keydown",
+  (e) => {
+    if (
+      e.code !== "Space" ||
+      e.ctrlKey ||
+      e.metaKey ||
+      e.altKey ||
+      e.target.closest("#helpPanel") ||
+      e.target.matches("input,select,textarea")
+    )
+      return;
+    e.preventDefault();
+    if (!e.repeat) stop();
+  },
+  { capture: true },
+);
 window.addEventListener("keydown", (e) => {
   if (
     e.repeat ||
@@ -497,12 +515,6 @@ window.addEventListener("keydown", (e) => {
     e.defaultPrevented
   )
     return;
-  if (e.code === "Space") {
-    if (e.target.matches("button")) return;
-    e.preventDefault();
-    stop();
-    return;
-  }
   const key = e.key.toLowerCase();
   const index = strumIndex(key);
   if (index >= 0) {
@@ -599,6 +611,7 @@ function resize() {
 }
 $("#fitToggle").addEventListener("click", () => {
   fit = !fit;
+  document.body.classList.toggle("fit-instrument", fit);
   setPressed("#fitToggle", fit);
   $("#fitToggle").textContent = fit ? "Playing size" : "Fit instrument";
   resize();

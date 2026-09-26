@@ -732,6 +732,8 @@ body.keyboard-open main {
     inset 0 0 13px #f4b6cd16;
 }
 #keyboardOverlay {
+  --key-backlight-center: rgba(231, 168, 190, 0.24);
+  --key-backlight-edge: rgba(164, 65, 100, 0.42);
   position: fixed;
   z-index: 9;
   bottom: 86px;
@@ -761,6 +763,15 @@ body.keyboard-open main {
     transform 0.42s cubic-bezier(0.2, 0.75, 0.25, 1),
     opacity 0.3s ease,
     visibility 0s;
+}
+.keyboard-open.fit-instrument #keyboardOverlay {
+  --key-backlight-center: rgba(199, 110, 146, 0.28);
+  --key-backlight-edge: rgba(139, 43, 81, 0.46);
+  background: rgba(255, 216, 230, 0.78);
+  border-radius: 10px;
+  box-shadow:
+    0 4px 18px #571b3024,
+    inset 0 0 0 1px #70203924;
 }
 #computerKeyboard {
   display: grid;
@@ -809,8 +820,8 @@ body.keyboard-open main {
 .computer-key.key-active {
   background: radial-gradient(
     ellipse at center,
-    rgba(231, 168, 190, 0.24),
-    rgba(164, 65, 100, 0.42)
+    var(--key-backlight-center),
+    var(--key-backlight-edge)
   );
   box-shadow:
     inset 0 0 12px #d889aa18,
