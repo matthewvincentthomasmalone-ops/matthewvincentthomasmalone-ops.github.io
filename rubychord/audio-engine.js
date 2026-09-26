@@ -36,7 +36,7 @@ export class SampleEngine {
       pattern: "rock1",
       auto: false,
       hold: false,
-      sync: true,
+      sync: false,
       keyboard: false,
     };
   }

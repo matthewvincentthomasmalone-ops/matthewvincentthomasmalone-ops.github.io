@@ -1,4 +1,4 @@
-import { SampleEngine } from "./audio-engine.js?v=20260926-rhythm";
+import { SampleEngine } from "./audio-engine.js?v=20260926-defaultoff";
 import {
   ROOTS,
   PANEL_ROOTS,

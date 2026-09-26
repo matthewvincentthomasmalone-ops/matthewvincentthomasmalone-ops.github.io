@@ -218,11 +218,11 @@
                   id="syncStart"
                   class="sync-mode"
                   type="button"
-                  aria-pressed="true"
+                  aria-pressed="false"
                   aria-label="Sync Start"
                   title="Arm rhythm for the next chord-button press"
                 >
-                  <i id="syncLight" class="led on"></i>Sync Start
+                  <i id="syncLight" class="led"></i>Sync Start
                 </button>
               </div>
               <button
@@ -309,17 +309,18 @@
         <p>
           Power on, choose a chord, then sweep the gold plate. Higher notes are
           at the top. Yellow buttons switch between the two printed banks. Hold
-          keeps the chord; Auto adds bass and rhythmic chords. Start runs drums
-          continuously; Sync Start starts them on the next chord or
-          keyboard-note button press. Drums keep playing after release. Press
-          the blue Rhythm button again to stop them without changing volume.
-          Click Sync Start to arm drums for the next chord press. Instant Off or
-          Space silences everything; Power turns the instrument off.
+          keeps the chord; Auto adds bass and rhythmic chords. Drums are off
+          initially. Start runs drums continuously; Sync Start starts them on
+          the next chord or keyboard-note button press. Drums keep playing after
+          release. Press the blue Rhythm button again to stop them without
+          changing volume. Click Sync Start to arm drums for the next chord
+          press. Instant Off or Space silences everything; Power turns the
+          instrument off.
         </p>
         <p>
           <b>Keyboard:</b> Q–O major, A–L minor, Z–. seventh (E♭ B♭ F C G D A E
-          B). P: F♯ major. 1–=: strum; +: thirteenth note. Space: stop.
-          Knobs: drag, wheel, arrows; Shift-drag for fine adjustment.
+          B). P: F♯ major. 1–=: strum; +: thirteenth note. Space: stop. Knobs:
+          drag, wheel, arrows; Shift-drag for fine adjustment.
         </p>
         <p>
           <b>Combinations:</b> Hold same-root Major + 7 for M7; Minor + 7 for
@@ -351,6 +352,6 @@
         </p>
       </aside>
     </main>
-    <script type="module" src="app.js?v=20260926-keyboard"></script>
+    <script type="module" src="app.js?v=20260926-defaultoff"></script>
   </body>
 </html>
