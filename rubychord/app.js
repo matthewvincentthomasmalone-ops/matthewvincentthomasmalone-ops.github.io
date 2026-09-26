@@ -1,9 +1,13 @@
+import {
+  chordForKey,
+  strumIndex,
+  mountKeyboard,
+} from "./keyboard-view.js?v=20260926-overlay";
 import { SampleEngine } from "./audio-engine.js?v=20260926-defaultoff";
 import {
   ROOTS,
   PANEL_ROOTS,
   LABELS,
-  QUALITIES,
   SUFFIX,
   VOICES,
   PATTERNS,
@@ -233,7 +237,7 @@ selectors("#voiceSelectors", VOICES, "voice");
 selectors("#patternSelectors", PATTERNS, "pattern");
 function selected(chord, options = {}) {
   if (!engine.powered) {
-    status("Power on to load your local recordings.");
+    status("Power on to start your Rubychord -98");
     return;
   }
   engine.selectChord(chord, options);
@@ -260,7 +264,7 @@ function selectHeld(triggerRhythm = true) {
 }
 function begin(key, descriptor) {
   if (!engine.powered) {
-    status("Power on to begin.");
+    status("Power on to start your Rubychord -98");
     return;
   }
   pressed.set(key, descriptor);
@@ -484,9 +488,6 @@ $("#keyboard").addEventListener("click", () => {
       : "Chord mode",
   );
 });
-const keyRows = ["qwertyuio", "asdfghjkl", "zxcvbnm,."],
-  keyRoots = [3, 10, 5, 0, 7, 2, 9, 4, 11],
-  strumKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"];
 window.addEventListener("keydown", (e) => {
   if (
     e.repeat ||
@@ -505,30 +506,20 @@ window.addEventListener("keydown", (e) => {
     return;
   }
   const key = e.key.toLowerCase();
-  const index = strumKeys.indexOf(key);
+  const index = strumIndex(key);
   if (index >= 0) {
     e.preventDefault();
     strum(index);
     return;
   }
-  let root, quality;
-  if (key === "p") {
-    root = 6;
-    quality = "major";
-  } else
-    for (let row = 0; row < 3; row++) {
-      const i = keyRows[row].indexOf(key);
-      if (i >= 0) {
-        root = keyRoots[i];
-        quality = QUALITIES[row];
-        break;
-      }
-    }
-  if (root !== undefined) {
+  const chord = chordForKey(key);
+  if (chord) {
     e.preventDefault();
     begin(
       `k${e.code}`,
-      descriptors.find((d) => d.root === root && d.quality === quality),
+      descriptors.find(
+        (d) => d.root === chord.root && d.quality === chord.quality,
+      ),
     );
   }
 });
@@ -587,13 +578,19 @@ window.addEventListener("keydown", (e) => {
 });
 function resize() {
   const width = $(".stage").clientWidth;
-  const scale = fit
-    ? Math.min(1.45, (width - 20) / 1100)
-    : Math.min(
-        1.45,
-        width >= 700 ? Math.max(0.5, (window.innerHeight - 230) / 600) : 1.45,
-        Math.max(width < 700 ? 0.88 : 0.5, (width - 20) / 1100),
-      );
+  const keyboardSpace = document.body.classList.contains("keyboard-open")
+    ? $("#keyboardOverlay").offsetHeight + 28
+    : 0;
+  const scale =
+    fit || (keyboardSpace > 0 && width < 700)
+      ? Math.min(1.45, (width - 20) / 1100)
+      : Math.min(
+          1.45,
+          width >= 700
+            ? Math.max(0.5, (window.innerHeight - 230 - keyboardSpace) / 600)
+            : 1.45,
+          Math.max(width < 700 ? 0.88 : 0.5, (width - 20) / 1100),
+        );
   const wrap = $(".instrument-wrap");
   wrap.style.width = `${1100 * scale}px`;
   wrap.style.height = `${600 * scale}px`;
@@ -604,6 +601,19 @@ $("#fitToggle").addEventListener("click", () => {
   setPressed("#fitToggle", fit);
   $("#fitToggle").textContent = fit ? "Playing size" : "Fit instrument";
   resize();
+});
+mountKeyboard({
+  chordDown: (key, chord) =>
+    begin(
+      key,
+      descriptors.find(
+        (d) => d.root === chord.root && d.quality === chord.quality,
+      ),
+    ),
+  chordUp: end,
+  strum,
+  stop,
+  visibilityChanged: resize,
 });
 new ResizeObserver(resize).observe($(".stage"));
 resize();
