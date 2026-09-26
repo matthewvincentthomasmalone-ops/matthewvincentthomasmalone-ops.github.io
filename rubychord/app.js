@@ -1,444 +1,551 @@
-(() => {
-  "use strict";
-
-  const ROOTS = ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"];
-  const ROOT_MIDI = { C: 60, "C#": 61, D: 62, Eb: 63, E: 64, F: 65, "F#": 66, G: 67, Ab: 68, A: 69, Bb: 70, B: 71 };
-  const KEY_ROOTS = ["Eb", "Bb", "F", "C", "G", "D", "A", "E", "B"];
-  const KEY_ROWS = ["qwertyuio", "asdfghjkl", "zxcvbnm,."];
-  const QUALITIES = ["major", "minor", "seventh"];
-  const SUFFIX = { major: "", minor: "m", seventh: "7" };
-  const INTERVALS = { major: [0, 4, 7], minor: [0, 3, 7], seventh: [0, 4, 7, 10] };
-  const STRUM_KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="];
-
-  const $ = (selector) => document.querySelector(selector);
-  const $$ = (selector) => [...document.querySelectorAll(selector)];
-  const ui = {
-    grid: $("#chordGrid"), strumplate: $("#strumplate"), status: $("#statusText"), light: $("#powerLight"),
-    rhythmStart: $("#rhythmStart"), chordHold: $("#chordHold"), autoBass: $("#autoBass"), midiButton: $("#midiButton"),
-    midiStatus: $("#midiStatus"), pattern: $("#pattern"), voice: $("#voice"), serialButton: $("#serialButton")
+import { SampleEngine } from "./audio-engine.js";
+import {
+  ROOTS,
+  PANEL_ROOTS,
+  LABELS,
+  QUALITIES,
+  SUFFIX,
+  VOICES,
+  PATTERNS,
+  resolveChord,
+  chordButtons,
+} from "./omnichord-controls.js";
+import { connectDevices } from "./connections.js";
+const $ = (s) => document.querySelector(s),
+  $$ = (s) => [...document.querySelectorAll(s)];
+const status = (text) => ($("#statusText").textContent = text);
+const engine = new SampleEngine((text) => {
+  status(text);
+  $("#sampleStatus").textContent = text;
+});
+const pressed = new Map(),
+  latched = new Map(),
+  pointers = new Map();
+let fit = false,
+  powerBusy = false;
+function setPressed(id, on) {
+  $(id).setAttribute("aria-pressed", String(on));
+}
+function light(id, on) {
+  $(id).classList.toggle("on", on);
+}
+function stop() {
+  pressed.clear();
+  latched.clear();
+  pointers.clear();
+  engine.stopAll();
+  $$(".chord-button").forEach((b) => {
+    b.classList.remove("active");
+    b.setAttribute("aria-pressed", "false");
+  });
+  status("All notes off");
+}
+async function power() {
+  if (powerBusy) return;
+  powerBusy = true;
+  const on = !engine.powered;
+  setPressed("#power", on);
+  light("#powerLight", on);
+  try {
+    if (!on) stop();
+    await engine.power(on);
+    if (on && !engine.settings.sync) engine.startRhythm();
+    if (!on) status("Power off");
+  } catch (error) {
+    status(`Audio could not start: ${error.message}`);
+    engine.powered = false;
+    setPressed("#power", false);
+    light("#powerLight", false);
+  } finally {
+    powerBusy = false;
+  }
+}
+$("#power").addEventListener("click", power);
+function knob(parent, id, label, min, max, value, step) {
+  const wrapper = document.createElement("label");
+  wrapper.className = "knob-control";
+  wrapper.innerHTML = `<span class="knob" role="slider" tabindex="0" aria-label="${label}" aria-valuemin="${min}" aria-valuemax="${max}" data-midi-control="${id}"><input id="${id}" type="range" tabindex="-1" aria-hidden="true" min="${min}" max="${max}" value="${value}" step="${step}"></span><span>${label}</span>`;
+  $(parent).append(wrapper);
+  const input = wrapper.querySelector("input"),
+    dial = wrapper.querySelector(".knob");
+  const update = (v) => {
+    input.value = String(
+      Math.max(min, Math.min(max, Math.round(v / step) * step)),
+    );
+    const value = Number(input.value);
+    dial.style.setProperty(
+      "--turn",
+      `${-135 + ((value - min) / (max - min)) * 270}deg`,
+    );
+    dial.setAttribute("aria-valuenow", String(value));
+    dial.setAttribute(
+      "aria-valuetext",
+      id === "tempo"
+        ? `${Math.round(value)} beats per minute`
+        : `${Math.round(((value - min) / (max - min)) * 100)} percent`,
+    );
+    engine.update({ [id]: value });
   };
-
-  class RubyEngine {
-    constructor() {
-      this.context = null;
-      this.master = null;
-      this.filter = null;
-      this.drive = null;
-      this.chordBus = null;
-      this.strumBus = null;
-      this.rhythmBus = null;
-      this.activeChord = null;
-      this.chordVoices = [];
-      this.midiVoices = new Map();
-      this.rhythmTimer = null;
-      this.nextStepTime = 0;
-      this.step = 0;
-      this.tapTimes = [];
+  let drag = null;
+  input.addEventListener("input", () => update(Number(input.value)));
+  dial.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    dial.focus();
+    dial.setPointerCapture(e.pointerId);
+    drag = {
+      id: e.pointerId,
+      y: e.clientY,
+      x: e.clientX,
+      value: Number(input.value),
+    };
+  });
+  dial.addEventListener("pointermove", (e) => {
+    if (!drag || drag.id !== e.pointerId) return;
+    update(
+      drag.value +
+        ((drag.y - e.clientY + (e.clientX - drag.x) * 0.2) / 160) *
+          (max - min) *
+          (e.shiftKey ? 0.2 : 1),
+    );
+  });
+  for (const type of ["pointerup", "pointercancel", "lostpointercapture"])
+    dial.addEventListener(type, () => (drag = null));
+  dial.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      update(
+        Number(input.value) +
+          (e.deltaY < 0 ? 1 : -1) * step * (e.shiftKey ? 1 : 2),
+      );
+    },
+    { passive: false },
+  );
+  dial.addEventListener("keydown", (e) => {
+    const d = {
+      ArrowUp: 1,
+      ArrowRight: 1,
+      ArrowDown: -1,
+      ArrowLeft: -1,
+      PageUp: 10,
+      PageDown: -10,
+    }[e.key];
+    if (d) {
+      e.preventDefault();
+      e.stopPropagation();
+      update(Number(input.value) + d * step);
+    } else if (e.key === "Home" || e.key === "End") {
+      e.preventDefault();
+      update(e.key === "Home" ? min : max);
     }
-
-    async ensure() {
-      if (!this.context) this.buildGraph();
-      if (this.context.state !== "running") await this.context.resume();
-      ui.light.classList.add("on");
-    }
-
-    buildGraph() {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      this.context = new AudioCtx();
-      this.master = this.context.createGain();
-      this.filter = this.context.createBiquadFilter();
-      this.drive = this.context.createWaveShaper();
-      this.chordBus = this.context.createGain();
-      this.strumBus = this.context.createGain();
-      this.rhythmBus = this.context.createGain();
-      const compressor = this.context.createDynamicsCompressor();
-      compressor.threshold.value = -14; compressor.knee.value = 18; compressor.ratio.value = 4; compressor.attack.value = .004; compressor.release.value = .18;
-      this.chordBus.connect(this.filter); this.strumBus.connect(this.filter); this.rhythmBus.connect(this.filter);
-      this.filter.connect(this.drive); this.drive.connect(compressor); compressor.connect(this.master); this.master.connect(this.context.destination);
-      this.updateControls();
-    }
-
-    updateControls() {
-      if (!this.context) return;
-      const now = this.context.currentTime;
-      this.master.gain.setTargetAtTime(Number($("#master").value), now, .02);
-      this.chordBus.gain.setTargetAtTime(Number($("#chord").value) * .55, now, .02);
-      this.strumBus.gain.setTargetAtTime(Number($("#strum").value) * .72, now, .02);
-      this.rhythmBus.gain.setTargetAtTime(Number($("#rhythm").value) * .8, now, .02);
-      const tone = Number($("#tone").value);
-      this.filter.type = "lowpass";
-      this.filter.frequency.setTargetAtTime(700 + tone * 7600, now, .02);
-      this.filter.Q.value = .55 + tone * .5;
-      this.drive.curve = this.makeDriveCurve(1 + Number($("#preamp").value) * 34);
-      this.drive.oversample = "4x";
-    }
-
-    makeDriveCurve(amount) {
-      const points = 1024, curve = new Float32Array(points);
-      for (let i = 0; i < points; i++) { const x = i * 2 / points - 1; curve[i] = ((3 + amount) * x * 20 * Math.PI / 180) / (Math.PI + amount * Math.abs(x)); }
-      return curve;
-    }
-
-    frequency(midi) { return 440 * 2 ** ((midi - 69) / 12); }
-
-    createVoice(midi, destination, velocity = .75, sustained = false, when = this.context.currentTime) {
-      const voice = $("#voice").value;
-      const gain = this.context.createGain();
-      const partial = this.context.createGain();
-      const osc1 = this.context.createOscillator();
-      const osc2 = this.context.createOscillator();
-      osc1.type = voice === "organ" ? "sine" : (voice === "omni2" ? "square" : "sawtooth");
-      osc2.type = voice === "omni2" ? "triangle" : "sine";
-      osc1.frequency.value = this.frequency(midi);
-      osc2.frequency.value = this.frequency(midi + 12);
-      osc2.detune.value = voice === "organ" ? 2 : -5;
-      partial.gain.value = voice === "organ" ? .42 : .15;
-      osc1.connect(gain); osc2.connect(partial); partial.connect(gain); gain.connect(destination);
-      gain.gain.setValueAtTime(.0001, when);
-      gain.gain.exponentialRampToValueAtTime(Math.max(.0002, velocity * .18), when + .014);
-      osc1.start(when); osc2.start(when);
-      if (!sustained) {
-        const release = Number($("#sustain").value);
-        gain.gain.exponentialRampToValueAtTime(.0001, when + .08 + release);
-        osc1.stop(when + .12 + release); osc2.stop(when + .12 + release);
-      }
-      return { gain, oscillators: [osc1, osc2] };
-    }
-
-    releaseVoice(voice, release = .08) {
-      if (!voice || !this.context) return;
-      const now = this.context.currentTime;
-      voice.gain.gain.cancelScheduledValues(now);
-      voice.gain.gain.setTargetAtTime(.0001, now, release / 3);
-      voice.oscillators.forEach((osc) => { try { osc.stop(now + release + .04); } catch (_) {} });
-    }
-
-    async selectChord(root, quality) {
-      await this.ensure();
-      this.stopChord();
-      this.activeChord = { root, quality };
-      const rootMidi = ROOT_MIDI[root];
-      const notes = [...INTERVALS[quality], ...INTERVALS[quality].map((n) => n + 12)];
-      this.chordVoices = notes.map((interval, index) => this.createVoice(rootMidi + interval, this.chordBus, .64 / Math.sqrt(notes.length), true, this.context.currentTime + index * .007));
-      $$(".chord-button").forEach((button) => button.classList.toggle("active", button.dataset.root === root && button.dataset.quality === quality));
-      ui.status.textContent = `${root}${SUFFIX[quality]} SELECTED`;
-    }
-
-    stopChord(clear = false) {
-      this.chordVoices.forEach((voice) => this.releaseVoice(voice, .06));
-      this.chordVoices = [];
-      if (clear) {
-        this.activeChord = null;
-        $$(".chord-button.active").forEach((button) => button.classList.remove("active"));
-      }
-    }
-
-    chordScale() {
-      const chord = this.activeChord || { root: "C", quality: "major" };
-      const intervals = INTERVALS[chord.quality];
-      const notes = [];
-      for (let octave = 0; notes.length < 12; octave++) intervals.forEach((n) => { if (notes.length < 12) notes.push(ROOT_MIDI[chord.root] + n + octave * 12); });
-      return notes.sort((a, b) => a - b);
-    }
-
-    async strum(index) {
-      await this.ensure();
-      const midi = this.chordScale()[index];
-      this.createVoice(midi, this.strumBus, .82, false);
-      const key = $(`.strum-key[data-index="${index}"]`);
-      key?.classList.add("active"); setTimeout(() => key?.classList.remove("active"), 95);
-    }
-
-    async midiNoteOn(note, velocity) {
-      await this.ensure();
-      if (this.midiVoices.has(note)) this.releaseVoice(this.midiVoices.get(note));
-      this.midiVoices.set(note, this.createVoice(note, this.strumBus, velocity, true));
-    }
-
-    midiNoteOff(note) { this.releaseVoice(this.midiVoices.get(note), .12); this.midiVoices.delete(note); }
-
-    stopAll() {
-      this.stopChord(true);
-      this.midiVoices.forEach((voice) => this.releaseVoice(voice));
-      this.midiVoices.clear();
-      ui.status.textContent = "ALL NOTES OFF";
-    }
-
-    kick(when, velocity = 1) {
-      const osc = this.context.createOscillator(), gain = this.context.createGain();
-      osc.frequency.setValueAtTime(145, when); osc.frequency.exponentialRampToValueAtTime(43, when + .12);
-      gain.gain.setValueAtTime(.65 * velocity, when); gain.gain.exponentialRampToValueAtTime(.001, when + .24);
-      osc.connect(gain); gain.connect(this.rhythmBus); osc.start(when); osc.stop(when + .25);
-    }
-
-    noise(when, kind, velocity = 1) {
-      const duration = kind === "hat" ? .055 : .16;
-      const buffer = this.context.createBuffer(1, this.context.sampleRate * duration, this.context.sampleRate);
-      const data = buffer.getChannelData(0); for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
-      const source = this.context.createBufferSource(), filter = this.context.createBiquadFilter(), gain = this.context.createGain();
-      source.buffer = buffer; filter.type = kind === "hat" ? "highpass" : "bandpass"; filter.frequency.value = kind === "hat" ? 6500 : 1550; filter.Q.value = kind === "hat" ? .4 : .8;
-      gain.gain.setValueAtTime((kind === "hat" ? .14 : .32) * velocity, when); gain.gain.exponentialRampToValueAtTime(.001, when + duration);
-      source.connect(filter); filter.connect(gain); gain.connect(this.rhythmBus); source.start(when);
-    }
-
-    bass(when, step) {
-      if (!ui.autoBass.classList.contains("is-on") || !this.activeChord) return;
-      const midi = ROOT_MIDI[this.activeChord.root] - 24 + (step % 8 >= 4 ? 7 : 0);
-      this.createVoice(midi, this.rhythmBus, .65, false, when);
-    }
-
-    patternData(name) {
-      const patterns = {
-        "ROCK I": { kick:[0,8], snare:[4,12], hat:[0,2,4,6,8,10,12,14] },
-        "ROCK II": { kick:[0,6,8,11], snare:[4,12], hat:[0,2,4,6,8,10,12,14] },
-        DISCO: { kick:[0,4,8,12], snare:[4,12], hat:[2,6,10,14] },
-        WALTZ: { length:12, kick:[0,6], snare:[4,10], hat:[0,2,4,6,8,10] },
-        SWING: { length:12, kick:[0,7], snare:[4,10], hat:[0,3,4,7,8,11] },
-        BOSSA: { kick:[0,3,7,10], snare:[4,12], hat:[0,2,4,6,8,10,12,14] },
-        MARCH: { kick:[0,4,8,12], snare:[2,6,10,14], hat:[0,2,4,6,8,10,12,14] },
-        "SLOW ROCK": { kick:[0,7,8], snare:[4,12], hat:[0,2,4,6,8,10,12,14] }
-      };
-      return patterns[name] || patterns["ROCK I"];
-    }
-
-    scheduleRhythm() {
-      if (!this.context) return;
-      const data = this.patternData(ui.pattern.value), length = data.length || 16;
-      while (this.nextStepTime < this.context.currentTime + .1) {
-        const step = this.step % length;
-        if (data.kick.includes(step)) { this.kick(this.nextStepTime); this.bass(this.nextStepTime, step); }
-        if (data.snare.includes(step)) this.noise(this.nextStepTime, "snare");
-        if (data.hat.includes(step)) this.noise(this.nextStepTime, "hat", step % 4 === 0 ? 1 : .68);
-        const bpm = Number($("#tempo").value), swing = ui.pattern.value === "SWING" && step % 2 ? .28 : 0;
-        this.nextStepTime += (60 / bpm / 4) * (1 + swing);
-        this.step = (this.step + 1) % length;
-      }
-    }
-
-    async toggleRhythm() {
-      await this.ensure();
-      if (this.rhythmTimer) this.stopRhythm(); else {
-        this.step = 0; this.nextStepTime = this.context.currentTime + .04;
-        this.rhythmTimer = setInterval(() => this.scheduleRhythm(), 25);
-        ui.rhythmStart.textContent = "RHYTHM STOP"; ui.rhythmStart.classList.add("is-on");
-        ui.status.textContent = `${ui.pattern.value} RHYTHM`;
-      }
-    }
-
-    stopRhythm() { clearInterval(this.rhythmTimer); this.rhythmTimer = null; ui.rhythmStart.textContent = "RHYTHM START"; ui.rhythmStart.classList.remove("is-on"); }
+  });
+  update(value);
+}
+knob("#masterControl", "master", "Master Volume", 0, 1, 0.65, 0.01);
+knob("#stringControls", "sustain", "Sustain", 0, 1, 1, 0.01);
+knob("#stringControls", "strum", "Main Volume", 0, 1, 0.65, 0.01);
+knob("#stringControls", "sub", "Sub Volume", 0, 1, 0.35, 0.01);
+knob("#rhythmControls", "tempo", "Tempo", 40, 200, 112, 1);
+knob("#rhythmControls", "rhythm", "Volume", 0, 1, 0.4, 0.01);
+knob("#chordControls", "chord", "Volume", 0, 1, 0.5, 0.01);
+$("#rhythm").parentElement.setAttribute("aria-label", "Rhythm Volume");
+$("#chord").parentElement.setAttribute("aria-label", "Chord Volume");
+function selectors(container, values, setting) {
+  let bank = 0,
+    column = 0;
+  const host = $(container);
+  const bankEl = document.createElement("div");
+  bankEl.className = "selector bank";
+  bankEl.innerHTML =
+    '<i class="led on"></i><button class="physical yellow" aria-pressed="false"></button><i class="led"></i>';
+  host.append(bankEl);
+  const bankButton = bankEl.querySelector("button");
+  bankButton.setAttribute("aria-label", `${setting} upper/lower bank`);
+  const buttons = Array.from({ length: 5 }, (_, i) => {
+    const el = document.createElement("div");
+    el.className = "selector";
+    el.innerHTML = `<i class="led"></i><span class="upper">${values[i]}</span><button class="physical"></button><span class="lower">${values[i + 5]}</span>`;
+    host.append(el);
+    const button = el.querySelector("button");
+    button.addEventListener("click", () => {
+      column = i;
+      update();
+    });
+    return button;
+  });
+  function update() {
+    const value = values[bank * 5 + column];
+    engine.update({ [setting]: value });
+    bankButton.setAttribute("aria-pressed", String(bank === 1));
+    [...bankEl.querySelectorAll(".led")].forEach((l, i) =>
+      l.classList.toggle("on", i === bank),
+    );
+    buttons.forEach((button, i) => {
+      button.setAttribute("aria-label", `${setting}: ${values[bank * 5 + i]}`);
+      button.setAttribute("aria-pressed", String(i === column));
+      button.parentElement
+        .querySelector(".led")
+        .classList.toggle("on", i === column);
+    });
+    if (engine.ctx)
+      status(
+        `${value}${setting === "voice" && !value.startsWith("omni") ? " · synthesized approximation" : ""}`,
+      );
   }
-
-  const engine = new RubyEngine();
-  let lastStrum = -1, pointerDown = false, midiAccess = null, serialPort = null, learnTarget = null;
-  const midiMap = JSON.parse(localStorage.getItem("rubychord-midi-map") || "{}");
-
-  function buildChordGrid() {
-    QUALITIES.forEach((quality, row) => {
-      const label = document.createElement("span"); label.className = "row-label"; label.textContent = ["MAJOR", "MINOR", "7TH"][row]; ui.grid.append(label);
-      ROOTS.forEach((root) => {
-        const button = document.createElement("button");
-        const mappedIndex = KEY_ROOTS.indexOf(root);
-        const key = root === "F#" && quality === "major" ? "\\" : (mappedIndex >= 0 ? KEY_ROWS[row][mappedIndex] : "");
-        button.className = "chord-button"; button.dataset.root = root; button.dataset.quality = quality; button.dataset.midiControl = `chord:${root}:${quality}`;
-        button.innerHTML = `${root}${SUFFIX[quality]}${key ? `<b>${key.toUpperCase()}</b>` : ""}`;
-        button.setAttribute("aria-label", `${root} ${quality} chord${key ? `, keyboard ${key}` : ""}`);
-        button.addEventListener("pointerdown", (event) => { event.preventDefault(); engine.selectChord(root, quality); });
-        button.addEventListener("pointerup", () => { if (!ui.chordHold.classList.contains("is-on")) engine.stopChord(); });
-        ui.grid.append(button);
+  bankButton.addEventListener("click", () => {
+    bank = 1 - bank;
+    update();
+  });
+  update();
+}
+selectors("#voiceSelectors", VOICES, "voice");
+selectors("#patternSelectors", PATTERNS, "pattern");
+function selected(chord) {
+  if (!engine.powered) {
+    status("Power on to load your local recordings.");
+    return;
+  }
+  engine.selectChord(chord);
+  $$(".chord-button").forEach((b) => {
+    const on =
+      Number(b.dataset.root) === chord.root &&
+      (b.dataset.quality === chord.quality ||
+        [...pressed.values(), ...latched.values()].some(
+          (v) =>
+            v.root === Number(b.dataset.root) &&
+            v.quality === b.dataset.quality,
+        ));
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-pressed", String(on));
+  });
+  status(
+    `${LABELS[chord.root]}${SUFFIX[chord.quality]}${engine.settings.auto ? " · Auto" : ""}`,
+  );
+}
+function selectHeld() {
+  const values = [...latched.values(), ...pressed.values()];
+  if (values.length) selected(resolveChord(values));
+  else engine.releaseChord();
+}
+function begin(key, descriptor) {
+  if (!engine.powered) {
+    status("Power on to begin.");
+    return;
+  }
+  pressed.set(key, descriptor);
+  if (engine.settings.keyboard) {
+    engine.midiNoteOn(descriptor.note, 0.85);
+    return;
+  }
+  selectHeld();
+}
+function end(key) {
+  const descriptor = pressed.get(key);
+  pressed.delete(key);
+  if (engine.settings.keyboard) {
+    if (descriptor) engine.midiNoteOff(descriptor.note);
+    return;
+  }
+  if (pressed.size || latched.size) selectHeld();
+  else {
+    engine.releaseChord();
+    if (!engine.settings.hold)
+      $$(".chord-button").forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
       });
-    });
   }
-
-  function buildStrumplate() {
-    STRUM_KEYS.forEach((key, index) => {
-      const button = document.createElement("button"); button.className = "strum-key"; button.dataset.index = index; button.dataset.midiControl = `strum:${index}`;
-      button.setAttribute("aria-label", `Strum note ${index + 1}, keyboard ${key}`);
-      button.addEventListener("pointerenter", () => { if (pointerDown && index !== lastStrum) { lastStrum = index; engine.strum(index); } });
-      button.addEventListener("pointerdown", (event) => { event.preventDefault(); pointerDown = true; lastStrum = index; engine.strum(index); button.setPointerCapture?.(event.pointerId); });
-      button.addEventListener("pointerup", () => { pointerDown = false; lastStrum = -1; });
-      ui.strumplate.append(button);
+}
+const descriptors = chordButtons().map((d, i) => ({ ...d, note: 48 + i }));
+for (const [i, root] of PANEL_ROOTS.entries()) {
+  const label = document.createElement("span");
+  label.className = "root-label";
+  label.style.left = `${54 + i * 34}px`;
+  label.textContent = LABELS[root];
+  $("#chordGrid").append(label);
+}
+for (const [row, name] of ["MAJOR", "MINOR", "7th"].entries()) {
+  const label = document.createElement("span");
+  label.className = "row-label";
+  label.style.top = `${31 + row * 46}px`;
+  label.textContent = name;
+  $("#chordGrid").append(label);
+}
+for (const descriptor of descriptors) {
+  const { root, quality, row, column } = descriptor;
+  const button = document.createElement("button");
+  button.className = "chord-button";
+  if (
+    row === 0 ||
+    (row === 1 ? [0, 1, 4, 8, 11] : [0, 4, 7, 10]).includes(column)
+  )
+    button.classList.add("grey");
+  button.style.left = `${(row === 0 ? 54 : row === 1 ? 37 : 54) + column * 34}px`;
+  button.style.top = `${20 + row * 46}px`;
+  button.dataset.root = root;
+  button.dataset.quality = quality;
+  button.dataset.midiControl = `chord:${ROOTS[root]}:${quality}`;
+  button.setAttribute("aria-label", `${LABELS[root]} ${quality} chord`);
+  button.setAttribute("aria-pressed", "false");
+  button.title = `${LABELS[root]} ${quality}`;
+  button.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    button.focus();
+    button.setPointerCapture(e.pointerId);
+    if (e.shiftKey && !engine.settings.keyboard) {
+      const id = `${root}:${quality}`;
+      if (latched.has(id)) latched.delete(id);
+      else latched.set(id, descriptor);
+      selectHeld();
+    } else begin(`p${e.pointerId}`, descriptor);
+  });
+  for (const type of ["pointerup", "pointercancel", "lostpointercapture"])
+    button.addEventListener(type, (e) => {
+      if (pressed.has(`p${e.pointerId}`)) end(`p${e.pointerId}`);
     });
-  }
-
-  function updateKnob(input) {
-    const min = Number(input.min), max = Number(input.max), ratio = (Number(input.value) - min) / (max - min);
-    input.closest(".knob").style.setProperty("--turn", `${-125 + ratio * 250}deg`);
-    const output = input.closest(".knob-control").querySelector("output"); output.value = input.id === "tempo" ? Math.round(input.value) : Number(input.value).toFixed(2);
-    const knob = input.closest(".knob");
-    knob?.setAttribute("aria-valuenow", String(input.value));
-    knob?.setAttribute("aria-valuetext", output.value);
-    engine.updateControls();
-  }
-
-  function configureKnob(input) {
-    const knob = input.closest(".knob"), min = Number(input.min), max = Number(input.max), range = max - min;
-    const step = input.step === "any" ? range / 100 : Number(input.step || range / 100);
-    knob.tabIndex = 0; knob.setAttribute("role", "slider"); knob.setAttribute("aria-label", input.id); knob.setAttribute("aria-valuemin", String(min)); knob.setAttribute("aria-valuemax", String(max));
-    knob.dataset.midiControl = input.id;
-    const setValue = (value) => {
-      const precision = step < 1 ? Math.max(0, String(step).split(".")[1]?.length || 0) : 0;
-      input.value = Math.max(min, Math.min(max, Math.round(value / step) * step)).toFixed(precision);
-      input.dispatchEvent(new Event("input", { bubbles: true }));
-    };
-    let drag = null;
-    knob.addEventListener("pointerdown", (event) => {
-      if (event.button !== 0) return;
-      event.preventDefault(); knob.focus(); knob.setPointerCapture(event.pointerId); knob.classList.add("dragging");
-      drag = { x:event.clientX, y:event.clientY, value:Number(input.value), pointerId:event.pointerId };
-    });
-    knob.addEventListener("pointermove", (event) => {
-      if (!drag || event.pointerId !== drag.pointerId) return;
-      const travel = (drag.y - event.clientY) + (event.clientX - drag.x) * .25;
-      const fine = event.shiftKey ? .2 : 1;
-      setValue(drag.value + travel / 180 * range * fine);
-    });
-    const finishDrag = (event) => {
-      if (!drag || event.pointerId !== drag.pointerId) return;
-      knob.classList.remove("dragging"); drag = null;
-    };
-    knob.addEventListener("pointerup", finishDrag); knob.addEventListener("pointercancel", finishDrag);
-    knob.addEventListener("wheel", (event) => { event.preventDefault(); setValue(Number(input.value) + (event.deltaY < 0 ? 1 : -1) * step * (event.shiftKey ? 1 : 2)); }, { passive:false });
-    knob.addEventListener("keydown", (event) => {
-      const direction = { ArrowUp:1, ArrowRight:1, ArrowDown:-1, ArrowLeft:-1 }[event.key];
-      if (direction) { event.preventDefault(); setValue(Number(input.value) + direction * step); }
-      else if (event.key === "Home") { event.preventDefault(); setValue(min); }
-      else if (event.key === "End") { event.preventDefault(); setValue(max); }
-      else if (event.key === "PageUp") { event.preventDefault(); setValue(Number(input.value) + range / 10); }
-      else if (event.key === "PageDown") { event.preventDefault(); setValue(Number(input.value) - range / 10); }
-    });
-  }
-
-  function toggle(button) { const on = !button.classList.contains("is-on"); button.classList.toggle("is-on", on); button.setAttribute("aria-pressed", String(on)); return on; }
-
-  function tapTempo() {
-    const now = performance.now(); engine.tapTimes = engine.tapTimes.filter((time) => now - time < 2200); engine.tapTimes.push(now);
-    if (engine.tapTimes.length > 1) {
-      const gaps = engine.tapTimes.slice(1).map((time, i) => time - engine.tapTimes[i]);
-      $("#tempo").value = Math.max(60, Math.min(180, Math.round(60000 / (gaps.reduce((a,b) => a+b, 0) / gaps.length)))); updateKnob($("#tempo"));
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!e.repeat) begin("focused", descriptor);
     }
+  });
+  button.addEventListener("keyup", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.stopPropagation();
+      end("focused");
+    }
+  });
+  // Assistive-technology activation does not generate pointer events.
+  button.addEventListener("click", (e) => {
+    if (e.detail === 0 && !pressed.has("focused")) {
+      begin("accessible", descriptor);
+      setTimeout(() => end("accessible"), 200);
+    }
+  });
+  $("#chordGrid").append(button);
+}
+function strum(index) {
+  if (engine.settings.keyboard) {
+    if (engine.powered && engine.loadResult)
+      engine.drum(
+        ["kick", "snare", "hihat", "clave"][index % 4],
+        engine.ctx.currentTime,
+      );
+  } else engine.strum(index);
+  const flash = document.createElement("span");
+  flash.className = "strum-flash";
+  flash.style.top = `${((12 - index) / 13) * 100}%`;
+  $("#strumplate").append(flash);
+  setTimeout(() => flash.remove(), 90);
+  $("#strumplate").setAttribute("aria-valuenow", String(index + 1));
+}
+const plate = $("#strumplate");
+const zone = (e) => {
+  const r = plate.getBoundingClientRect();
+  return (
+    12 -
+    Math.max(0, Math.min(12, Math.floor(((e.clientY - r.top) / r.height) * 13)))
+  );
+};
+plate.addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  plate.setPointerCapture(e.pointerId);
+  const index = zone(e);
+  pointers.set(e.pointerId, index);
+  strum(index);
+});
+plate.addEventListener("pointermove", (e) => {
+  if (!pointers.has(e.pointerId)) return;
+  const samples = e.getCoalescedEvents?.() || [e];
+  for (const point of samples.length ? samples : [e]) {
+    const next = zone(point),
+      last = pointers.get(e.pointerId);
+    if (next === last) continue;
+    const dir = Math.sign(next - last);
+    for (let i = last + dir; i !== next + dir; i += dir) strum(i);
+    pointers.set(e.pointerId, next);
   }
-
-  async function enableMidi() {
-    if (!("requestMIDIAccess" in navigator)) { ui.midiStatus.textContent = "WEB MIDI NOT AVAILABLE"; return; }
-    try {
-      midiAccess = await navigator.requestMIDIAccess();
-      midiAccess.inputs.forEach(bindMidiInput); midiAccess.onstatechange = () => midiAccess.inputs.forEach(bindMidiInput);
-      ui.midiButton.classList.add("is-on"); ui.midiButton.textContent = "MIDI ON"; ui.midiStatus.textContent = `${midiAccess.inputs.size || 0} MIDI INPUT${midiAccess.inputs.size === 1 ? "" : "S"}`;
-    } catch (_) { ui.midiStatus.textContent = "MIDI ACCESS DECLINED"; }
+});
+for (const type of ["pointerup", "pointercancel", "lostpointercapture"])
+  plate.addEventListener(type, (e) => pointers.delete(e.pointerId));
+plate.addEventListener("keydown", (e) => {
+  if (["ArrowUp", "ArrowDown", "Enter"].includes(e.key)) {
+    e.preventDefault();
+    e.stopPropagation();
+    let i = Number(plate.getAttribute("aria-valuenow")) - 1;
+    if (e.key !== "Enter")
+      i = Math.max(0, Math.min(12, i + (e.key === "ArrowUp" ? 1 : -1)));
+    strum(i);
   }
-
-  function bindMidiInput(input) { input.onmidimessage = onMidiMessage; }
-
-  function onMidiMessage(event) {
-    const [status, data1, data2] = event.data, command = status & 0xf0;
-    if (command === 0xb0) {
-      if (learnTarget) {
-        midiMap[data1] = learnTarget; localStorage.setItem("rubychord-midi-map", JSON.stringify(midiMap));
-        ui.status.textContent = `CC ${data1} → ${learnTarget}`; learnTarget = null; $("#instrument").classList.remove("learning"); return;
+});
+$("#instantOff").addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  stop();
+});
+$("#instantOff").addEventListener("click", stop);
+$("#chordHold").addEventListener("click", () => {
+  engine.update({ hold: !engine.settings.hold });
+  setPressed("#chordHold", engine.settings.hold);
+  light("#holdLight", engine.settings.hold);
+  if (!engine.settings.hold && !pressed.size && !latched.size)
+    engine.releaseChord();
+});
+$("#autoBass").addEventListener("click", () => {
+  const auto = !engine.settings.auto;
+  engine.update({ auto });
+  setPressed("#autoBass", auto);
+  light("#manualLight", !auto);
+  light("#autoLight", auto);
+  if (engine.chord && engine.chordActive) selected(engine.chord);
+});
+$("#rhythmStart").addEventListener("click", async () => {
+  const sync = !engine.settings.sync;
+  engine.update({ sync });
+  setPressed("#rhythmStart", !sync);
+  light("#startLight", !sync);
+  light("#syncLight", sync);
+  if (!sync && (await engine.ensure())) engine.startRhythm();
+  else if (sync && !pressed.size && !latched.size && !engine.settings.hold)
+    engine.stopRhythm();
+});
+$("#keyboard").addEventListener("click", () => {
+  stop();
+  const keyboard = !engine.settings.keyboard;
+  engine.update({ keyboard });
+  setPressed("#keyboard", keyboard);
+  light("#keyboardLight", keyboard);
+  status(
+    keyboard
+      ? "Keyboard mode · chord panel notes / strumplate drums"
+      : "Chord mode",
+  );
+});
+const keyRows = ["qwertyuio", "asdfghjkl", "zxcvbnm,."],
+  keyRoots = [3, 10, 5, 0, 7, 2, 9, 4, 11],
+  strumKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "+"];
+window.addEventListener("keydown", (e) => {
+  if (
+    e.repeat ||
+    e.ctrlKey ||
+    e.metaKey ||
+    e.altKey ||
+    e.target.closest("#helpPanel") ||
+    e.target.matches("input,select,textarea") ||
+    e.defaultPrevented
+  )
+    return;
+  if (e.code === "Space") {
+    if (e.target.matches("button")) return;
+    e.preventDefault();
+    stop();
+    return;
+  }
+  const key = e.key.toLowerCase();
+  const index = strumKeys.indexOf(key);
+  if (index >= 0) {
+    e.preventDefault();
+    strum(index);
+    return;
+  }
+  let root, quality;
+  if (e.code === "Backslash") {
+    root = 6;
+    quality = "major";
+  } else
+    for (let row = 0; row < 3; row++) {
+      const i = keyRows[row].indexOf(key);
+      if (i >= 0) {
+        root = keyRoots[i];
+        quality = QUALITIES[row];
+        break;
       }
-      const target = midiMap[data1]; if (target) applyMidiControl(target, data2 / 127); return;
     }
-    if (command === 0x90 && data2 > 0) engine.midiNoteOn(data1, data2 / 127);
-    if (command === 0x80 || (command === 0x90 && data2 === 0)) engine.midiNoteOff(data1);
+  if (root !== undefined) {
+    e.preventDefault();
+    begin(
+      `k${e.code}`,
+      descriptors.find((d) => d.root === root && d.quality === quality),
+    );
   }
-
-  async function enableSerial() {
-    if (!("serial" in navigator)) { ui.midiStatus.textContent = "WEB SERIAL NOT AVAILABLE"; return; }
-    try {
-      serialPort = await navigator.serial.requestPort();
-      await serialPort.open({ baudRate: 115200 });
-      ui.serialButton.classList.add("is-on"); ui.serialButton.textContent = "SERIAL ON"; ui.midiStatus.textContent = "SERIAL 115200 BAUD";
-      readSerial(serialPort);
-    } catch (error) { if (error.name !== "NotFoundError") ui.midiStatus.textContent = "SERIAL CONNECTION FAILED"; }
-  }
-
-  async function readSerial(port) {
-    const decoder = new TextDecoder(); let pending = "";
-    while (port.readable) {
-      const reader = port.readable.getReader();
-      try {
-        while (true) {
-          const { value, done } = await reader.read(); if (done) break;
-          pending += decoder.decode(value, { stream: true });
-          const lines = pending.split(/\r?\n/); pending = lines.pop(); lines.forEach(handleSerialCommand);
-        }
-      } catch (_) { ui.midiStatus.textContent = "SERIAL DISCONNECTED"; }
-      finally { reader.releaseLock(); }
+});
+window.addEventListener("keyup", (e) => {
+  if (pressed.has(`k${e.code}`)) end(`k${e.code}`);
+});
+window.addEventListener("blur", () => {
+  pressed.clear();
+  latched.clear();
+  pointers.clear();
+  if (engine.ctx) stop();
+});
+const devices = connectDevices({
+  engine,
+  selectChord: selected,
+  status: (text) => ($("#midiStatus").textContent = text),
+  learnStatus: status,
+  applyControl: (target, value) => {
+    if (target.startsWith("chord:")) {
+      const [, root, quality] = target.split(":");
+      if (value > 0.5 && ROOTS.includes(root))
+        selected({ root: ROOTS.indexOf(root), quality });
+      else if (value <= 0.5) engine.releaseChord();
+    } else if (target.startsWith("strum:")) {
+      if (value > 0.5) strum(Number(target.split(":")[1]));
+    } else {
+      const input = document.getElementById(target);
+      if (input?.type === "range") {
+        input.value =
+          Number(input.min) + value * (Number(input.max) - Number(input.min));
+        input.dispatchEvent(new Event("input"));
+      }
     }
-  }
+  },
+});
+$("#midiButton").addEventListener("click", () => devices.midi());
+$("#serialButton").addEventListener("click", () => devices.serial());
+$("#clearMidi").addEventListener("click", () => devices.clear());
+document.addEventListener("dblclick", (e) => {
+  const control = e.target.closest("[data-midi-control]");
+  if (control) devices.learn(control.dataset.midiControl);
+  else if (e.target.closest("#strumplate")) devices.learn(`strum:${zone(e)}`);
+});
+function drawer(open) {
+  $("#helpPanel").hidden = !open;
+  $("#helpToggle").setAttribute("aria-expanded", String(open));
+  if (open) $("#helpClose").focus();
+  else $("#helpToggle").focus();
+}
+$("#helpToggle").addEventListener("click", () =>
+  drawer($("#helpPanel").hidden),
+);
+$("#helpClose").addEventListener("click", () => drawer(false));
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") drawer(false);
+});
+function resize() {
+  const width = $(".stage").clientWidth;
+  const scale = fit
+    ? Math.min(1.45, (width - 20) / 1100)
+    : Math.min(
+        1.45,
+        width >= 700 ? Math.max(0.5, (window.innerHeight - 230) / 600) : 1.45,
+        Math.max(width < 700 ? 0.88 : 0.5, (width - 20) / 1100),
+      );
+  const wrap = $(".instrument-wrap");
+  wrap.style.width = `${1100 * scale}px`;
+  wrap.style.height = `${600 * scale}px`;
+  $("#instrument").style.transform = `scale(${scale})`;
+}
+$("#fitToggle").addEventListener("click", () => {
+  fit = !fit;
+  setPressed("#fitToggle", fit);
+  $("#fitToggle").textContent = fit ? "Playing size" : "Fit instrument";
+  resize();
+});
+new ResizeObserver(resize).observe($(".stage"));
+resize();
 
-  function handleSerialCommand(line) {
-    const parts = line.trim().split(/\s+/), command = (parts.shift() || "").toUpperCase();
-    if (command === "CHORD") {
-      const root = ROOTS.find((item) => item.toLowerCase() === (parts[0] || "").toLowerCase());
-      const quality = ({ M:"major", MAJOR:"major", MIN:"minor", MINOR:"minor", "7":"seventh", SEVENTH:"seventh" })[(parts[1] || "MAJOR").toUpperCase()];
-      if (root && quality) engine.selectChord(root, quality);
-    } else if (command === "STRUM") engine.strum(Math.max(0, Math.min(11, Number(parts[0]) - 1)));
-    else if (command === "NOTE") engine.midiNoteOn(Number(parts[0]), Math.max(0, Math.min(1, Number(parts[1] || 100) / 127)));
-    else if (command === "NOTEOFF") engine.midiNoteOff(Number(parts[0]));
-    else if (command === "CC") applyMidiControl(midiMap[Number(parts[0])] || "", Number(parts[1]) / 127);
-    else if (command === "OFF") { engine.stopAll(); engine.stopRhythm(); }
-    else if (command === "RHYTHM" && (parts[0] || "").toUpperCase() === "START" && !engine.rhythmTimer) engine.toggleRhythm();
-    else if (command === "RHYTHM" && (parts[0] || "").toUpperCase() === "STOP") engine.stopRhythm();
-  }
-
-  function applyMidiControl(target, value) {
-    if (target.startsWith("chord:")) { const [,root,quality] = target.split(":"); if (value > .5) engine.selectChord(root, quality); return; }
-    if (target.startsWith("strum:")) { if (value > .5) engine.strum(Number(target.split(":")[1])); return; }
-    const input = document.getElementById(target); if (input?.type === "range") { input.value = Number(input.min) + value * (Number(input.max) - Number(input.min)); updateKnob(input); }
-  }
-
-  buildChordGrid(); buildStrumplate();
-
-  // Set this in JavaScript as well as HTML so browser-restored form state
-  // cannot silently return sustain to an older value such as 0.36.
-  $("#sustain").value = "2.80";
-
-  ui.strumplate.addEventListener("pointermove", (event) => {
-    if (!pointerDown) return;
-    const bounds = ui.strumplate.getBoundingClientRect();
-    const index = Math.max(0, Math.min(11, Math.floor((event.clientY - bounds.top) / bounds.height * 12)));
-    if (index !== lastStrum) { lastStrum = index; engine.strum(index); }
-  });
-
-  $$("input[type=range]").forEach((input) => { input.dataset.midiControl = input.id; input.addEventListener("input", () => updateKnob(input)); configureKnob(input); updateKnob(input); });
-  ui.chordHold.addEventListener("click", () => toggle(ui.chordHold));
-  ui.autoBass.addEventListener("click", () => toggle(ui.autoBass));
-  ui.rhythmStart.addEventListener("click", () => engine.toggleRhythm());
-  $("#instantOff").addEventListener("click", () => { engine.stopAll(); engine.stopRhythm(); });
-  $("#hostSync").addEventListener("click", tapTempo);
-  ui.midiButton.addEventListener("click", enableMidi);
-  ui.serialButton.addEventListener("click", enableSerial);
-  ui.pattern.addEventListener("change", () => { if (engine.rhythmTimer) { engine.step = 0; ui.status.textContent = `${ui.pattern.value} RHYTHM`; } });
-  $("#helpToggle").addEventListener("click", (event) => { const panel = $("#helpPanel"), open = panel.hidden; panel.hidden = !open; event.currentTarget.setAttribute("aria-expanded", String(open)); });
-
-  document.addEventListener("dblclick", (event) => {
-    const control = event.target.closest("[data-midi-control]"); if (!control) return;
-    event.preventDefault(); learnTarget = control.dataset.midiControl; $("#instrument").classList.add("learning"); ui.status.textContent = `MOVE A MIDI CC FOR ${learnTarget.toUpperCase()}`;
-  });
-
-  window.addEventListener("keydown", (event) => {
-    if (event.repeat || /INPUT|SELECT|TEXTAREA/.test(event.target.tagName)) return;
-    const key = event.key.toLowerCase();
-    if (event.code === "Backslash" || key === "\\") { event.preventDefault(); engine.selectChord("F#", "major"); return; }
-    for (let row = 0; row < KEY_ROWS.length; row++) {
-      const index = KEY_ROWS[row].indexOf(key);
-      if (index >= 0) { event.preventDefault(); engine.selectChord(KEY_ROOTS[index], QUALITIES[row]); return; }
-    }
-    const strumIndex = STRUM_KEYS.indexOf(event.key);
-    if (strumIndex >= 0) { event.preventDefault(); engine.strum(strumIndex); return; }
-    if (event.code === "Space") { event.preventDefault(); engine.stopAll(); engine.stopRhythm(); }
-  });
-
-  window.addEventListener("keyup", (event) => {
-    const key = event.key.toLowerCase();
-    if (!ui.chordHold.classList.contains("is-on") && (event.code === "Backslash" || key === "\\" || KEY_ROWS.some((row) => row.includes(key)))) engine.stopChord();
-  });
-
-  window.addEventListener("pageshow", (event) => {
-    if (!event.persisted) return;
-    $("#sustain").value = "2.80"; updateKnob($("#sustain"));
-  });
-
-  window.addEventListener("pointerup", () => { pointerDown = false; lastStrum = -1; });
-})();
+window.addEventListener("resize", resize);
