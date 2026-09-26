@@ -512,7 +512,7 @@ window.addEventListener("keydown", (e) => {
     return;
   }
   let root, quality;
-  if (e.code === "Backslash") {
+  if (key === "p") {
     root = 6;
     quality = "major";
   } else
