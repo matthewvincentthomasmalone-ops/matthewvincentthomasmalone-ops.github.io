@@ -667,15 +667,8 @@ body {
   text-underline-offset: 2px;
 }
 
-:root {
-  --keyboard-height: 248px;
-}
 main {
   padding-bottom: 112px;
-  transition: padding-bottom 0.42s ease;
-}
-body.keyboard-open main {
-  padding-bottom: calc(112px + var(--keyboard-height));
 }
 .below {
   position: fixed;
@@ -704,13 +697,12 @@ body.keyboard-open main {
   gap: 16px;
   align-items: center;
   pointer-events: auto;
+  flex-shrink: 0;
+}
+.playing-display {
+  min-width: 0;
 }
 #keyboardToggle {
-  position: fixed;
-  z-index: 11;
-  left: 50%;
-  bottom: 22px;
-  transform: translateX(-50%);
   border: 1px solid #7b3044;
   border-radius: 5px;
   padding: 12px 27px;
@@ -732,20 +724,24 @@ body.keyboard-open main {
     inset 0 0 13px #f4b6cd16;
 }
 #keyboardOverlay {
-  --key-backlight-center: rgba(231, 168, 190, 0.24);
-  --key-backlight-edge: rgba(164, 65, 100, 0.42);
+  --key-backlight-center: rgba(199, 110, 146, 0.28);
+  --key-backlight-edge: rgba(139, 43, 81, 0.46);
   position: fixed;
   z-index: 9;
   bottom: 86px;
-  left: 50%;
-  width: min(1160px, 88vw);
+  right: 3vw;
+  width: min(820px, 78vw);
   padding: 5px 4px 9px;
-  background: transparent;
+  background: rgba(255, 216, 230, 0.78);
+  border-radius: 10px;
+  box-shadow:
+    0 4px 18px #571b3024,
+    inset 0 0 0 1px #70203924;
   overflow-x: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: #78283c70 transparent;
-  transform: translate(-50%, calc(100% + 105px));
+  transform: translateY(calc(100% + 105px));
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -755,7 +751,7 @@ body.keyboard-open main {
     visibility 0s 0.42s;
 }
 .keyboard-open #keyboardOverlay {
-  transform: translate(-50%, 0);
+  transform: translateY(0);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -764,19 +760,10 @@ body.keyboard-open main {
     opacity 0.3s ease,
     visibility 0s;
 }
-.keyboard-open.fit-instrument #keyboardOverlay {
-  --key-backlight-center: rgba(199, 110, 146, 0.28);
-  --key-backlight-edge: rgba(139, 43, 81, 0.46);
-  background: rgba(255, 216, 230, 0.78);
-  border-radius: 10px;
-  box-shadow:
-    0 4px 18px #571b3024,
-    inset 0 0 0 1px #70203924;
-}
 #computerKeyboard {
   display: grid;
   gap: 5px;
-  min-width: 740px;
+  min-width: 680px;
   background: transparent;
 }
 .computer-key-row {
@@ -787,7 +774,7 @@ body.keyboard-open main {
 .computer-key {
   flex: var(--key-width) 1 0;
   min-width: 0;
-  height: clamp(35px, 3.5vw, 48px);
+  height: 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -798,7 +785,7 @@ body.keyboard-open main {
   border-radius: 6px;
   background: transparent;
   color: #65192f;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1;
   box-shadow: 0 2px 2px #571b3012;
   user-select: none;
@@ -810,11 +797,11 @@ body.keyboard-open main {
   line-height: 1.15;
 }
 .mapped-key .key-label {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
 }
 .computer-key small {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
 }
 .computer-key.key-active {
@@ -832,29 +819,24 @@ body.keyboard-open main {
   outline-offset: 1px;
 }
 @media (max-width: 700px) {
-  main {
-    padding-bottom: 148px;
-  }
-  body.keyboard-open main {
-    padding-bottom: calc(148px + var(--keyboard-height));
-  }
   #keyboardOverlay {
     width: calc(100vw - 20px);
-    bottom: 134px;
+    right: 10px;
+    bottom: 90px;
   }
   #keyboardToggle {
-    bottom: 24px;
-    padding: 11px 22px;
+    padding: 11px 15px;
+    font-size: 11px;
   }
   .below {
-    bottom: 83px;
+    bottom: 22px;
     left: 12px;
     right: 12px;
     gap: 10px;
     align-items: center;
   }
   .display-plaque {
-    max-width: 60vw;
+    max-width: 100%;
     padding: 8px 10px;
     font-size: 10px;
   }

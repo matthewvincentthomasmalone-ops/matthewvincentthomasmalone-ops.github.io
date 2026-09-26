@@ -13,7 +13,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23531224'/%3E%3Ctext x='9' y='29' fill='%23eee0bb' font-size='28'%3ER%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260926-fit-keyboard" />
+    <link rel="stylesheet" href="styles.css?v=20260926-corner-keyboard" />
   </head>
   <body>
     <div class="la-background" aria-hidden="true"></div>
@@ -295,6 +295,15 @@
           <p id="statusText" class="display-plaque" role="status" hidden></p>
         </div>
         <div class="page-controls">
+          <button
+            id="keyboardToggle"
+            type="button"
+            aria-expanded="false"
+            aria-pressed="false"
+            aria-controls="keyboardOverlay"
+          >
+            Keyboard
+          </button>
           <button id="fitToggle" aria-pressed="false">Fit instrument</button>
         </div>
       </div>
@@ -326,8 +335,8 @@
           <b>Keyboard:</b> Q–O major, A–L minor, Z–. seventh (E♭ B♭ F C G D A E
           B). P: F♯ major; ; or : gives F♯ minor; / or ? gives F♯7. 1–=: strum;
           +: thirteenth note. Space: stop all notes and drums. Knobs: drag,
-          wheel, arrows; Shift-drag for fine adjustment. Use the bottom Keyboard
-          button to show or hide the transparent, playable key guide.
+          wheel, arrows; Shift-drag for fine adjustment. Use the bottom-right
+          Keyboard button to show or hide the transparent, playable key guide.
         </p>
         <p>
           <b>Combinations:</b> Hold same-root Major + 7 for M7; Minor + 7 for
@@ -367,15 +376,6 @@
     >
       <div id="computerKeyboard"></div>
     </section>
-    <button
-      id="keyboardToggle"
-      type="button"
-      aria-expanded="false"
-      aria-pressed="false"
-      aria-controls="keyboardOverlay"
-    >
-      Keyboard
-    </button>
-    <script type="module" src="app.js?v=20260926-fit-keyboard"></script>
+    <script type="module" src="app.js?v=20260926-corner-keyboard"></script>
   </body>
 </html>

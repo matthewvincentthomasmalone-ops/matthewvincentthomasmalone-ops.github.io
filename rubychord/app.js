@@ -2,7 +2,7 @@ import {
   chordForKey,
   strumIndex,
   mountKeyboard,
-} from "./keyboard-view.js?v=20260926-overlay";
+} from "./keyboard-view.js?v=20260926-corner-keyboard";
 import { SampleEngine } from "./audio-engine.js?v=20260926-defaultoff";
 import {
   ROOTS,
@@ -591,19 +591,13 @@ window.addEventListener("keydown", (e) => {
 });
 function resize() {
   const width = $(".stage").clientWidth;
-  const keyboardSpace = document.body.classList.contains("keyboard-open")
-    ? $("#keyboardOverlay").offsetHeight + 28
-    : 0;
-  const scale =
-    fit || (keyboardSpace > 0 && width < 700)
-      ? Math.min(1.45, (width - 20) / 1100)
-      : Math.min(
-          1.45,
-          width >= 700
-            ? Math.max(0.5, (window.innerHeight - 230 - keyboardSpace) / 600)
-            : 1.45,
-          Math.max(width < 700 ? 0.88 : 0.5, (width - 20) / 1100),
-        );
+  const scale = fit
+    ? Math.min(1.45, (width - 20) / 1100)
+    : Math.min(
+        1.45,
+        width >= 700 ? Math.max(0.5, (window.innerHeight - 230) / 600) : 1.45,
+        Math.max(width < 700 ? 0.88 : 0.5, (width - 20) / 1100),
+      );
   const wrap = $(".instrument-wrap");
   wrap.style.width = `${1100 * scale}px`;
   wrap.style.height = `${600 * scale}px`;
@@ -627,7 +621,6 @@ mountKeyboard({
   chordUp: end,
   strum,
   stop,
-  visibilityChanged: resize,
 });
 new ResizeObserver(resize).observe($(".stage"));
 resize();

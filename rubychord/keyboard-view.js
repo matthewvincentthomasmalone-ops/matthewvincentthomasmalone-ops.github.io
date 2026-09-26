@@ -96,13 +96,7 @@ const rows = [
   ],
 ];
 
-export function mountKeyboard({
-  chordDown,
-  chordUp,
-  strum,
-  stop,
-  visibilityChanged,
-}) {
+export function mountKeyboard({ chordDown, chordUp, strum, stop }) {
   const panel = document.querySelector("#keyboardOverlay");
   const board = document.querySelector("#computerKeyboard");
   const toggle = document.querySelector("#keyboardToggle");
@@ -221,7 +215,6 @@ export function mountKeyboard({
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-pressed", String(open));
     document.body.classList.toggle("keyboard-open", open);
-    visibilityChanged();
   }
   toggle.addEventListener("click", () => show(!open));
   window.addEventListener("keydown", (event) =>
@@ -239,13 +232,5 @@ export function mountKeyboard({
     )
       show(false);
   });
-  const observer = new ResizeObserver(() => {
-    document.documentElement.style.setProperty(
-      "--keyboard-height",
-      `${Math.ceil(panel.getBoundingClientRect().height)}px`,
-    );
-    visibilityChanged();
-  });
-  observer.observe(panel);
   return { clearHighlights, show };
 }
