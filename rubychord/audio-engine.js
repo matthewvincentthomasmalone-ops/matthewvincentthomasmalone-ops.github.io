@@ -49,8 +49,22 @@ export class SampleEngine {
       return;
     }
     if (!this.ctx) this.buildGraph();
-    await this.ctx.resume();
     if (!this.ready) this.ready = this.load();
+    await this.ready;
+    if (this.powered) await this.ctx.resume();
+  }
+  async preload() {
+    if (!this.ctx) this.buildGraph();
+    if (!this.ready) {
+      // Some browsers create a running context even without a gesture. Keep it
+      // explicitly silent while decoding so Power remains the audible on/off.
+      if (!this.powered && this.ctx.state === "running") {
+        try {
+          await this.ctx.suspend();
+        } catch {}
+      }
+      this.ready = this.load();
+    }
     await this.ready;
   }
   buildGraph() {
@@ -101,12 +115,15 @@ export class SampleEngine {
   async load() {
     this.report("Loading the first Omni-84 sounds…", { phase: "loading" });
     try {
-      const response = await fetch("sample-manifest.json?v=20260926-cream");
+      const response = await fetch("sample-manifest.json?v=20260927-preload", {
+        cache: "force-cache",
+      });
       if (!response.ok) throw Error("manifest unavailable");
       this.samples = (await response.json()).samples;
       const essential = this.chordEntries({ root: 0, quality: "major" });
       this.startupCount = essential.length;
-      await this.loadEntries(essential, 4);
+      // Six parallel requests make better use of HTTP/2 without flooding slower devices.
+      await this.loadEntries(essential, 6);
       this.playable = true;
       this.loadResult.essential = this.buffers.size;
       this.report(
@@ -116,7 +133,7 @@ export class SampleEngine {
         { phase: "ready" },
       );
       // Ready resolves as soon as the first chord, strings, bass and drum hits are usable.
-      this.loadingAll = this.loadEntries(this.samples, 2).then(() => {
+      this.loadingAll = this.loadEntries(this.samples, 3).then(() => {
         this.report(
           `Omni-84 2.1.0 · ${this.buffers.size} recordings ready${this.failedSamples.size ? " · missing sounds use fallback" : ""}`,
           { phase: "background" },
@@ -155,6 +172,7 @@ export class SampleEngine {
         try {
           const response = await fetch(
             path.split("/").map(encodeURIComponent).join("/"),
+            { cache: "force-cache" },
           );
           if (!response.ok) throw Error("missing sample");
           const buffer = await this.ctx.decodeAudioData(

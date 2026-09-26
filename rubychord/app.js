@@ -3,7 +3,7 @@ import {
   strumIndex,
   mountKeyboard,
 } from "./keyboard-view.js?v=20260926-corner-keyboard";
-import { SampleEngine } from "./audio-engine.js?v=20260926-defaultoff";
+import { SampleEngine } from "./audio-engine.js?v=20260927-preload";
 import {
   ROOTS,
   PANEL_ROOTS,
@@ -626,3 +626,7 @@ new ResizeObserver(resize).observe($(".stage"));
 resize();
 
 window.addEventListener("resize", resize);
+
+// Download and decode the playable set while the visitor looks over the instrument.
+// The graph remains silent until the explicit Power gesture resumes it.
+engine.preload();
