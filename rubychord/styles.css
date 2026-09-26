@@ -686,7 +686,7 @@ body.keyboard-open main {
   margin: 0;
   pointer-events: none;
 }
-#statusText {
+.display-plaque {
   max-width: min(390px, 32vw);
   padding: 12px 16px;
   border: 1px solid #7b3044;
@@ -697,7 +697,7 @@ body.keyboard-open main {
     0 3px 1px #dfa4b75c,
     inset 0 1px 0 #f0bbcd12;
   line-height: 1.45;
-  pointer-events: auto;
+  pointer-events: none;
 }
 .page-controls {
   display: flex;
@@ -842,7 +842,7 @@ body.keyboard-open main {
     gap: 10px;
     align-items: center;
   }
-  #statusText {
+  .display-plaque {
     max-width: 60vw;
     padding: 8px 10px;
     font-size: 10px;

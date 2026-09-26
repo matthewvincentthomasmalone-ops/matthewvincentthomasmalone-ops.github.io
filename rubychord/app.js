@@ -17,14 +17,11 @@ import {
 import { connectDevices } from "./connections.js?v=20260926-rhythm";
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
-const status = (text) => ($("#statusText").textContent = text);
 const engine = new SampleEngine((text, state = {}) => {
   if (state.phase === "rhythm") {
     refreshRhythm();
-    if (!state.playing || !engine.chordActive) status(text);
     return;
   }
-  if (state.phase !== "background") status(text);
   $("#sampleStatus").textContent = text;
 });
 const pressed = new Map(),
@@ -34,6 +31,22 @@ let fit = false,
   powerBusy = false,
   rhythmBusy = false,
   startOnPower = false;
+function refreshPlayingDisplay() {
+  $("#powerPlaque").hidden = engine.powered;
+  const notes = engine.settings.keyboard
+    ? [
+        ...new Set(
+          [...pressed.values()].map(
+            ({ note }) => `${LABELS[note % 12]}${Math.floor(note / 12) - 1}`,
+          ),
+        ),
+      ].join(" · ")
+    : engine.chordActive && engine.chord
+      ? `${LABELS[engine.chord.root]}${SUFFIX[engine.chord.quality]}`
+      : "";
+  $("#statusText").textContent = engine.powered ? notes : "";
+  $("#statusText").hidden = !engine.powered || !notes;
+}
 function setPressed(id, on) {
   $(id).setAttribute("aria-pressed", String(on));
 }
@@ -65,7 +78,7 @@ function stop({ keepRhythm = false } = {}) {
     b.classList.remove("active");
     b.setAttribute("aria-pressed", "false");
   });
-  status(engine.rhythmTimer ? "Notes off · rhythm continues" : "All notes off");
+  refreshPlayingDisplay();
 }
 async function power() {
   if (powerBusy) return;
@@ -75,19 +88,21 @@ async function power() {
   light("#powerLight", on);
   try {
     if (!on) stop();
-    await engine.power(on);
+    const change = engine.power(on);
+    refreshPlayingDisplay();
+    await change;
     if (on && startOnPower) {
       startOnPower = false;
       engine.startRhythm();
     }
-    if (!on) status("Power off");
   } catch (error) {
-    status(`Audio could not start: ${error.message}`);
+    $("#sampleStatus").textContent = `Audio could not start: ${error.message}`;
     engine.powered = false;
     setPressed("#power", false);
     light("#powerLight", false);
   } finally {
     powerBusy = false;
+    refreshPlayingDisplay();
   }
 }
 $("#power").addEventListener("pointerdown", (event) => event.preventDefault());
@@ -222,10 +237,6 @@ function selectors(container, values, setting) {
         .querySelector(".led")
         .classList.toggle("on", i === column);
     });
-    if (engine.ctx)
-      status(
-        `${value}${setting === "voice" && !value.startsWith("omni") ? " · synthesized approximation" : ""}`,
-      );
   }
   bankButton.addEventListener("click", () => {
     bank = 1 - bank;
@@ -236,10 +247,7 @@ function selectors(container, values, setting) {
 selectors("#voiceSelectors", VOICES, "voice");
 selectors("#patternSelectors", PATTERNS, "pattern");
 function selected(chord, options = {}) {
-  if (!engine.powered) {
-    status("Power on to start your Rubychord -98");
-    return;
-  }
+  if (!engine.powered) return;
   engine.selectChord(chord, options);
   $$(".chord-button").forEach((b) => {
     const on =
@@ -253,23 +261,22 @@ function selected(chord, options = {}) {
     b.classList.toggle("active", on);
     b.setAttribute("aria-pressed", String(on));
   });
-  status(
-    `${LABELS[chord.root]}${SUFFIX[chord.quality]}${engine.settings.auto ? " · Auto" : ""}`,
-  );
+  refreshPlayingDisplay();
 }
 function selectHeld(triggerRhythm = true) {
   const values = [...latched.values(), ...pressed.values()];
   if (values.length) selected(resolveChord(values), { triggerRhythm });
-  else engine.releaseChord();
+  else {
+    engine.releaseChord();
+    refreshPlayingDisplay();
+  }
 }
 function begin(key, descriptor) {
-  if (!engine.powered) {
-    status("Power on to start your Rubychord -98");
-    return;
-  }
+  if (!engine.powered) return;
   pressed.set(key, descriptor);
   if (engine.settings.keyboard) {
     engine.midiNoteOn(descriptor.note, 0.85);
+    refreshPlayingDisplay();
     return;
   }
   selectHeld();
@@ -279,6 +286,7 @@ function end(key) {
   pressed.delete(key);
   if (engine.settings.keyboard) {
     if (descriptor) engine.midiNoteOff(descriptor.note);
+    refreshPlayingDisplay();
     return;
   }
   if (pressed.size || latched.size) selectHeld(false);
@@ -289,6 +297,7 @@ function end(key) {
         b.classList.remove("active");
         b.setAttribute("aria-pressed", "false");
       });
+    refreshPlayingDisplay();
   }
 }
 const descriptors = chordButtons().map((d, i) => ({ ...d, note: 48 + i }));
@@ -416,17 +425,13 @@ plate.addEventListener("keydown", (e) => {
     strum(i);
   }
 });
-$("#instantOff").addEventListener("pointerdown", (e) => {
-  e.preventDefault();
-  stop();
-});
-$("#instantOff").addEventListener("click", stop);
 $("#chordHold").addEventListener("click", () => {
   engine.update({ hold: !engine.settings.hold });
   setPressed("#chordHold", engine.settings.hold);
   light("#holdLight", engine.settings.hold);
   if (!engine.settings.hold && !pressed.size && !latched.size)
     engine.releaseChord();
+  refreshPlayingDisplay();
 });
 $("#autoBass").addEventListener("click", () => {
   const auto = !engine.settings.auto;
@@ -444,7 +449,6 @@ $("#rhythmStart").addEventListener("click", async () => {
     engine.update({ sync: false });
     engine.stopRhythm();
     refreshRhythm();
-    status("Rhythm stopped");
     return;
   }
   // Before Power, select immediate Start without loading audio.
@@ -452,7 +456,6 @@ $("#rhythmStart").addEventListener("click", async () => {
     startOnPower = true;
     engine.update({ sync: false });
     refreshRhythm();
-    status("Power on to start rhythm");
     return;
   }
   engine.update({ sync: false });
@@ -474,7 +477,6 @@ $("#syncStart").addEventListener("click", () => {
   engine.update({ sync });
   engine.stopRhythm();
   refreshRhythm();
-  status(sync ? "Sync Start ready · press a chord button" : "Rhythm stopped");
 });
 $("#keyboard").addEventListener("click", () => {
   stop({ keepRhythm: true });
@@ -482,11 +484,7 @@ $("#keyboard").addEventListener("click", () => {
   engine.update({ keyboard });
   setPressed("#keyboard", keyboard);
   light("#keyboardLight", keyboard);
-  status(
-    keyboard
-      ? "Keyboard mode · chord panel notes / strumplate drums"
-      : "Chord mode",
-  );
+  refreshPlayingDisplay();
 });
 window.addEventListener("keydown", (e) => {
   if (
@@ -536,13 +534,16 @@ const devices = connectDevices({
   engine,
   selectChord: selected,
   status: (text) => ($("#midiStatus").textContent = text),
-  learnStatus: status,
+  learnStatus: (text) => ($("#midiStatus").textContent = text),
   applyControl: (target, value) => {
     if (target.startsWith("chord:")) {
       const [, root, quality] = target.split(":");
       if (value > 0.5 && ROOTS.includes(root))
         selected({ root: ROOTS.indexOf(root), quality });
-      else if (value <= 0.5) engine.releaseChord();
+      else if (value <= 0.5) {
+        engine.releaseChord();
+        refreshPlayingDisplay();
+      }
     } else if (target.startsWith("strum:")) {
       if (value > 0.5) strum(Number(target.split(":")[1]));
     } else {
