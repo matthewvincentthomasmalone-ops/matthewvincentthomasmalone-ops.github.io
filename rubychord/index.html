@@ -13,7 +13,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23531224'/%3E%3Ctext x='9' y='29' fill='%23eee0bb' font-size='28'%3ER%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260926-cream" />
+    <link rel="stylesheet" href="styles.css?v=20260926-rhythm" />
   </head>
   <body>
     <div class="la-background" aria-hidden="true"></div>
@@ -213,13 +213,23 @@
               ></button>
               <span class="rhythm-legend">Rhythm</span>
               <div class="sync-legend">
-                <span><i id="startLight" class="led"></i>Start</span
-                ><span><i id="syncLight" class="led on"></i>Sync Start</span>
+                <span><i id="startLight" class="led"></i>Start / Stop</span
+                ><button
+                  id="syncStart"
+                  class="sync-mode"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="Sync Start"
+                  title="Arm rhythm for the next chord-button press"
+                >
+                  <i id="syncLight" class="led on"></i>Sync Start
+                </button>
               </div>
               <button
                 id="rhythmStart"
                 class="physical blue"
-                aria-label="Rhythm Start / Sync Start"
+                aria-label="Start rhythm"
+                title="Start rhythm"
                 aria-pressed="false"
               ></button>
             </section>
@@ -300,8 +310,11 @@
           Power on, choose a chord, then sweep the gold plate. Higher notes are
           at the top. Yellow buttons switch between the two printed banks. Hold
           keeps the chord; Auto adds bass and rhythmic chords. Start runs drums
-          continuously; Sync Start follows chord playing. Instant Off silences
-          everything.
+          continuously; Sync Start starts them on the next chord or
+          keyboard-note button press. Drums keep playing after release. Press
+          the blue Rhythm button again to stop them without changing volume.
+          Click Sync Start to arm drums for the next chord press. Instant Off or
+          Space silences everything; Power turns the instrument off.
         </p>
         <p>
           <b>Keyboard:</b> Q–O major, A–L minor, Z–. seventh (E♭ B♭ F C G D A E
@@ -338,6 +351,6 @@
         </p>
       </aside>
     </main>
-    <script type="module" src="app.js?v=20260926-cream"></script>
+    <script type="module" src="app.js?v=20260926-rhythm"></script>
   </body>
 </html>

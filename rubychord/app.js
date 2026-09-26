@@ -1,4 +1,4 @@
-import { SampleEngine } from "./audio-engine.js?v=20260926-cream";
+import { SampleEngine } from "./audio-engine.js?v=20260926-rhythm";
 import {
   ROOTS,
   PANEL_ROOTS,
@@ -10,11 +10,16 @@ import {
   resolveChord,
   chordButtons,
 } from "./omnichord-controls.js";
-import { connectDevices } from "./connections.js";
+import { connectDevices } from "./connections.js?v=20260926-rhythm";
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
 const status = (text) => ($("#statusText").textContent = text);
 const engine = new SampleEngine((text, state = {}) => {
+  if (state.phase === "rhythm") {
+    refreshRhythm();
+    if (!state.playing || !engine.chordActive) status(text);
+    return;
+  }
   if (state.phase !== "background") status(text);
   $("#sampleStatus").textContent = text;
 });
@@ -22,23 +27,41 @@ const pressed = new Map(),
   latched = new Map(),
   pointers = new Map();
 let fit = false,
-  powerBusy = false;
+  powerBusy = false,
+  rhythmBusy = false,
+  startOnPower = false;
 function setPressed(id, on) {
   $(id).setAttribute("aria-pressed", String(on));
 }
 function light(id, on) {
   $(id).classList.toggle("on", on);
 }
-function stop() {
+function refreshRhythm() {
+  const playing = !!engine.rhythmTimer;
+  setPressed("#rhythmStart", playing || rhythmBusy || startOnPower);
+  light("#startLight", playing || rhythmBusy || startOnPower);
+  light("#syncLight", engine.settings.sync);
+  setPressed("#syncStart", engine.settings.sync);
+  const label =
+    playing || rhythmBusy || startOnPower ? "Stop rhythm" : "Start rhythm";
+  $("#rhythmStart").setAttribute("aria-label", label);
+  $("#rhythmStart").title = label;
+}
+function stop({ keepRhythm = false } = {}) {
   pressed.clear();
   latched.clear();
   pointers.clear();
-  engine.stopAll();
+  if (keepRhythm) engine.stopNotes();
+  else {
+    rhythmBusy = false;
+    startOnPower = false;
+    engine.stopAll();
+  }
   $$(".chord-button").forEach((b) => {
     b.classList.remove("active");
     b.setAttribute("aria-pressed", "false");
   });
-  status("All notes off");
+  status(engine.rhythmTimer ? "Notes off · rhythm continues" : "All notes off");
 }
 async function power() {
   if (powerBusy) return;
@@ -49,7 +72,10 @@ async function power() {
   try {
     if (!on) stop();
     await engine.power(on);
-    if (on && !engine.settings.sync) engine.startRhythm();
+    if (on && startOnPower) {
+      startOnPower = false;
+      engine.startRhythm();
+    }
     if (!on) status("Power off");
   } catch (error) {
     status(`Audio could not start: ${error.message}`);
@@ -205,12 +231,12 @@ function selectors(container, values, setting) {
 }
 selectors("#voiceSelectors", VOICES, "voice");
 selectors("#patternSelectors", PATTERNS, "pattern");
-function selected(chord) {
+function selected(chord, options = {}) {
   if (!engine.powered) {
     status("Power on to load your local recordings.");
     return;
   }
-  engine.selectChord(chord);
+  engine.selectChord(chord, options);
   $$(".chord-button").forEach((b) => {
     const on =
       Number(b.dataset.root) === chord.root &&
@@ -227,9 +253,9 @@ function selected(chord) {
     `${LABELS[chord.root]}${SUFFIX[chord.quality]}${engine.settings.auto ? " · Auto" : ""}`,
   );
 }
-function selectHeld() {
+function selectHeld(triggerRhythm = true) {
   const values = [...latched.values(), ...pressed.values()];
-  if (values.length) selected(resolveChord(values));
+  if (values.length) selected(resolveChord(values), { triggerRhythm });
   else engine.releaseChord();
 }
 function begin(key, descriptor) {
@@ -251,7 +277,7 @@ function end(key) {
     if (descriptor) engine.midiNoteOff(descriptor.note);
     return;
   }
-  if (pressed.size || latched.size) selectHeld();
+  if (pressed.size || latched.size) selectHeld(false);
   else {
     engine.releaseChord();
     if (!engine.settings.hold)
@@ -404,20 +430,50 @@ $("#autoBass").addEventListener("click", () => {
   setPressed("#autoBass", auto);
   light("#manualLight", !auto);
   light("#autoLight", auto);
-  if (engine.chord && engine.chordActive) selected(engine.chord);
+  if (engine.chord && engine.chordActive)
+    selected(engine.chord, { triggerRhythm: false });
 });
 $("#rhythmStart").addEventListener("click", async () => {
-  const sync = !engine.settings.sync;
-  engine.update({ sync });
-  setPressed("#rhythmStart", !sync);
-  light("#startLight", !sync);
-  light("#syncLight", sync);
-  if (!sync && (await engine.ensure())) engine.startRhythm();
-  else if (sync && !pressed.size && !latched.size && !engine.settings.hold)
+  if (engine.rhythmTimer || rhythmBusy || startOnPower) {
+    rhythmBusy = false;
+    startOnPower = false;
+    engine.update({ sync: false });
     engine.stopRhythm();
+    refreshRhythm();
+    status("Rhythm stopped");
+    return;
+  }
+  // Before Power, select immediate Start without loading audio.
+  if (!engine.powered) {
+    startOnPower = true;
+    engine.update({ sync: false });
+    refreshRhythm();
+    status("Power on to start rhythm");
+    return;
+  }
+  engine.update({ sync: false });
+  rhythmBusy = true;
+  refreshRhythm();
+  const token = engine.rhythmGeneration;
+  try {
+    if ((await engine.ensure()) && token === engine.rhythmGeneration)
+      engine.startRhythm();
+  } finally {
+    if (token === engine.rhythmGeneration) rhythmBusy = false;
+    refreshRhythm();
+  }
+});
+$("#syncStart").addEventListener("click", () => {
+  const sync = !engine.settings.sync;
+  rhythmBusy = false;
+  startOnPower = false;
+  engine.update({ sync });
+  engine.stopRhythm();
+  refreshRhythm();
+  status(sync ? "Sync Start ready · press a chord button" : "Rhythm stopped");
 });
 $("#keyboard").addEventListener("click", () => {
-  stop();
+  stop({ keepRhythm: true });
   const keyboard = !engine.settings.keyboard;
   engine.update({ keyboard });
   setPressed("#keyboard", keyboard);
@@ -483,7 +539,7 @@ window.addEventListener("blur", () => {
   pressed.clear();
   latched.clear();
   pointers.clear();
-  if (engine.ctx) stop();
+  if (engine.ctx) stop({ keepRhythm: true });
 });
 const devices = connectDevices({
   engine,

@@ -12,6 +12,8 @@ export class SampleEngine {
     this.samples = [];
     this.powered = false;
     this.generation = 0;
+    this.powerGeneration = 0;
+    this.rhythmGeneration = 0;
     this.chord = null;
     this.chordActive = false;
     this.rhythmTimer = null;
@@ -40,6 +42,7 @@ export class SampleEngine {
   }
   async power(on) {
     this.powered = on;
+    this.powerGeneration++;
     if (!on) {
       this.stopAll();
       if (this.ctx) await this.ctx.suspend();
@@ -394,7 +397,22 @@ export class SampleEngine {
         ),
       );
   }
-  async selectChord(chord) {
+  async triggerSyncRhythm() {
+    if (!this.powered || !this.settings.sync) return;
+    const token = this.powerGeneration;
+    const rhythmToken = this.rhythmGeneration;
+    if (await this.ensure()) {
+      if (
+        token === this.powerGeneration &&
+        rhythmToken === this.rhythmGeneration &&
+        this.settings.sync
+      )
+        this.startRhythm();
+    }
+  }
+  async selectChord(chord, { triggerRhythm = true } = {}) {
+    // A brief press starts drums even if its chord recording is still loading.
+    if (triggerRhythm) this.triggerSyncRhythm();
     const token = ++this.generation;
     this.chord = chord;
     this.chordActive = true;
@@ -406,7 +424,6 @@ export class SampleEngine {
     if (!(await this.chordReady) || token !== this.generation) return;
     this.stopChord();
     if (!this.settings.auto) this.chordLayer();
-    if (this.settings.sync && !this.rhythmTimer) this.startRhythm();
   }
   releaseChord() {
     if (this.settings.hold) return;
@@ -415,7 +432,6 @@ export class SampleEngine {
     for (const voice of this.voices)
       if (voice.role === "chord") this.release(voice);
     this.stopChord();
-    if (this.settings.sync) this.stopRhythm();
   }
   async strum(index) {
     const token = this.generation;
@@ -459,6 +475,7 @@ export class SampleEngine {
       !Number.isFinite(velocity)
     )
       return;
+    this.triggerSyncRhythm();
     const token = this.generation;
     this.midiNoteOff(midi);
     const pending = {};
@@ -568,6 +585,7 @@ export class SampleEngine {
     this.nextTime = this.ctx.currentTime + 0.015;
     this.rhythmTimer = setInterval(() => this.schedule(), 25);
     this.schedule();
+    this.report("Rhythm playing", { phase: "rhythm", playing: true });
   }
   schedule() {
     const pattern = this.pattern();
@@ -594,16 +612,21 @@ export class SampleEngine {
     }
   }
   stopRhythm() {
+    this.rhythmGeneration++;
     clearInterval(this.rhythmTimer);
     this.rhythmTimer = null;
     for (const v of this.voices)
       if (v.role === "rhythm" || (this.settings.auto && v.role === "chord"))
         this.release(v);
+    this.report("Rhythm stopped", { phase: "rhythm", playing: false });
   }
   stopAll() {
-    this.generation++;
     this.stopRhythm();
-    for (const v of this.voices) this.release(v);
+    this.stopNotes();
+  }
+  stopNotes() {
+    this.generation++;
+    for (const v of this.voices) if (v.role !== "rhythm") this.release(v);
     this.chordVoices = [];
     this.midiVoices.clear();
     this.chord = null;
